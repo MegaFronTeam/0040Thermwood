@@ -2,8 +2,14 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col-auto
+					+e.logo(href='/'): +img('img/logo.png')
+				.col-auto.d-none.d-lg-block
+					p Производитель фасадных и террасных изделий из термодерева
+				.col-auto.ms-auto.d-none.d-lg-block
+					a(href="mailto:termo-wood@mail.ru") termo-wood@mail.ru
+					a(href="tel:+74952013706") + 7 (495) 201-37-06
+				.col-auto.ms-auto.d-lg-none
+					+menu-toggle()
 	// end topLine
