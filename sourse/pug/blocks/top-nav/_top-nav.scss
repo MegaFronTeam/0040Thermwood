@@ -1,11 +1,12 @@
 .top-nav {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(59)};
+	--sPB: #{rem(59)};
 	// --sTPB: #{rem()};
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPB);
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
 	.section-title{
 		

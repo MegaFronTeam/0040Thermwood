@@ -6,29 +6,91 @@
 		@include roww(20px);
 		flex-wrap: wrap;
 	}
-
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(60)};
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
 	li{
 		
-		// margin-left: 0;
-		// margin-right: 0;
-		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
+		// padding: 0;
 	}
-	a{
+	a, span{
+		@include mt;
+		cursor: pointer;
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		// padding: 0 calc(var(--bs-gutter-x) / 2);
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		line-height: 1.31;
+		font-size: rem(16);
+		color: #000;
+		&:hover {
+			color: $primary;
+		}
+	}
+	&-item-has-children {
+		position: relative;
+	}
+	.sub-menu {
+		// @include roww('48px');
+		a {
+			padding: rem(6) 0;
+			&:hover {
+				background-color: transparent;
+				color: $primary;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			padding: rem(6) 0 rem(30);
+			display: none;
+			li {
+				border-top: none;
+				a {
+					display: inline-block;
+					padding: rem(6) rem(18);
+				}
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			@include mt;
+			position: absolute;
+			top: calc(100% + rem(16));
+			left: calc(50% );
+			transform: translateX(-50%);
+			z-index: 100;
+			width: max-content;
+			background-color: #FFFFFF;
+			border: 1px solid $gray-300;
+			box-shadow: 0px 6px 12px rgba(5, 5, 5, 0.12);
+			border-radius: 12px;
+			opacity: 1;
+			pointer-events: all;
+			list-style: none;
+			text-align: left;
+			display: flex !important;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: rem(18);
+			&:hover {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
 	}
 }
 
 
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: #{rem(2)};
+	--color: #000;
+	--position: calc(var(--h) * 3);
 	&.on span {
 		--color: transparent;
 	}
@@ -38,9 +100,9 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
+	height: calc(var(--h)* 8);
 	position: relative; 
-	font-size: 32px;
+	font-size: 16px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -141,7 +203,7 @@
 			margin: 0;
 			border-top: 1px solid rgba(255, 255, 255, .13);
 
-			a {
+			a, span {
 				// font-size: 16px;
 
 				padding: 10px;
