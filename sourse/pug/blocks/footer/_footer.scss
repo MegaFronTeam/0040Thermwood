@@ -8,14 +8,7 @@
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
-	&__logo-wrap {
-		@include media-breakpoint-down(md) {
-			display: flex;
-			align-items: center;
-			flex-wrap: wrap;
-			@include roww(1.5rem, 4px, m);
-		}
-	}
+	
 	&__logo {
 		display: inline-block;
 		max-width: rem(134);
