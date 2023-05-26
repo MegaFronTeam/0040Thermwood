@@ -1,9 +1,32 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
+			+e.row.row
+				.col-md-5.col-lg-3.col-xxl-2
+					+e.logo-wrap
+						+e.logo(href='/'): +img('img/logo.png')
+						p Производстводитель фасадных и&nbsp;террасных изделий из&nbsp;термодерева
+				.col-md
+					+e.nav
+						h6 навигация по&nbsp;сайту
+						nav
+							ul
+								li: a(href="#") О&nbsp;компании
+								li: a(href="#") Продукция
+								li: a(href="#") Портфолио
+								li: a(href="#") Контакты
+							ul
+								li: a(href="#") Прайс-лист
+								li: a(href="#") Каталог
+								li: a(href="#") Технические паспорта
 				.col-auto
+					+e.contacts
+						+e.link(href="tel:+74952013706") + 7 (495) 201-37-06
+						+e.link(href="mailto:termo-wood@mail.ru") termo-wood@mail.ru
+						+soc()
+							+item-sos('', 'https://vk.com/termowoodofficial')
+								+img('img/vk.png')
+							+item-sos('', 'https://t.me/TERMO_1WOOD1')
+								+img('img/youtube.png')
+							+item-sos('', 'https://www.youtube.com/channel/UCBaRZ5XjwGMX5g5_SBfCdJQ')
+								+img('img/telegram.png')
