@@ -1,0 +1,48 @@
+mixin catalogItem(img)
+	+b.catalogItem
+		+e.title фасадная доска термоясень прямой / косой планкен
+		+e.img-wrap
+			+img(`img/catalogItem-${img}.jpg`, 'bg')
+		table
+			tbody
+				tr
+					td Толщина:
+					td 20&nbsp;мм
+				tr
+					td Ширина:
+					td 95&nbsp;/ 115&nbsp;/ 135&nbsp;/ 160&nbsp;/ 180&nbsp;/ 200&nbsp;мм
+				tr
+					td Длина:
+					td 900&nbsp;&minus; 3000&nbsp;мм
+				tr
+					td Сроки:
+					td В&nbsp;наличии
+		+e.footer
+			+e.row.row
+				.col
+					+e.price от&nbsp;500&nbsp;800&nbsp;руб.&nbsp;/ м&sup2;
+				.col-auto
+					+e.btn.btn.btn-primary(href="#") заказать
+
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title
+				h2 производим 
+					b материал для комфортной жизни
+
+		.container
+			+e.wrapper.slider-wrapper
+				+e.slider.swiper.slider-auto-js
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+catalogItem(1)
+						+e.slide.swiper-slide
+							+catalogItem(2)
+						+e.slide.swiper-slide
+							+catalogItem(3)
+						+e.slide.swiper-slide
+							+catalogItem(1)
+
+	// end sCategories

@@ -427,7 +427,7 @@ function eventHandler() {
 	for (const sliderParent of sliderParents) {
 		const autoSlider = new Swiper((sliderParent.querySelector('.slider-auto-js')), {
 			slidesPerView: 'auto',
-			spaceBetween: 13,
+			spaceBetween: 0,
 			watchOverflow: true,
 			observer: true,
 			observeSlideChildren: true,
