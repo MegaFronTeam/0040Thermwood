@@ -423,17 +423,29 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
+	const sliderParents = document.querySelectorAll('.slider-wrapper');
+	for (const sliderParent of sliderParents) {
+		const autoSlider = new Swiper((sliderParent.querySelector('.slider-auto-js')), {
+			slidesPerView: 'auto',
+			spaceBetween: 13,
+			watchOverflow: true,
+			observer: true,
+			observeSlideChildren: true,
+			freeMode: {
+				enabled: true,
+				sticky: true,
+				momentumVelocityRatio: 0.3
+			},
+			lazy: {
+				loadPrevNext: true,
+			},
+			// breakpoints: {
+			// 	768: {
+			// 		spaceBetween: 24
+			// 	}
+			// },
+		});
+	};
 
 	// modal window
 

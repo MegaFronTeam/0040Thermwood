@@ -2,10 +2,10 @@
 .sResult {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	--sTPB: #{rem(30)};
-	@include media-breakpoint-up(md) {
-		--sTPB: #{rem(60)};
-	}
+	// --sTPB: #{rem(30)};
+	// @include media-breakpoint-up(md) {
+	// 	--sTPB: #{rem(60)};
+	// }
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(32)};

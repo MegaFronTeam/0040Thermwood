@@ -1,0 +1,35 @@
+mixin sTeam(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		.container
+			+b.section-title
+				h2 в компании термовуд работают 
+					b специалисты,
+					|  которые 
+					b влюблены в своё дело
+		+e.wrapper.slider-wrapper
+			+e.slider.swiper.slider-auto-js
+				.swiper-wrapper
+					mixin slide(img, name, position)
+						+e.slide.swiper-slide
+							+e.item
+								+e.img-wrap
+									+img(`img/sTeam-${img}.jpg`, 'bg')
+								+e.caption
+									h3!= name
+									span!= position
+
+					+slide(1, `Плясова Наталья`, `Руководитель компании`)
+					+slide(2, `Правидный евгений`, `Управляющий директор`)
+					+slide(3, `Никулушкина Татьяна`, `Руководитель отдела продаж`)
+					+slide(4, `Кудашов Игорь`, `Ведущий менеджер`)
+					+slide(5, `Закирова Лариса`, `Ведущий менеджер`)
+					+slide(6, `Волошин Олег`, `Менеджер`)
+					+slide(7, `Кривенко Наталья`, `Эксперт по&nbsp;маркетингу`)
+					+slide(8, `Ахмадеев Роман`, `Руководитель отдела IT`)
+					+slide(9, `Тюрина Марина`, `Финансовый директор`)
+					+slide(10, `Добротворская Светлана`, `Главный бухгалтер`)
+					+slide(11, `Чернышова Екатерина`, `Заместитель главного бухгалтера`)
+					+slide(12, `Бигас Валентина`, `Руководитель складского хозяйства`)
+
+	// end sTeam
