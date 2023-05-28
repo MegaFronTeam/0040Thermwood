@@ -31,6 +31,7 @@
 		@include block(414, 382);
 		flex-shrink: 0;
 		margin-bottom: rem(30);
+		background-color: $light;
 	}
 	&__caption {
 		flex-grow: 1;

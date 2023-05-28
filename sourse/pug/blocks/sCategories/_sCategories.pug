@@ -1,26 +1,20 @@
-mixin catalogItem(img)
+mixin catalogItem(img, title, price)
 	+b.catalogItem
-		+e.title фасадная доска термоясень прямой / косой планкен
+		+e.title!= title
 		+e.img-wrap
 			+img(`img/catalogItem-${img}.jpg`, 'bg')
 		table
 			tbody
-				tr
-					td Толщина:
-					td 20&nbsp;мм
-				tr
-					td Ширина:
-					td 95&nbsp;/ 115&nbsp;/ 135&nbsp;/ 160&nbsp;/ 180&nbsp;/ 200&nbsp;мм
-				tr
-					td Длина:
-					td 900&nbsp;&minus; 3000&nbsp;мм
-				tr
-					td Сроки:
-					td В&nbsp;наличии
+				mixin tr(p, v)
+					tr
+						td!= p
+						td!= v
+				block
+
 		+e.footer
 			+e.row.row
 				.col
-					+e.price от&nbsp;500&nbsp;800&nbsp;руб.&nbsp;/ м&sup2;
+					+e.price!= price
 				.col-auto
 					+e.btn.btn.btn-primary(href="#") заказать
 
@@ -37,12 +31,28 @@ mixin sCategories(data)
 				+e.slider.swiper.slider-auto-js
 					.swiper-wrapper
 						+e.slide.swiper-slide
-							+catalogItem(1)
+							+catalogItem(1, `фасадная доска термоясень прямой / косой планкен`, `от&nbsp;5&nbsp;800&nbsp;руб.&nbsp;/ м&sup2;`)
+								+tr(`Толщина:`, `20&nbsp;мм`)
+								+tr(`Ширина:`, `95&nbsp;/ 115&nbsp;/ 135&nbsp;/ 160&nbsp;/ 180&nbsp;/ 200&nbsp;мм`)
+								+tr(`Длина:`, `900&nbsp;&minus; 3000&nbsp;мм`)
+								+tr(`Сроки:`, `В&nbsp;наличии`)
 						+e.slide.swiper-slide
-							+catalogItem(2)
+							+catalogItem(2, `фасадная доска термопихта прямой&nbsp;/ косой планкен`, `от&nbsp;3&nbsp;350&nbsp;руб.&nbsp;/ м&sup2;`)
+								+tr(`Толщина:`, `16&nbsp;мм`)
+								+tr(`Ширина:`, `80&nbsp;/ 120&nbsp;мм`)
+								+tr(`Длина:`, `900&nbsp;&mdash; 4000&nbsp;мм`)
+								+tr(`Сроки:`, `В&nbsp;наличии`)
 						+e.slide.swiper-slide
-							+catalogItem(3)
+							+catalogItem(3, `реечный фасад термоясень&nbsp;/ термопихта`, `от&nbsp;250&nbsp;руб.&nbsp;/ м.п.`)
+								+tr(`Толщина:`, `20&nbsp;/ 40&nbsp;мм`)
+								+tr(`Ширина:`, `40&nbsp;/ 50&nbsp;/ 60&nbsp;мм`)
+								+tr(`Длина:`, `900&nbsp;&mdash; 4000&nbsp;мм`)
+								+tr(`Сроки:`, `В&nbsp;наличии`)
 						+e.slide.swiper-slide
-							+catalogItem(1)
+							+catalogItem(1, `террасная доска термоясень гладкая&nbsp;/ вельвет`, `от&nbsp;5&nbsp;800&nbsp;руб.&nbsp;/ м&sup2;`)
+								+tr(`Толщина:`, `20&nbsp;мм`)
+								+tr(`Ширина:`, `95&nbsp;/ 115&nbsp;/ 135&nbsp;/ 160&nbsp;/ 180&nbsp;/ 200&nbsp;мм`)
+								+tr(`Длина:`, `900&nbsp;&mdash; 3000&nbsp;мм`)
+								+tr(`Сроки:`, `В&nbsp;наличии`)
 
 	// end sCategories

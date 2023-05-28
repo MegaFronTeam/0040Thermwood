@@ -72,6 +72,8 @@
 	&__img-wrap {
 		@include block(130, 257);
 		margin-bottom: rem(10);
+		overflow: hidden;
+		background-color: $light;
 		img {
 			position: absolute;
 			left: 0;
