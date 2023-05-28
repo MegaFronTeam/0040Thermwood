@@ -24,6 +24,16 @@ mixin sCategories(data)
 			+b.section-title
 				h2 производим 
 					b материал для комфортной жизни
+		+e.wrapper
+			+e.row.row
+				.col-md-6
+					+e.item
+						+img(`img/sCategories-1.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") фасадная доска
+				.col-md-6
+					+e.item
+						+img(`img/sCategories-2.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") террасная доска
 
 		.container
 			+e.wrapper.slider-wrapper

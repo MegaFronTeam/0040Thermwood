@@ -50,7 +50,7 @@
 		ul {
 			list-style: none;
 			margin-bottom: 0;
-			font-weight: 300;
+			// font-weight: 300;
 			font-size: rem(16);
 			line-height: 1.6;
 		}
@@ -61,9 +61,9 @@
 			}
 			a {
 				// display: inline-block;
-				color: #be2424;
-				&:hover {
-					color: #e92525;
+				// color: #be2424;
+				&:not(:hover) {
+					color: $body-color;
 				}
 			}
 		}
