@@ -1,0 +1,20 @@
+mixin sPortfolio(data)
+	// start sPortfolio
+	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
+		.container
+			+b.section-title
+				h2 портфолио проектов
+					br
+					b  гордимся каждым и&nbsp;благодарим за&nbsp;доверие
+		+e.wrapper
+			+e.item
+				+img(`img/sPortfolio-1.jpg`, 'bg')
+				+e.btn.btn.btn-primary(href="#") фасадная доска
+			+e.item
+				+img(`img/sPortfolio-2.jpg`, 'bg')
+				+e.btn.btn.btn-primary(href="#") подшивка крыши
+			+e.item
+				+img(`img/sPortfolio-3.jpg`, 'bg')
+				+e.btn.btn.btn-primary(href="#") террасная доска
+			
+	// end sPortfolio
