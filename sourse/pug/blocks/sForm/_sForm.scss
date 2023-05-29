@@ -29,6 +29,7 @@
 			font-weight: 700;
 			letter-spacing: 0.035em;
 			@include rfs(35px, font-size);
+			color: #808080;
 		}
 
 		p {
@@ -89,9 +90,19 @@
 		}
 		&__btn {
 			width: 100%;
+			--bs-btn-color: #{$body-color};
+			// --bs-btn-hover-color: #{$body-color};
 		}
 		.form-control {
 			--bs-form-control-bg: rgba(255, 255, 255, 0.5);
+			--bs-border-color: #a7a7a7;
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: rem(12);
+			line-height: 1.6;
+			@include media-breakpoint-up(md) {
+				text-align: right;
+			}
 			&:focus {
 				--bs-form-control-bg: #{$white};
 			}
