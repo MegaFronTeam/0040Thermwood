@@ -153,79 +153,6 @@ const JSCCommon = {
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
 	},
-	// /inputMask
-	sendForm() {
-		var gets = (function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-			return b;
-		})();
-		// form
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data,
-			}).done(function (data) {
-
-				Fancybox.close();
-				Fancybox.show([{ src: "#modal-thanks", type: "inline" }]);
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () { });
-
-		});
-
-
-		// async function submitForm(event) {
-		// 	event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
-		// 	try {
-		// 		// Формируем запрос
-		// 		const response = await fetch(event.target.action, {
-		// 			method: 'POST',
-		// 			body: new FormData(event.target)
-		// 		});
-		// 		// проверяем, что ответ есть
-		// 		if (!response.ok) throw (`Ошибка при обращении к серверу: ${response.status}`);
-		// 		// проверяем, что ответ действительно JSON
-		// 		const contentType = response.headers.get('content-type');
-		// 		if (!contentType || !contentType.includes('application/json')) {
-		// 			throw ('Ошибка обработки. Ответ не JSON');
-		// 		}
-		// 		// обрабатываем запрос
-		// 		const json = await response.json();
-		// 		if (json.result === "success") {
-		// 			// в случае успеха
-		// 			alert(json.info);
-		// 		} else {
-		// 			// в случае ошибки
-		// 			console.log(json);
-		// 			throw (json.info);
-		// 		}
-		// 	} catch (error) { // обработка ошибки
-		// 		alert(error);
-		// 	}
-		// }
-	},
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -278,15 +205,7 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	makeDDGroup() {
-		$('.dd-head-js').on('click', function () {
-      let clickedHead = this;
-      $(this).parent().toggleClass('active');
-      $(this)
-        .next()
-        .slideToggle(function () {
-          $(this).toggleClass('active');
-        });
-    });
+		
 		// let parents = document.querySelectorAll('.dd-group-js');
 		// for (let parent of parents) {
 		// 	if (parent) {
@@ -454,12 +373,55 @@ function eventHandler() {
 	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl,{
 		placement: 'auto',
 		trigger: 'hover focus'
-	}))  
- 
+	}));
 
+
+	const faqSlider = new Swiper('.sFaq__slider--js', {
+		direction: 'vertical',
+		slidesPerView: 'auto',
+		freeMode: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		observer: true,
+		scrollbar: {
+			el: ".sFaq .swiper-scrollbar",
+			draggable: true,
+		},
+		navigation: {
+			nextEl: '.sFaq .swiper-button-next',
+			prevEl: '.sFaq .swiper-button-prev',
+		},
+		mousewheel: true,
+	});
+
+	
+	
+	
+	$('.dd-head-js').on('click', function () {
+		let clickedHead = this;
+		$(this).parent().toggleClass('active');
+		$(this)
+		.next()
+		.slideToggle(function () {
+				$(this).toggleClass('active');
+				faqSlider.update()
+			});
+	});
+	
+	const sBlogSlider = new Swiper('.sBlog__slider--js', { 
+		// loop: true,
+		spaceBetween: 70,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.sBlog .swiper-button-next',
+			prevEl: '.sBlog .swiper-button-prev',
+		}
+	});
 };
+	
 if (document.readyState !== 'loading') {
-	eventHandler();
+
+eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }

@@ -1,0 +1,31 @@
+mixin sBlog(data)
+	// start sBlog
+	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
+		.container
+			+b.section-title
+				h2: strong блог
+				
+		+e.slider--js.swiper
+			.swiper-wrapper
+				- for (var x = 0; x < 3; x++)
+					+e.slide.swiper-slide
+						+e.item
+							.row
+								.col-sm-auto
+									+e.img-wrap
+										+img("img/blog-img.jpg",'bg')
+								.col
+									+e.head
+										+e.title EXTERIA DESIGN WEEKEND 2023
+										+e.date 19.05.2023 г.
+									+e.body
+										p Вчера установили подиум для форума "EXTERIA DESIGN WEEKEND 2023", где будет выступление ведущих архитекторов и дизайнеров частного домостроения. <br> Использовали гладкую террасную доску из Термоясеня. Подиум отлично вписался в стилистику мероприятия!
+									+e.footer.row
+											.col-auto
+												a.btn.btn-light(href="#") подробнее
+											.col-auto
+												span.d-none.d-sm-inline Нравится 
+												+img("img/like.png")
+												| 200
+			+arrow
+	// end sBlog

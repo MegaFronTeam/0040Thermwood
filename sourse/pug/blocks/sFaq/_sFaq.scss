@@ -1,0 +1,131 @@
+// start .sFaq
+.sFaq {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		--bs-gutter-x: #{rem(0)};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	picture{
+		aspect-ratio: 737/570;
+		width: 100%;
+		display: block;
+	}
+	
+	&__slider-wrap{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: relative;
+		@include media-breakpoint-up(lg){
+			
+			margin-top: -20px;
+				padding-right: 20px;
+			}
+			padding-right: 10px;
+	}
+	&__slider,
+	&__slider-wrap{
+		// height: 100%;
+		aspect-ratio: 737/570;
+	}
+	@include media-breakpoint-up(sm) {
+
+		--left: 125px;
+	}
+	--left: 60px;
+	&__slider{
+		@include media-breakpoint-up(lg){
+			padding-right: 30px;
+		}
+		padding-right: 10px;
+	}
+	&__slide{
+		height: auto;
+		border-top: 1px solid #D9D9D9;
+		position: relative;
+		.icon{
+			@include a-cent(y);
+			left: calc(var(--left) / 2 - 6px);
+			font-size: 12px;
+			stroke: currentColor;
+			fill: none;
+			opacity: 0.2;
+			stroke-width: 1.6px;
+			@include mt;
+		}
+		&.active{
+			.icon{
+				transform: rotateX(-180deg);
+			}
+		}
+	}
+	&__head{
+		padding: rem(20) rem(20);
+		padding-left: var(--left);
+		font-weight: 600;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	
+	&__body{
+		padding: rem(0) rem(20) rem(20);
+		padding-left: var(--left);
+		display: none;
+		p{
+			font-size: rem(12);
+		}
+	}
+
+	.swiper-button-hand{
+		left: 50%;
+		border: none;
+		background: none;
+		box-shadow: none;
+		color: $body-color;
+		--swiperArrowSize: 20px;
+		.icon{
+			font-size: 20px;
+			stroke: currentColor;
+			fill: none; 
+			stroke-width: 1.6px;
+		}
+	}
+	.swiper-button-hand-prev{
+		bottom: auto;
+		transform: rotate(90deg);
+	}
+	.swiper-button-hand-next{
+		top: auto;
+		transform: rotate(90deg);
+	}
+	--swiper-scrollbar-size: 1px;
+	--swiper-scrollbar-drag-bg-color:#D9D9D9;
+	.swiper-scrollbar-drag{
+			&::after{
+				content: '';
+				width: 10px;
+				border-radius: 162px;
+				background-color: var(--swiper-scrollbar-drag-bg-color);
+				height: 100%;
+				@include a-cent1;
+			}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFaq
