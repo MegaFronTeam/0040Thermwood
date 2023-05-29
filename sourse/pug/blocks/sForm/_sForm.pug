@@ -1,15 +1,26 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
-				+policy
+		+e.wrapper
+			.container
+				+e.row.row
+					.col-auto.col-lg-6.col-xl-auto
+						+b.section-title
+							h2 отправьте запрос
+							p и&nbsp;Вам перезвонит специалист, который:
+					.col-md
+						//- .col-md.d-lg-flex.justify-content-center
+						ul
+							li ответит на все  интересующие вопросы
+							li подробно расскажет о продукте 
+							li подберёт материал под Ваш проект и бюджет
+					.col-xl-auto
+						+form-wrap
+							+e.row.row
+								.col-12.col-md.col-lg-6.col-xl-12
+									+input('ваш телефон','tel')
+								.col-6.col-md-auto.col-xl-6
+									+e.btn.btn.btn-primary(type="submit") позвонить
+								.col-6.col-md-auto.col-xl-6
+									+e.btn.btn.btn-primary(type="submit") написать
 	// end sForm
