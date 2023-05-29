@@ -1,0 +1,20 @@
+mixin sDocs(data)
+	// start sDocs
+	+b.SECTION.sDocs.section#sDocs&attributes(attributes)
+		.container
+			+b.section-title
+				h2 скачать информацию
+				
+			+e.row.row
+				+e.col.col
+					+pic('doc.png')
+				.col-md-auto
+					mixin item(t,p)
+						+e.item(href="#")
+							+e.title= t
+							+e.label pdf
+					+item(`каталог термо вуд`)
+					+item(`прайс лист`,``)
+					+item(`документация`,``)
+
+	// end sDocs
