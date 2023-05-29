@@ -1,0 +1,24 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+b.section-title
+				h2 предлагаем <strong>познакомиться</strong> ближе и&nbsp;<strong>проверить</strong> нас в&nbsp;деле
+		+e.content.bg-wrap
+			+pic(`about-bg.jpg`,'bg').picture-bg
+			.container
+				.row
+					.col
+						.h1 каждый заказ мы&nbsp;делаем как для себя
+						p Наша цель&nbsp;&mdash; это комфорт клиента. Благодаря собственному производсту мы&nbsp;гарантируем сроки и&nbsp;качество изделий, неизменную стоимость в&nbsp;процессе работы, фиксируя это в&nbsp;договоре.
+						
+						a.btn.btn-primary(href="#") о компании
+					+e.item.col-auto
+						mixin item(t,p)
+							.strong!= t 
+							p!= p
+
+						+item(`20&nbsp;000&nbsp;м²`,`готовых изделий всегда в&nbsp;наличии на&nbsp;складе`)
+						+item(`82&nbsp;000&nbsp;м²`,`продукции  произведено и&nbsp;реализовано в&nbsp;2022 года`)
+						+item(`100%`,`счастливых клиентов с&nbsp;момента основания`)
+	// end sAbout
