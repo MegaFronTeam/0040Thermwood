@@ -23,7 +23,8 @@ mixin sForm()
 						+form-wrap
 							+e.row.row
 								.col-12.col-md.col-lg-6.col-xl-12
-									+input('ваш телефон','tel')
+									+input('','tel')(required)
+										+e.placeholder ваш телефон
 								.col-6.col-md-auto.col-xl-6
 									+e.btn.btn.btn-primary(type="submit") позвонить
 								.col-6.col-md-auto.col-xl-6
