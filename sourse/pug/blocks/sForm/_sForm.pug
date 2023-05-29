@@ -4,16 +4,21 @@ mixin sForm()
 		+e.wrapper
 			.container
 				+e.row.row
-					.col-auto.col-lg-6.col-xl-auto
+					.col-auto.col-lg-6.col-xl-4
 						+b.section-title
 							h2 отправьте запрос
 							p и&nbsp;Вам перезвонит специалист, который:
-					.col-md
-						//- .col-md.d-lg-flex.justify-content-center
+					.col-md.d-xl-flex.justify-content-center
 						ul
-							li ответит на все  интересующие вопросы
-							li подробно расскажет о продукте 
-							li подберёт материал под Ваш проект и бюджет
+							li
+								span ответит 
+								| на&nbsp;все интересующие вопросы
+							li 
+								span подробно 
+								| расскажет о&nbsp;продукте
+							li 
+								span подберёт 
+								| материал под Ваш проект и&nbsp;бюджет
 					.col-xl-auto
 						+form-wrap
 							+e.row.row
