@@ -1,6 +1,38 @@
+.main-page{
+	.header{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		@include media-breakpoint-up(xl) {
+			padding-right: 17px;
+		}
+	}
+	.top-nav{
+
+		--sPB: #{rem(0)};
+		.menu a, .menu span{
+			color: #fff;
+		}
+	}
+	.topLine {
+		color: #fff;
+		a{
+			&:not(:hover){
+				color: #fff;
+
+			}
+		}
+	}
+}
 .top-nav {
-	--sPT: #{rem(59)};
-	--sPB: #{rem(59)};
+	@include media-breakpoint-up(lg) {
+
+		--sPT: #{rem(59)};
+		--sPB: #{rem(59)};
+	}
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);

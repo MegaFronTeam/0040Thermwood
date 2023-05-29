@@ -158,3 +158,23 @@
 	@include media-breakpoint-down(xs) {
 	}
 }
+
+
+.fixed-soc{
+	position: fixed;
+	top: 50%;
+	margin-top: -60px;
+	// transform: translateY(-50%);
+	z-index: 400;
+	will-change: transform;
+	@include media-breakpoint-up(xl) {
+		right: 38px;
+	}
+	right: 0;
+	.soc{
+		display: block;
+		&__item{
+			margin: 0;
+		}
+	}
+}

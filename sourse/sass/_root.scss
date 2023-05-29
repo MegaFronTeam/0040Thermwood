@@ -39,6 +39,10 @@
 
 	  //  --carousel-button-svg-stroke-width: 2.5;
 	  //  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+		@include media-breakpoint-up(lg) {
+			--header-h: #{rem(192)};
+		}
+		--header-h: #{rem(88)};
 }
 
 @include media-breakpoint-up(xl) {}

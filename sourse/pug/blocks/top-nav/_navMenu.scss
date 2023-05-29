@@ -3,11 +3,12 @@
 
 		display: flex;
 		text-align: center;
+		justify-content: space-around;
 		@include roww(20px);
 		flex-wrap: wrap;
 	}
 	@include media-breakpoint-up(xl) {
-		--bs-gutter-x: #{rem(60)};
+		--bs-gutter-x: #{rem(10)};
 	}
 	list-style: none;
 	position: relative;
@@ -38,8 +39,10 @@
 	}
 	.sub-menu {
 		// @include roww('48px');
+	
 		a {
 			padding: rem(6) 0;
+			color: #000;
 			&:hover {
 				background-color: transparent;
 				color: $primary;
@@ -72,11 +75,12 @@
 			pointer-events: all;
 			list-style: none;
 			text-align: left;
-			display: flex !important;
+			// display: flex !important;
 			flex-direction: column;
 			align-items: center;
 			flex-wrap: wrap;
 			padding: rem(18);
+				display: none;
 			&:hover {
 				opacity: 1;
 				pointer-events: all;

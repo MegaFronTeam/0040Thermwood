@@ -7,10 +7,10 @@ mixin item-sos(icon, a='#')
 //- social buttons
 mixin soc()
 	+b.soc
-		if block
-			block
-		else
-			each soc in social
-				+item-sos(soc)
-
+		+item-sos('', 'https://vk.com/termowoodofficial')
+			+img('img/vk.png')
+		+item-sos('', 'https://t.me/TERMO_1WOOD1')
+			+img('img/youtube.png')
+		+item-sos('', 'https://www.youtube.com/channel/UCBaRZ5XjwGMX5g5_SBfCdJQ')
+			+img('img/telegram.png')
 //- /social buttons 
