@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sResult/_sResult.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sProperties/_sProperties.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sDocs/_sDocs.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sBlog/_sBlog.pug
+ 
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+headerBlock 
+		+sResult()
+		+sCategories()
+		+sProperties
+		+sTeam()
+		+sAbout
+		+sPortfolio()
+		+sDocs()
+		+sForm()
+		+sFaq
+		+sBlog
+		//- +sCatalog
+		//- +sForm()
+		//- +sContact()
+		
+	+parts('footer')
+      
+
+
+
