@@ -1,0 +1,21 @@
+mixin sApproach(data)
+	// start sApproach
+	+b.SECTION.sApproach.section#sApproach&attributes(attributes)
+		.container
+			+b.section-title
+				h2 всё дело 
+					b в подходе
+			+e.row.row
+				mixin item(h, t)
+					.col-lg-6
+						+e.item
+							+e.check
+							+e.content
+								h4!= h
+								span!= t
+				+item(`Не&nbsp;поднимаем стоимость:`, `Фиксируем стоимость в&nbsp;договоре`)
+				+item(`индивидуальный подход к&nbsp;клиенту:`, `Формируем предложение с&nbsp;учётом интересов каждого`)
+				+item(`точное соблюдение сроков:`, `Несёсм ответственность <br> за&nbsp;соблюдение сроков`)
+				+item(`высокий уровень профессионализма сотрудников:`, `Оперативно решаем все возникающие вопросы`)
+
+	// end sApproach

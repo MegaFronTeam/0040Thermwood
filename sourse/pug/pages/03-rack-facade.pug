@@ -4,7 +4,7 @@ include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sPortfolio/_sPortfolio.pug
 include ../blocks/sPalette/_sPalette.pug
-//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sApproach/_sApproach.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -21,10 +21,11 @@ block pagecontent
 	+parts('header')
 	main
 		+page-head(title)
+		+sApproach()
 		+sPalette(`цветовая палитра на&nbsp;термоясене`)
 			- for (var x = 1; x < 16; x++)
 				+item(x)
-			
+
 		+sPortfolioSlider()
 		+sCategoriesCards()
 		+sForm()

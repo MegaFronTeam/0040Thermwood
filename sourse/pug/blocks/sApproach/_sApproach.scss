@@ -1,0 +1,84 @@
+// start .sApproach
+.sApproach {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(70)};
+	}
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--sTPB);
+	}
+	// .section-title {
+	// }
+
+	&__item {
+		@include roww(#{rem(16)}, 0, m);
+		display: flex;
+		max-width: rem(544);
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: #{rem(24)}
+		}
+	}
+
+	&__check {
+		position: relative;
+		--w: #{rem(44)};
+		width: var(--w);
+		height: var(--w);
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(217, 217, 217, 0.3);
+		flex-shrink: 0;
+		&::after {
+			content: "";
+			@include a-cent;
+			background-image: url(../img/svg/check.svg);
+			background-repeat: no-repeat;
+			background-size: 50%;
+			background-position: center center;
+			width: calc(var(--w) - #{rem(10)});
+			height: calc(var(--w) - #{rem(10)});
+			background-color: $primary;
+			border-radius: inherit;
+		}
+	}
+	&__content {
+		font-size: rem(16);
+		line-height: calc(22 / 18);
+		letter-spacing: -0.035em;
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(md) {
+			font-size: rem(18);
+		}
+		h4 {
+			font-weight: 600;
+			text-transform: uppercase;
+			line-height: inherit;
+			font-size: inherit;
+		}
+		span {
+			display: block;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sApproach
