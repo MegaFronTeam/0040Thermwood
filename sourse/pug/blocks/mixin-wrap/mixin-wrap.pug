@@ -42,7 +42,7 @@ mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
 		.container
-			+breadcrumb('Главная',...items)
+			//- +breadcrumb('Главная',...items)
 
 			h1= t
 
@@ -50,3 +50,23 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin section(t)
+	+b.section
+		.container
+			.section-title
+				h2= t
+				if p
+					p!= p
+		block
+
+mixin card(i,t,p)
+	+b.card-item
+		+e.img-wrap.bg-wrap(href="#")
+			+img(i,'bg').picture-bg
+			if t
+				+e.btn.btn.btn-primary!= t
+		if p
+			+e.caption
+				p= p
+	// /.card-item

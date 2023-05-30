@@ -417,6 +417,33 @@ function eventHandler() {
 			prevEl: '.sBlog .swiper-button-prev',
 		}
 	});
+	
+	new Swiper('.section__slider--js', { 
+		// loop: true,
+		spaceBetween: 10,
+		slidesPerView: 'auto',
+		// navigation: {
+		// 	nextEl: '.sBlog .swiper-button-next',
+		// 	prevEl: '.sBlog .swiper-button-prev',
+		// }
+	});
+
+	var swipersPortfolio = new Swiper(".sPortfolio__slider--js", {
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: "auto",
+		loop: true,
+		// loopedSlides: 10,
+		coverflowEffect: {
+			rotate: 0,
+			stretch: -60,
+			depth: 100,
+			modifier: 4,
+			slideShadows: false,
+		},
+	});
+
 };
 	
 if (document.readyState !== 'loading') {

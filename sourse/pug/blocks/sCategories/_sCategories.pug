@@ -17,24 +17,11 @@ mixin catalogItem(img, title, price)
 				.col-auto
 					+e.btn.btn.btn-primary(href="#") заказать
 
-mixin sCategories(data)
+
+mixin sCategoriesCards(data)
 	// start sCategories
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
-		.container
-			+b.section-title
-				h2 производим 
-					b материал для комфортной жизни
-		+e.wrapper
-			+e.row.row
-				.col-md-6
-					+e.item
-						+img(`img/sCategories-1.jpg`, 'bg')
-						+e.btn.btn.btn-primary(href="#") фасадная доска
-				.col-md-6
-					+e.item
-						+img(`img/sCategories-2.jpg`, 'bg')
-						+e.btn.btn.btn-primary(href="#") террасная доска
-
+		block
 		.container
 			+e.wrapper.slider-wrapper
 				+e.slider.swiper.slider-auto-js
@@ -65,3 +52,21 @@ mixin sCategories(data)
 								+tr(`Сроки:`, `В&nbsp;наличии`)
 
 	// end sCategories
+
+
+mixin sCategories()
+	+sCategoriesCards()
+		.container
+			+b.section-title
+				h2 производим 
+					b материал для комфортной жизни
+			+e.wrapper
+				+e.row.row
+					.col-md-6
+						+e.item
+							+img(`img/sCategories-1.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") фасадная доска
+					.col-md-6
+						+e.item
+							+img(`img/sCategories-2.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") террасная доска

@@ -90,6 +90,39 @@
 		}
 	}
 
+	&__slider{
+		max-width: 870px;
+		overflow: visible;
+		.sPortfolio__item{
+			aspect-ratio: 870 / 485;
+			min-height: 1px;
+		}
+	}
+	&__zoom{
+		@include a-cent;
+		width: 66px;
+		height: 66px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(#ABA3A3, .5);
+		z-index: 5;
+		color: #fff;
+		&::before{
+			content: '';
+			width: 104px;
+			height: 104px;
+			border-radius: 50%;
+			@include a-cent1;
+			background: rgba(95, 93, 93, 0.5);
+		}
+		.icon{
+			fill: none;
+			stroke: currentColor;
+			font-size: 22px;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
