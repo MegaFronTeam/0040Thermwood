@@ -565,6 +565,10 @@ p {
 }
 
 .page-head{
+	padding-top: var(--sPT);
+	@include media-breakpoint-up(lg) {
+		padding-top: 0;
+	}
 	h1{
 		font-weight: 500;
 		font-size: 15px;
