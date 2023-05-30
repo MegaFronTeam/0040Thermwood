@@ -3,8 +3,9 @@ extends ../layout/main.pug
 include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sPortfolio/_sPortfolio.pug
-//- include ../blocks/sPalette/_sPalette.pug
-//- include ../blocks/sApproach/_sApproach.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sApproach/_sApproach.pug
+include ../blocks/sProdCardTabs/_sProdCardTabs.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -12,7 +13,7 @@ block variables
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'реечный фасад'
+	- let  title= 'фасадная доска'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -20,7 +21,12 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head(title)
+		//- +page-head(title)
+		+sProdCardTabs()
+		+sApproach()
+		+sPalette(`цветовая палитра на&nbsp;термоясене`)
+			- for (var x = 1; x < 16; x++)
+				+item(x)
 		+sPortfolioSlider()
 		+sCategoriesCards()
 		+sForm()

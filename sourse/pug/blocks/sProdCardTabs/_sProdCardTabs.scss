@@ -1,0 +1,90 @@
+// start .sProdCardTabs
+.sProdCardTabs {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	.tabs {
+		.tabs-swiper {
+			overflow: visible;
+		}
+		&__caption {
+			margin-bottom: rem(30);
+			justify-content: space-between;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40);
+			}
+			@include media-breakpoint-up(xxl) {
+				margin-bottom: rem(60);
+			}
+		}
+		&__btn {
+			@include mt;
+			position: relative;
+			width: auto;
+			padding: rem(10);
+			font-weight: 400;
+			font-size: rem(25);
+			line-height: calc(30 / 25);
+			letter-spacing: -0.035em;
+			text-transform: uppercase;
+			font-size: rem(18);
+			@include media-breakpoint-up(lg) {
+				@include rfs(25px, font-size);
+			}
+			&::after {
+				content: "";
+				@include mt;
+				position: absolute;
+				width: 100%;
+				height: rem(5);
+				left: 0;
+				bottom: 0;
+				border-radius: rem(5);
+				background-color: transparent;
+			}
+			&.active,
+			&:hover {
+				&::after {
+					background-color: $primary;
+				}
+			}
+		}
+		&__content {
+			line-height: calc(20 / 16);
+			text-align: justify;
+			letter-spacing: -0.035em;
+			P {
+				margin-bottom: 1em;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sProdCardTabs
