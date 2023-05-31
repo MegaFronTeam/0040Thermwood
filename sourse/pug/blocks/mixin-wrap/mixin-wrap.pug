@@ -71,7 +71,10 @@ mixin card(i,t,p)
 				p= p
 	// /.card-item
 
-mixin head-banner(i)
+mixin head-banner(i, t)
 	.section
 		+b.head-banner.bg-wrap
 			+pic(i,'bg').picture-bg
+			if t
+				.container
+					+e.btn.btn.btn-primary(href="#")!= t
