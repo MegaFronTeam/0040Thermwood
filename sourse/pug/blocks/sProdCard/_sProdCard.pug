@@ -1,0 +1,30 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				+e.col.col-md-6.col-xl-auto
+					+e.slider-wrap
+						+e.slider--js.swiper
+							.swiper-wrapper
+								-for(let i = 1; i <= 3; i++)
+									+e.slide.swiper-slide
+										+e.img-wrap(href=`img/sProdCard-img-${i}.jpg` data-fancybox="sProdCard")
+											.img-wrap-center
+												+img(`img/sProdCard-img-${i}.jpg`, 'bg')
+												.swiper-lazy-preloader
+						+e.thumb-wrapper
+							+e.thumb-slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 1; i <= 3; i++)
+										+e.thumb-slide.swiper-slide 
+											+e.img-wrap
+												.img-wrap-center
+													+img(`img/sProdCard-img-${i}.jpg`, 'bg')
+													.swiper-lazy-preloader
+							.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+								+icon('arrow-left')
+							.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+								+icon('arrow-right')
+				.col-md-6.col-xl
+	// end sProdCard
