@@ -613,3 +613,9 @@ p {
 .head-banner{
 	aspect-ratio: 1512 / 450;
 }
+
+.btn-light {
+
+	--bs-btn-bg-color:  rgba(167, 167, 167, 0.5);
+	--bs-btn-border-color:  #A7A7A7;
+}

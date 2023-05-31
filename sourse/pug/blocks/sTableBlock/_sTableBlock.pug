@@ -2,35 +2,59 @@ mixin sTableBlock(data)
 	// start sTableBlock
 	+b.SECTION.sTableBlock.section#sTableBlock&attributes(attributes)
 		.container
-			table
-				thead
-					tr.tr-gray
-						th(colspan="4").text-center  реечный фасад
-				tbody
-					tr.tr-gray
-						th(colspan="4") термоясень
-					tr
-						td
-							+e.img-wrap
-								img("img/")
-							p Сорт Экстра
-							p Длина доски 900-4000 мм
-							p Доска короче 2 м - не более 50% от партии
-						td  20
-						td 50
-						td
-						
-					tr
-						td
-							+e.img-wrap
-								img("img/")
-							p Сорт Экстра
-							p Длина доски 900-4000 мм
-							p Доска короче 2 м - не более 50% от партии
-						td  20
-						td 50
-						td
-
-
+			.table-wtrap
+				table
+					thead
+						tr.tr-gray
+							th(colspan="4").text-center  реечный фасад
+						tr 
+							th порода древесины
+							th толщина (мм)
+							th ширина (мм)
+							th цена (руб./м.п)
+					tbody
+						tr.tr-gray
+							th().text-center термоясень
+							th(colspan="3")
+						tr
+							td
+								+e.img-wrap
+									+img("img/table-1-1.png")
+								p Сорт Экстра
+								p Длина доски 900-4000 мм
+								p Доска короче 2 м - не более 50% от партии
+							td: strong  20
+							td: strong 50
+							td
+							
+						tr
+							td(rowspan="2")
+								+e.img-wrap
+									+img("img/table-1-2.png")
+								p Сорт Экстра
+								p Длина доски 900-4000 мм
+								p Доска короче 2 м - не более 50% от партии
+							td(rowspan="2"): strong  20
+							td: strong 50
+							td: strong 390
+						tr
+							td: strong 60
+							td: strong 580
+						tr
+							td
+								+e.img-wrap
+									+img("img/table-1-3.png")
+								p Сорт В (с сучками)
+								p Длина доски 3000 мм
+							td: strong 40
+							td: strong 40
+							td: strong 250
+			p.text-end  *Цены указаны без покртия
+			.row
+				.col
+				.col-auto
+					+e.btn.btn.btn-light(href="#") скачать техпаспорт
+				.col-auto
+					+e.btn.btn.btn-light(href="#") скачать прайс лист
 
 	// end sTableBlock
