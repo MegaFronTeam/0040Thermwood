@@ -199,3 +199,42 @@ mixin sTableBlock05(data)
 				td: strong 40
 				td: strong 40
 				td: strong 250
+
+
+				
+mixin sTableBlock07(data)
+	+sTableBlockBase()
+		thead
+			tr.tr-gray
+				th(colspan="4").text-center  разноширинный фасад
+			tr 
+				th порода древесины
+				th толщина (мм)
+				th ширина (мм)
+				th цена (руб./м.п)
+		tbody
+			tr.tr-gray
+				th().text-center термоясень
+				th(colspan="3")
+			tr
+				td(rowspan="4")
+					+e.img-wrap
+						+img("img/table-2-1.png")
+					p Сорт Экстра
+					p Длина доски 900-3000 мм
+					p Доска короче 2 м - не более 50% от партии
+				td(rowspan="4"): strong  20
+				td: strong 95
+				td: strong 5 800
+				
+			tr
+				td: strong 115
+				td: strong 6 000
+			tr
+				td: strong 135/160
+				td: strong 6 200
+			tr
+				td: strong 180/200
+				td: strong 7 000
+
+

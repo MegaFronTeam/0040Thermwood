@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'террасная доска'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		+head-banner('head-5.jpg',`термоясень <br> от 5800 руб/м²`)
+		+sTableBlock07
+		//- +headerBlock 
+		//- +sResult()
+		+sContent().pb-0
+			.container
+				h2 цвет
+				p Цена доски указана без покрытия. Доску обязательно нужно покрывать, чтобы защитить от выгорания. Покрытие защитными маслами в производственных условиях стоит от 1500 руб./м2. В услугу входит: шлифовка, покрытие нижней стороны в 1 слой, покрытие лицевой стороны в 2 слоя. Мы используем только проверенные немецкие масла Kreidezeit и Leinos.
+				p Фасадная доска из термодерева (термодоска) – это геометрически стабильное, экологичное, долговечное обшивочное изделие из натурального цельного массива (например, из сосны) для внешней и внутренней отделки.
+		+sPalette(`цветовая палитра на термоясене`)
+			- for (var x = 1; x < 16; x++)
+				+item(`${x}`)
+		+sCategoriesCards()
+		+sPortfolioSlider(title)
+
+		+sForm()
+		//- +sCatalog
+		//- +sForm()
+		//- +sContact()
+		
+	+parts('footer')
+      
+
+
+

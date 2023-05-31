@@ -479,6 +479,16 @@ function eventHandler() {
 		},
 	});
 
+	var $grid = $('.grid').masonry({
+		// set itemSelector so .grid-sizer is not used in layout
+		itemSelector: '.masonry__col',
+		// use element for option
+		columnWidth: '.masonry__col',
+		percentPosition: true,
+	})
+	$grid.imagesLoaded().progress(function () {
+		$grid.masonry('layout');
+	});
 };
 
 if (document.readyState !== 'loading') {
