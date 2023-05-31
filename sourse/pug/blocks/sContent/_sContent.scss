@@ -5,6 +5,13 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	img{
+		margin-bottom: 2rem;
+		@extend .res-i;
+	}
+	h2{
+		margin-bottom: rem(13) ;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -21,6 +28,15 @@
 	}
 	&__slide{
 		height: auto;
+	}
+	li{
+		list-style: none;
+		&::before{
+			content: '✔ ';
+			color: $body-color;
+			font-variant: small-caps;
+
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
