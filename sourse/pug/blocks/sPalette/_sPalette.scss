@@ -21,12 +21,16 @@
 	// }
 	&__content {
 		display: grid;
-		row-gap: rem(12);
-		column-gap: rem(12);
+		gap: rem(12);
 		grid-template-columns: repeat(2, 1fr);
+		@include media-breakpoint-up(sm) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		@include media-breakpoint-up(md) {
 			grid-template-columns: repeat(4, 1fr);
 		}
+		
 		@include media-breakpoint-up(lg) {
 			grid-template-columns: repeat(5, 1fr);
 		}

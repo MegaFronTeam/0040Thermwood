@@ -632,8 +632,12 @@ p {
 }
 
 .masonry{
-	--bs-gutter-x: 10px;
-	--bs-gutter-y: 10px;
+	--bs-gutter-x: 6px;
+	@include media-breakpoint-up(lg){
+		--bs-gutter-x: 10px;
+
+	}
+	--bs-gutter-y: var(--bs-gutter-x);
 	margin-bottom: var(--sPB);
 	img{
 		margin-bottom: 0  !important;
