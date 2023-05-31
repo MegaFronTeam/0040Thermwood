@@ -1,0 +1,61 @@
+// start .sPalette
+.sPalette {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(33)};
+		--sPT: #{rem(33)};
+		--sPB: #{rem(33)};
+	}
+	// &__row{
+	// 	// --bs-gutter-x: #{rem()};
+	// 	// --bs-gutter-y: #{rem()};
+
+	// }
+	// .section-title{
+
+	// }
+	// &__col{
+
+	// }
+	&__content {
+		display: grid;
+		row-gap: rem(12);
+		column-gap: rem(12);
+		grid-template-columns: repeat(2, 1fr);
+		@include media-breakpoint-up(md) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+	&__item {
+		@include block(1, 1);
+		// overflow: hidden;
+		&:hover {
+			img {
+				transform: scale(1.05);
+			}
+		}
+		img {
+			@include mt;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPalette

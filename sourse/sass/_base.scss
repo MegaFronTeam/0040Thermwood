@@ -565,8 +565,14 @@ p {
 }
 
 .page-head{
+<<<<<<< HEAD
 	@include media-breakpoint-down(lg) {
 		padding-top: 40px;
+=======
+	padding-top: var(--sPT);
+	@include media-breakpoint-up(lg) {
+		padding-top: 0;
+>>>>>>> 04c9d73bfc4e41c1dcebdd4bdb5369b50ff552f1
 	}
 	h1{
 		font-weight: 500;

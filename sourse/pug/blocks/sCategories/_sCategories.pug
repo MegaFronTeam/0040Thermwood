@@ -23,7 +23,7 @@ mixin sCategoriesCards(data)
 	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
 		block
 		.container
-			+e.wrapper.slider-wrapper
+			.slider-wrapper
 				+e.slider.swiper.slider-auto-js
 					.swiper-wrapper
 						+e.slide.swiper-slide
@@ -60,13 +60,13 @@ mixin sCategories()
 			+b.section-title
 				h2 производим 
 					b материал для комфортной жизни
-			+e.wrapper
-				+e.row.row
-					.col-md-6
-						+e.item
-							+img(`img/sCategories-1.jpg`, 'bg')
-							+e.btn.btn.btn-primary(href="#") фасадная доска
-					.col-md-6
-						+e.item
-							+img(`img/sCategories-2.jpg`, 'bg')
-							+e.btn.btn.btn-primary(href="#") террасная доска
+		+e.wrapper
+			+e.row.row
+				.col-md-6
+					+e.item
+						+img(`img/sCategories-1.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") фасадная доска
+				.col-md-6
+					+e.item
+						+img(`img/sCategories-2.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") террасная доска
