@@ -18,14 +18,17 @@ mixin sPortfolio(data)
 				+e.btn.btn.btn-primary(href="#") террасная доска
 			
 	// end sPortfolio
-mixin sPortfolioSlider(data)
+mixin sPortfolioSlider(subtitle)
 	// start sPortfolio
 	+b.SECTION.sPortfolio.section#sPortfolio&attributes(attributes)
 		.container
 			+b.section-title
 				h2 
 					strong выполненные проекты 
-					| фасадная доска 
+					if subtitle
+						= subtitle
+					else
+						| террасная доска
 		+e.slider--js.swiper
 			.swiper-wrapper
 				- for (var x = 1; x < 4; x++)
