@@ -1,9 +1,9 @@
-mixin sContent()
+mixin sContent(t)
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			+e.row.row
+		if t
+			.container
+				+b.section-title
+					h2!= t
+		block
 	// end sContent
