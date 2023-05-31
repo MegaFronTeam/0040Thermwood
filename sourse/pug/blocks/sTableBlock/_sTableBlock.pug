@@ -1,0 +1,36 @@
+mixin sTableBlock(data)
+	// start sTableBlock
+	+b.SECTION.sTableBlock.section#sTableBlock&attributes(attributes)
+		.container
+			table
+				thead
+					tr.tr-gray
+						th(colspan="4").text-center  реечный фасад
+				tbody
+					tr.tr-gray
+						th(colspan="4") термоясень
+					tr
+						td
+							+e.img-wrap
+								img("img/")
+							p Сорт Экстра
+							p Длина доски 900-4000 мм
+							p Доска короче 2 м - не более 50% от партии
+						td  20
+						td 50
+						td
+						
+					tr
+						td
+							+e.img-wrap
+								img("img/")
+							p Сорт Экстра
+							p Длина доски 900-4000 мм
+							p Доска короче 2 м - не более 50% от партии
+						td  20
+						td 50
+						td
+
+
+
+	// end sTableBlock

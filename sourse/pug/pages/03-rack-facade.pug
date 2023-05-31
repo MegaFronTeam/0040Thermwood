@@ -1,0 +1,41 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'реечный фасад'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		+head-banner('head-1.jpg')
+		+sTableBlock
+		//- +headerBlock 
+		//- +sResult()
+		+sCategoriesCards()
+		+sPortfolioSlider
+
+		+sForm()
+		//- +sCatalog
+		//- +sForm()
+		//- +sContact()
+		
+	+parts('footer')
+      
+
+
+

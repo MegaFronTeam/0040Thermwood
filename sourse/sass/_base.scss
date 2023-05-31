@@ -565,6 +565,9 @@ p {
 }
 
 .page-head{
+	@include media-breakpoint-down(lg) {
+		padding-top: 40px;
+	}
 	h1{
 		font-weight: 500;
 		font-size: 15px;
@@ -603,3 +606,6 @@ p {
 	}
 }
 
+.head-banner{
+	aspect-ratio: 1512 / 450;
+}
