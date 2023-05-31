@@ -576,6 +576,17 @@ p {
 		font-weight: 500;
 		font-size: 15px;
 		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		span {
+			display: inline-block;
+			font-weight: 400;
+			&.h2 {
+				margin-right: 1.5rem;
+				font-weight: 500;
+			}
+		}
 	}
 }
 
