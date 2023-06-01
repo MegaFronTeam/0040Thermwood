@@ -1,0 +1,38 @@
+mixin sMounting(data)
+	// start sMounting
+	+b.sMounting.section#sMounting&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md-6
+					+e.link
+						+img(`img/sMounting-link-1.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") монтаж террасной доски
+				.col-md-6
+					+e.link
+						+img(`img/sMounting-link-2.jpg`, 'bg')
+						+e.btn.btn.btn-primary(href="#") монтаж террасной доски
+			+e.content
+				h4 Монтаж фасадной доски
+				p Монтаж производится на&nbsp;предварительно подготовленный каркас из&nbsp;дерева или алюминия. Оптимальный шаг направляющих составляет 400-600мм. Весь фасад должен хорошо вентилироваться. Не&nbsp;рекомендуется заполнять пространство между лагами. Минимальный зазор между доской и&nbsp;стеной 20&nbsp;мм по&nbsp;всему периметру. Монтаж фасадной доски может производиться как в&nbsp;горизонтальном, так и&nbsp;вертикальном направлении.
+			+e.row.row.sMounting__row--sm
+				+e.col.col-sm-6.col-md-4
+					+e.item
+						h4 горизонтальный
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/sMounting-item-1.jpg`, 'bg')
+				+e.col.col-sm-6.col-md-4
+					+e.item
+						h4 вертикальный
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/sMounting-item-2.jpg`, 'bg')
+				+e.col.col-sm-6.col-md-4
+					+e.item
+						h4 реечный
+						+e.img-wrap
+							.img-wrap-center
+								+img(`img/sMounting-item-3.jpg`, 'bg')
+
+
+	// end sMounting
