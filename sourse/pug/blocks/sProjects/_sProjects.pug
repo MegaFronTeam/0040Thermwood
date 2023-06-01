@@ -4,37 +4,46 @@ mixin sProjects(data)
 		.container
 			+e.head
 				.row
-					.col-3
-						+in-c('checkbox', `все проекты`)
-					.col-3
-						+in-c('checkbox', `фасадная доска`)
-						+in-c('checkbox', `террасная доска`)
-						+in-c('checkbox', `подшивка крыши`)
-					.col-3
-						+in-c('checkbox', `термоясень`)
-						+in-c('checkbox', `термопихта`)
-						+in-c('checkbox', `термохвоя`)
-					.col-3
-						+in-c('checkbox', `Менее 100 м²`)
-						+in-c('checkbox', `более 300 м²`)
-						+in-c('checkbox', `более 1000 м²`)
-					.text-end.fw-500 2022-2021 г.
+					.col-lg
+						div: +in-c('checkbox', `все проекты`)
+					.col-sm.col-6
+						div: +in-c('checkbox', `фасадная доска`)
+						div: +in-c('checkbox', `террасная доска`)
+						div: +in-c('checkbox', `подшивка крыши`)
+					.col-sm.col-6
+						div: +in-c('checkbox', `термоясень`)
+						div: +in-c('checkbox', `термопихта`)
+						div: +in-c('checkbox', `термохвоя`)
+					.col-sm.col-6
+						div: +in-c('checkbox', `Менее 100 м²`)
+						div: +in-c('checkbox', `более 300 м²`)
+						div: +in-c('checkbox', `более 1000 м²`)
+			.text-end.fw-500.mb-2 2022-2021 г.
 
-			+b.masonry.grid.row
+			+e.grid
 				mixin grid-item(x)
-					+e.col.col-4(href=`#`)
+					+e.item(href=`#`)
 						//- img(src=`img/gal-${x}.jpg`, alt="")
 						+img(`img/project-${x}.jpg`)
-				+grid-item(`1`)
-				+grid-item(`2`)
-				+grid-item(`3`)
-				+grid-item(`4`)
-				+grid-item(`5`)
-				+grid-item(`6`)
-				+grid-item(`7`)
-				+grid-item(`8`)
-				+grid-item(`9`)
-				+grid-item(`10`)
-				+grid-item(`11`)
-				+grid-item(`12`)
+						+b.zoom-center
+							+icon("zoom")
+						+e.caption
+							+e.title Фасадная доска из массива Термоясеня
+							.row
+								.col 20х160 мм
+								.col-auto 1000 м²
+				- for (var x = 0; x < 2; x++)
+					+grid-item(`1`)
+					+grid-item(`2`)
+					+grid-item(`3`)
+					+grid-item(`4`)
+					+grid-item(`5`)
+					+grid-item(`6`)
+					+grid-item(`7`)
+					+grid-item(`8`)
+					+grid-item(`9`)
+					+grid-item(`10`)
+					+grid-item(`11`)
+					+grid-item(`12`)
+					<!-- grid-item -->
 	// end sProjects
