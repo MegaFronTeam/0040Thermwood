@@ -3,23 +3,17 @@ mixin sCatalogPage(data)
 	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
 		.container
 			+e.grid
-				mixin grid-item(x)
-					+e.item(href=`#`)
+				mixin grid-item(x,t)
+					+e.item.bg-wrap
 						//- img(src=`img/gal-${x}.jpg`, alt="")
-						+img(`img/project-${x}.jpg`)
-						+b.zoom-center
-							+icon("zoom")
-						+e.caption
-							+e.title Фасадная доска из массива Термоясеня
-							.row
-								.col 20х160 мм
-								.col-auto 1000 м²
-				- for (var x = 0; x < 2; x++)
-					+grid-item(`1`)
-					+grid-item(`2`)
-					+grid-item(`3`)
-					+grid-item(`4`)
-					+grid-item(`5`)
-					+grid-item(`6`)
-					+grid-item(`7`)
+						+img(`img/catalogItem-page-${x}.jpg`).picture-bg
+						+e.btn.btn.btn-primary(href="#")= t
+				- for (var x = 0; x < 1; x++)
+					+grid-item(`1`,`фасадная  доска`)
+					+grid-item(`2`,`террасная доска`)
+					+grid-item(`3`,`подшивка крыши`)
+					+grid-item(`4`,`доска пола`)
+					+grid-item(`5`,`крепежи и подсистема`)
+					+grid-item(`6`,`мебельные щиты`)
+					+grid-item(`7`,`обрезная доска`)
 	// end sCatalogPage
