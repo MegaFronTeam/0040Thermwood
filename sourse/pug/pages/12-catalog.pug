@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCatalogPage/_sCatalogPage.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'продукция'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		//- +head-banner('head-5.jpg')
+		+sCatalogPage
+		//- +sCatalog
+		//- +sForm()
+		//- +sContact()
+		
+	+parts('footer')
+      
+
+
+
