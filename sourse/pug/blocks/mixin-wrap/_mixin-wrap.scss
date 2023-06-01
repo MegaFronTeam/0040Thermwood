@@ -41,36 +41,54 @@
 }
 
 .addBlock {
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
+	// background: #F8F8F8;
+	@include roww(7px, 0, m);
+	width: auto;
+	color: var(--color, #{$white});
 	display: flex;
 	position: relative;
 	overflow: hidden;
 	input {
+		font-weight: 300;
+		font-size: rem(16);
+		line-height: calc(20 / 16);
+		letter-spacing: -0.035em;
+		background-color: #a7a7a7;
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: rem(40);
+		// flex: 0 0 1%;
+		width: rem(100);
+		outline: none !important;
+	}
+	&__input-wrap {
+		flex-grow: 1;
 	}
 	&__btn {
 		color: inherit;
-		height: rem(45);
+		height: rem(40);
+		width: rem(40);
+		background-color: #a7a7a7;
+		flex-shrink: 0;
 		position: relative;
-		border-radius: 23px;
-		background: none !important;
 		border: none !important;
 		box-shadow: none !important;
 		outline: none !important;
-		background: transparent;
+		// background: transparent;
+		border-radius: 0;
+		@include mt;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		&:hover {
+			background-color: $primary;
+			color: #fff;
+		}
 		&::before,
 		&::after {
 			content: "";
 			width: 10px;
-			height: 2px;
+			height: 1px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
