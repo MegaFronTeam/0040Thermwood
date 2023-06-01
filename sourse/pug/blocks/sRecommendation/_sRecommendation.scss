@@ -1,0 +1,51 @@
+// start .sRecommendation
+.sRecommendation {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(24)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(48)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		h2 {
+			text-align: center;
+			font-weight: 600;
+			text-align: center;
+			font-variant: small-caps;
+			color: rgba(87, 87, 87, 0.8);	
+			font-size: rem(25);		
+			@include media-breakpoint-up(lg) {
+				font-size: rem(40);		
+			}
+		}
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	h2 {
+		margin-bottom: rem(32);
+	}
+	p {
+		font-size: rem(16);
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(18);
+			margin-bottom: rem(24);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sRecommendation

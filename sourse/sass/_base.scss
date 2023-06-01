@@ -590,6 +590,22 @@ p {
 				}
 			}
 		}
+		.subpage {
+			font-size: rem(15);
+			line-height: 1.31;
+			display: flex;
+			align-items: center;
+			&:before {
+				content: '';
+				display: block;
+				width: rem(6);
+				height: rem(6);
+				border-radius: 50%;
+				background-color: #000;
+				margin-right: rem(24);
+				flex: 0 0 auto;
+			}
+		}
 	}
 }
 

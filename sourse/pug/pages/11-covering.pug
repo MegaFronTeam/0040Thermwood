@@ -1,0 +1,54 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sProjects/_sProjects.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sCatalogPage/_sCatalogPage.pug
+include ../blocks/sWhatCovering/_sWhatCovering.pug
+include ../blocks/sRecommendation/_sRecommendation.pug
+include ../blocks/sPalette/_sPalette.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Услуги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head()
+			h1
+				span.h2 услуги
+				span.subpage покрытие
+		+sWhatCovering
+		+sRecommendation
+		+sPalette(`цветовая палитра на термоясене`)
+			- for (var x = 1; x < 16; x++)
+				+item(`${x}`)
+		+sContent
+			.container
+				p Термопихта и Термохвоя – мягкие породы, и после термообработки приобретают светлый золотистый оттенок. Такую доску можно тонировать в любой цвет.
+		+sPalette(`цветовая палитра на термопихте/термохвое`)
+			- for (var x = 1; x < 11; x++)
+				+item(`1-${x}`)
+		+sForm
+		+sContent
+			.container
+				h2 уход
+				p При незначительном загрязнении поверхность следует мыть чуть тёплой водой без добавления моющих средств. Сильные загрязнения можно удалять раствором марсельского мыла (не&nbsp;содержит щелочи).<br>Большинство натуральных масел не&nbsp;содержат фунгицидов&nbsp;&mdash; защиты от&nbsp;грибка. Поэтому крайне важно периодически проверять наружные поверхности на&nbsp;предмет поражения. Как правило, грибок можно распознать по&nbsp;маленьким черным точкам. Нужно помнить, что термодерево не&nbsp;подвержено гниению и&nbsp;поражению микроорганизмов, и&nbsp;грибок образуется только на&nbsp;поверхности. В&nbsp;случае повреждения нужно немедленно помыть доску водой или мылом.<br>В&nbsp;среднем тонированные масла сохраняют защиту дерева от&nbsp;УФ лучей в&nbsp;течение 5&nbsp;и&nbsp;более лет на&nbsp;фасаде здания. Если фасад находится на&nbsp;северной и&nbsp;западной сторонах, этот срок будет в&nbsp;1,5 раза больше. Террасы, к&nbsp;сожалению, нужно обновлять ежегодно.<br>Преимущества масла в&nbsp;том, что для обновления не&nbsp;требуется сошлифовки поверхности (только в&nbsp;случае локальных глубоких загрязнений). Достаточно будет помыть фасад или террасу раствором марсельского мыла, дать ему высохнуть и&nbsp;покрыть в&nbsp;один слой.<br>Частота восстановительных работ сильно зависит от&nbsp;интенсивности воздействия погодных факторов и&nbsp;от&nbsp;ухода за&nbsp;окрашенной поверхностью. Не&nbsp;существует строго установленных интервалов проведения реновационных работ. Обращаем Ваше внимание, что благодаря минимальной профилактике можно существенно продлить первоначальный вид изделия.
+	+parts('footer')
+      
+
+
+
