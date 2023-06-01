@@ -1,0 +1,69 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'термоясень'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		+head-banner('head-5.jpg')
+		+sContent().pb-0
+			.container
+				p Термоясень — самый распространенный материал термообрабатываемой древесины. Он имеет богатый темно-шоколадный оттенок. Твердая структура позволяет использовать его как на фасаде, так и на террасе. Но самый главный плюс – его эстетические свойства.
+		+sCategoriesCards()
+		+sContent().pb-0
+			.container
+				.section-title 
+					h2 вдохновение
+				+b.masonry
+					mixin grid-item(x)
+						+e.col(data-fancybox="vdoh" href=`img/gal-${x}.jpg`)
+							//- img(src=`img/gal-${x}.jpg`, alt="")
+							+img(`img/gal-${x}.jpg`)
+					- for (var x = 0; x < 1; x++)
+						+grid-item(`1`)
+						+grid-item(`2`)
+						+grid-item(`3`)
+						+grid-item(`4`)
+						+grid-item(`5`)
+						<!-- grid -->
+					//- +grid-item(`1`)
+					//- +grid-item(`2`)
+					//- +grid-item(`4`)
+					//- +grid-item(`5`)
+					//- +grid-item(`3`)
+				p Ясень после термообработки приобретает темно-шоколадный оттенок на всю толщину доски. Это очень красивый и благородный цвет, который многие хотят сохранить. К сожалению, даже после покрытия бесцветными составами, доска «поджигается», становится темнее и отдает в красноту. Чтобы добиться более светлых оттенков, используют специальную технологию покрытия с высветляющими тонированными маслами, при этом цветовая палитра на термоясене всё равно ограничена в связи с изначальным темным оттенком сырья.
+		+sPalette(`цветовая палитра на термоясене`)
+			- for (var x = 1; x < 16; x++)
+				+item(`${x}`)
+		+sForm()
+		//- +sCatalog
+		//- +sForm()
+		//- +sContact()
+		
+	+parts('footer')
+      
+
+
+
+
+
+
