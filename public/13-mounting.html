@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Модальные окна</title>
+		<title>Монтаж</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -27,15 +27,67 @@
 	</head>
 	<body>
 		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
 			<main>
-				<div class="section container">
-					<h1>Страница для  демонстрации модальных окон</h1>
-					<div class="row">
-												<div class="col-auto mb-2">
-													<button class="btn btn-primary btn-modal-js" data-src="#modal-call" data-fancybox>modal-call</button>
-												</div>
+				<div class="page-head">
+					<div class="container">
+						<h1><span class="h2">фасадная доска</span></h1>
 					</div>
 				</div>
+				<!-- start sMounting-->
+				<div class="sMounting section" id="sMounting">
+					<div class="container">
+						<div class="sMounting__row row">
+							<div class="col-md-6">
+								<div class="sMounting__link"><img class="object-fit-js" src="img/sMounting-link-1.jpg" alt="" loading="lazy"/>
+									<a class="sMounting__btn btn btn-primary" href="#">монтаж террасной доски
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="sMounting__link"><img class="object-fit-js" src="img/sMounting-link-2.jpg" alt="" loading="lazy"/>
+									<a class="sMounting__btn btn btn-primary" href="#">монтаж террасной доски
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="sMounting__content">
+							<h4>Монтаж фасадной доски</h4>
+							<p>Монтаж производится на&nbsp;предварительно подготовленный каркас из&nbsp;дерева или алюминия. Оптимальный шаг направляющих составляет 400-600мм. Весь фасад должен хорошо вентилироваться. Не&nbsp;рекомендуется заполнять пространство между лагами. Минимальный зазор между доской и&nbsp;стеной 20&nbsp;мм по&nbsp;всему периметру. Монтаж фасадной доски может производиться как в&nbsp;горизонтальном, так и&nbsp;вертикальном направлении.</p>
+						</div>
+						<div class="sMounting__row row sMounting__row sMounting__row--sm">
+							<div class="sMounting__col col-sm-6 col-md-4">
+								<div class="sMounting__item">
+									<h4>горизонтальный</h4>
+									<div class="sMounting__img-wrap">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/sMounting-item-1.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sMounting__col col-sm-6 col-md-4">
+								<div class="sMounting__item">
+									<h4>вертикальный</h4>
+									<div class="sMounting__img-wrap">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/sMounting-item-2.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sMounting__col col-sm-6 col-md-4">
+								<div class="sMounting__item">
+									<h4>реечный</h4>
+									<div class="sMounting__img-wrap">
+										<div class="img-wrap-center"><img class="object-fit-js" src="img/sMounting-item-3.jpg" alt="" loading="lazy"/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sMounting-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
