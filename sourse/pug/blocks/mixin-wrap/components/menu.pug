@@ -4,10 +4,15 @@ mixin mnu()
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			each link in nav
 				if link.name
-					li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+					li.menu-item(itemprop="item" ) 
+						a(href= link.url itemprop="url")= link.name
+							if link.linkSpan
+								div.number= link.linkSpan
 				if link.subnav
 					li.menu-item.menu-item-has-children
-						span= link.subname
+						span
+							= link.subname
+							.toogle-sub-menu-icon
 						ul.sub-menu
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" )

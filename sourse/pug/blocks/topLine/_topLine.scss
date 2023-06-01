@@ -5,6 +5,8 @@
 	--sPB: #{rem(16)};
 	// --sTPB: #{rem()};
 	border-bottom: 0.3px solid #bfbfbf;
+	position: relative;
+	z-index: 100;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(23)};
 		--sPB: #{rem(18)};

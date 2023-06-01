@@ -1,8 +1,8 @@
 
-	// start .header
-	.header {
-		 position: relative;
-		 z-index: 500;
+// start .header
+.header {
+	// position: relative;
+	// z-index: 500;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
