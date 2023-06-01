@@ -4,15 +4,34 @@
 		left: 0;
 		top: 0;
 		width: 100vw;
+		// z-index: 1001;
 		@include media-breakpoint-up(xl) {
 			padding-right: 17px;
 		}
 	}
 	.top-nav{
-
+		
 		--sPB: #{rem(0)};
-		.menu a, .menu span{
-			color: #fff;
+		@include media-breakpoint-up(lg) {
+			position: relative;
+			z-index: 100;	
+		}
+		// .menu a, .menu span{
+		// 	&:not(:hover) {
+		// 		color: #fff;
+		// 	}
+		// }
+		.menu-mobile .menu .menu-item a:not(:hover),
+		.menu-mobile .menu .menu-item span:not(:hover){
+			color: #000;
+			@include media-breakpoint-up(lg) {
+				color: #fff;
+			}
+		}
+		.sub-menu .menu-item a:not(:hover) {
+			@include media-breakpoint-up(lg) {
+				color: #000 !important;
+			}
 		}
 	}
 	.topLine {
@@ -20,8 +39,15 @@
 		a{
 			&:not(:hover){
 				color: #fff;
-
 			}
+		}
+	}
+	.toggle-menu-mobile {
+		--color: #fff;
+	}
+	.toogle-sub-menu-icon {
+		@include media-breakpoint-up(lg) {
+			--color: #fff;
 		}
 	}
 }

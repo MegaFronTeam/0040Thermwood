@@ -502,6 +502,34 @@ function eventHandler() {
 		},
 	});
 
+	document.addEventListener('click', function(event) {
+		let menuItemWithSubMenuTarget = event.target.closest('.menu-item-has-children span');
+		let menuItemWithSubMenu = document.querySelector('.menu-item-has-children');
+		if(menuItemWithSubMenuTarget && window.matchMedia('(max-width: 992px)').matches) {
+			menuItemWithSubMenu.classList.toggle('active');
+			$('.menu-item-has-children .sub-menu').slideToggle();
+		}
+	})
+
+	var modalThumbSwiper = new Swiper(".modal-win__slider--thumbs-js", {
+		// spaceBetween: 10,
+		slidesPerView: 'auto',
+		// spaceBetween: 0,
+		watchSlidesProgress: true,
+		 
+		observeParents: true,
+		observer: true,
+	});
+	var modalSwiper = new Swiper(".modal-win__slider--js", {
+		slidesPerView: 'auto',
+		// spaceBetween: 0,
+		observeParents: true,
+		observer: true,
+		thumbs: {
+			swiper: modalThumbSwiper,
+		},
+	});
+
 };
 
 if (document.readyState !== 'loading') {

@@ -13,4 +13,31 @@ mixin modal()
 				+policy()
 	// #modal-call
 	
+	div(id="modal-blog"  style="display: none" )
+		+b.modal-win--blog
+			.row
+
+				+e.caption-col.col-lg-6
+					.sBlog__head
+						.sBlog__title Потрясающий дом с отделкой Термодеревом
+						.sBlog__date 19.05.2023 г.
+					.sBlog__body
+						p Хорошая погода-отличный повод для съемки нового объекта с применением планкена из Термоясеня.  В проекте использовали широкую доску для фасада 20х160 мм, общий объем планкена скошенного 1350м². Покрытием натуральным немецким маслом.
+
+						p Обязательно переходите и смотрите на youtube новый видео-ролик с объекта.
+					+e.slider--thumbs-js.swiper
+						.swiper-wrapper
+								- for (var x = 0; x < 7; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap
+											+img("img/blog-img.jpg",'bg')
+				+e.slider-col.col-lg-6.order-lg-first
+					+e.slider--js.swiper
+						.swiper-wrapper
+								- for (var x = 0; x < 7; x++)
+									+e.slide.swiper-slide
+										+e.img-wrap
+											+img("img/blog-img.jpg",'bg')
+	// #modal-call
+	
 	// end modals
