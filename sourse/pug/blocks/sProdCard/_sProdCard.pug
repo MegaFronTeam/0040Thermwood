@@ -27,4 +27,42 @@ mixin sProdCard(data)
 							.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 								+icon('arrow-right')
 				.col-md-6.col-xl
+					+form-wrap
+						+b.section-title
+							h2 Термоясень прямой планкен
+						.table-wrap
+							table
+								thead
+									th(colspan="2") Профиль:
+								tbody
+									mixin tr(p, v)
+										tr
+											td!= p
+											if v
+												td!= v
+											else
+												block
+									+tr(`Толщина:`, `20 мм`)
+									+tr(`Ширина:`, ``)
+										td
+											.form-wrap__input-wrap.form-group
+												select.form-wrap__input.form-select(name='select')
+													option(value='115 мм') 115 мм
+													option(value='120 мм') 120 мм
+													option(value='130 мм') 130 мм
+									+tr(`Длина:`, ``)
+										td
+											.form-wrap__input-wrap.form-group
+												select.form-wrap__input.form-select(name='select')
+													option(value='900 - 3000 мм') 900 - 3000 мм
+													option(value='2000 - 3000 мм') 2000 - 3000 мм
+													option(value='2500 - 3000 мм') 2500 - 3000 мм
+						+e.add-title Количество (м&sup2;):
+						+addblock()
+						+e.row-btns.row
+							.col-sm-6.col-md-12.col-lg-6.col-xl-auto
+								+e.BUTTON.btn.btn.btn-primary(type="submit") отправить запрос
+							.col-sm-6.col-md-12.col-lg-6.col-xl-auto
+								+e.BUTTON.btn.btn.btn-primary(type="submit") получить образцы
+
 	// end sProdCard
