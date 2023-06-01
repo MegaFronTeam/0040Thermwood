@@ -1,9 +1,22 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				+e.col.col
+					+e.item
+						.h2 адрес
+						p г. Химки, мкр. Сходня, Некрасова, 2с3в 10&nbsp;КМ от&nbsp;МКАД
+					+e.item
+						.h2 почта
+						a(href="mailto:termo-wood@mail.ru") termo-wood@mail.ru
+					+e.item
+						.h2 телефон
+						a(href="tel:+74952013706") +7 (495) 201-37-06
+				.col-md-7.col-lg-6.col-xl-auto
+					+form-wrap
+						+input('Имя')
+						+input('E-mail', 'email')
+						+input('Сообщение', 'textarea').mb-0
+						+e.btn.btn.btn-light(type="submit") отправить запрос
 	// end sContact

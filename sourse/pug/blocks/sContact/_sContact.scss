@@ -1,48 +1,131 @@
-
-	// start .sContact
-	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+// start .sContact
+.sContact {
+	// --sPT: #{rem(42)};
+	--sPB: #{rem(55)};
 	// --sTPB: #{rem()};
-	&__row{
+	@include media-breakpoint-up(md) {
+		// --sPT: #{rem(84)};
+		--sPB: #{rem(110)};
+	}
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
-	.section-title{
-		
+	// .section-title {
+	// }
+	&__col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
-	&__col{
-
+	&__item {
+		margin-bottom: var(--bs-gutter-x);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.h2 {
+			line-height: calc(30 / 25);
+			margin-bottom: rem(7);
+		}
+		p {
+			font-weight: rem(15);
+			line-height: calc(18 / 15);
+			font-variant: small-caps;
+			max-width: 19em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a {
+			font-weight: rem(15);
+			line-height: calc(18 / 15);
+			font-variant: small-caps;
+			&:not(:hover) {
+				color: $body-color;
+			}
+		}
 	}
-	&__item{
-
-	}
-	&__slide{
+	&__slide {
 		height: auto;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	.form-wrap {
+		width: rem(540);
+		max-width: 100%;
+		// &__input-wrap {
+		// 	margin-bottom: rem(11);
+		// }
+		&__input {
+			padding: rem(11) 0;
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: calc(20 / 15);
+			font-variant: small-caps;
 
+			--bs-border-width: 0.3px;
+			border-radius: 0;
+			border-color: #a7a7a7;
+			border-left: none;
+			border-top: none;
+			border-right: none;
+		}
+		textarea {
+			background-image: linear-gradient(#a7a7a7 1px, transparent 1px);
+			background-size: 100% 2.77em;
+			background-position: 0 -1px;
+			min-height: rem(210);
+			line-height: 2.77;
+			border-color: transparent;
+			background-attachment: local;
+			padding: 0;
+		}
+		&__btn {
+			width: 100%;
+			font-weight: 400;
+			font-size: rem(25);
+			line-height: calc(30 / 25);
+			text-transform: uppercase;
+			padding: rem(13) rem(14) rem(12);
+			@include rfs(25px, font-size);
+			margin-top: rem(40);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sContact
