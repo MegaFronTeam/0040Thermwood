@@ -76,7 +76,7 @@ mixin card(i,t,p)
 
 mixin head-banner(i, t)
 	.section
-		+b.head-banner.bg-wrap
+		+b.head-banner.bg-wrap&attributes(attributes)
 			+pic(i,'bg').picture-bg
 			if t
 				.container

@@ -121,7 +121,7 @@ main {
 	@include bgs;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
-	&__slide{
+	&__slide {
 		@include media-breakpoint-up(lg) {
 			width: rem(1000);
 			max-width: calc(100% / 3 - 20px / 3);
@@ -130,9 +130,8 @@ main {
 	}
 }
 
-h2{
+h2 {
 	text-transform: uppercase;
-
 }
 .section-title {
 	margin-bottom: var(--sTPB);
@@ -540,7 +539,7 @@ p {
 .btn-primary {
 	--bs-btn-color: #fff;
 	--bs-btn-bg: rgba(79, 196, 29, 0.5);
-	--bs-btn-border-color: #A7A7A7;
+	--bs-btn-border-color: #a7a7a7;
 	--bs-btn-hover-color: #fff;
 	// --bs-btn-hover-bg: #7bca29;
 	// --bs-btn-hover-border-color: #74c71c;
@@ -554,25 +553,24 @@ p {
 	// --bs-btn-disabled-border-color: #64c103;
 }
 
-.custom-popover{
-
-	.popover-header{
+.custom-popover {
+	.popover-header {
 		padding-bottom: 0;
 		text-transform: uppercase;
 		font-weight: 500;
 	}
-	.popover-body{
+	.popover-body {
 		padding-top: 0;
 		font-size: 12px;
 		line-height: calc(15 / 12);
 	}
 }
 
-.page-head{
+.page-head {
 	@include media-breakpoint-down(lg) {
 		padding-top: 40px;
 	}
-	h1{
+	h1 {
 		font-weight: 500;
 		font-size: 15px;
 		text-transform: uppercase;
@@ -609,14 +607,13 @@ p {
 	}
 }
 
-
-.card-item{
-	&__img-wrap{
+.card-item {
+	&__img-wrap {
 		aspect-ratio: 498 / 447;
 		position: relative;
 		display: block;
 	}
-	&__btn{
+	&__btn {
 		position: absolute;
 		left: rem(47);
 		bottom: rem(20);
@@ -632,36 +629,51 @@ p {
 		bottom: 20px;
 		left: 47px;
 	}
-	&__caption{
+	&__caption {
 		padding: rem(50) rem(35) 0;
-		p{
+		p {
 			font-size: 18px;
 		}
 	}
 }
 
-.head-banner{
+.head-banner {
 	aspect-ratio: 1512 / 450;
-	.container{
-		 @extend .section;
-		 display: flex;
-		 flex-direction: column;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+	&.head-banner--contacts {
+		aspect-ratio: 1512 / 612;
+		max-height: rem(612);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container {
+		@extend .section;
+		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 		min-height: 100%;
-		}
-	&__btn{
+	}
+	&__btn {
 		margin-top: auto;
 		width: 203px;
 	}
 }
 
 .btn-light {
-
-	--bs-btn-bg-color:  rgba(167, 167, 167, 0.5);
-	--bs-btn-border-color:  #A7A7A7;
+	--bs-btn-bg-color: rgba(167, 167, 167, 0.5);
+	--bs-btn-border-color: #a7a7a7;
 }
 
-.masonry{
+.masonry {
 	// --bs-gutter-x: 6px;
 	// @include media-breakpoint-up(lg){
 	// 	--bs-gutter-x: 10px;
@@ -669,8 +681,8 @@ p {
 	// }
 	--bs-gutter-y: var(--bs-gutter-x);
 	margin-bottom: var(--sPB);
-	img{
-		margin-bottom: 0  !important;
+	img {
+		margin-bottom: 0 !important;
 
 		width: 100%;
 		height: 100%;
@@ -682,67 +694,56 @@ p {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	@include media-breakpoint-up(sm) {
-
-			gap: 15px;
-		}
-		gap: 10px;
-	&__col{
+		gap: 15px;
+	}
+	gap: 10px;
+	&__col {
 		position: relative;
 		width: 100%;
 		height: 100%;
 		$g: 5;
-		aspect-ratio: 3 /  2;
-		&:nth-child(#{$g}n + 1){ 
-			aspect-ratio: 438 /  579;
+		aspect-ratio: 3 / 2;
+		&:nth-child(#{$g}n + 1) {
+			aspect-ratio: 438 / 579;
 		}
-		&:nth-child(#{$g}n + 2){
-			aspect-ratio: 861 /  389;
+		&:nth-child(#{$g}n + 2) {
+			aspect-ratio: 861 / 389;
 			grid-column: -1 / 2;
 		}
-		&:nth-child(#{$g}n + 3){
-			aspect-ratio: 438 /  423; 
+		&:nth-child(#{$g}n + 3) {
+			aspect-ratio: 438 / 423;
 			grid-column: 1 / span 1;
 		}
-		
-		&:nth-child(1){
-			grid-row: 1 / span 3; 
+
+		&:nth-child(1) {
+			grid-row: 1 / span 3;
 		}
 
 		&:nth-child(4),
-		&:nth-child(#{$g}){
+		&:nth-child(#{$g}) {
 			grid-row: 2 / span 3;
-			
 		}
-		
-		
-		
-		&:nth-child(#{$g + 1} ){
-			grid-row: $g / span 3; 
+
+		&:nth-child(#{$g + 1}) {
+			grid-row: $g / span 3;
 		}
-		
-		&:nth-child(#{$g * 2 + 1} ){
-			grid-row: 9 / span 3; 
+
+		&:nth-child(#{$g * 2 + 1}) {
+			grid-row: 9 / span 3;
 		}
-		
+
 		&:nth-child(#{$g + 4}),
-		&:nth-child(#{$g * 2}){
-			grid-row:   6 / span 3;
-			
+		&:nth-child(#{$g * 2}) {
+			grid-row: 6 / span 3;
 		}
 
-		
 		&:nth-child(#{$g * 2 + 4}),
-		&:nth-child(#{$g * 3}){
-			grid-row:   10 / span 3;
-			
+		&:nth-child(#{$g * 3}) {
+			grid-row: 10 / span 3;
 		}
-
-
-
 	}
-	
 }
 
-h2{
+h2 {
 	font-weight: 500;
 }
