@@ -1,5 +1,6 @@
 include include.pug
 include js-css.pug
+include ../blocks/modal/_modal.pug
 doctype html
 html(lang="ru")
 	head
@@ -54,3 +55,4 @@ html(lang="ru")
 
 		+allcjs()
 		block scripts
+		+modal()
