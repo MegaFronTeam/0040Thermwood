@@ -1,0 +1,25 @@
+mixin sCatalogPage(data)
+	// start sCatalogPage
+	+b.SECTION.sCatalogPage.section#sCatalogPage&attributes(attributes)
+		.container
+			+e.grid
+				mixin grid-item(x)
+					+e.item(href=`#`)
+						//- img(src=`img/gal-${x}.jpg`, alt="")
+						+img(`img/project-${x}.jpg`)
+						+b.zoom-center
+							+icon("zoom")
+						+e.caption
+							+e.title Фасадная доска из массива Термоясеня
+							.row
+								.col 20х160 мм
+								.col-auto 1000 м²
+				- for (var x = 0; x < 2; x++)
+					+grid-item(`1`)
+					+grid-item(`2`)
+					+grid-item(`3`)
+					+grid-item(`4`)
+					+grid-item(`5`)
+					+grid-item(`6`)
+					+grid-item(`7`)
+	// end sCatalogPage
