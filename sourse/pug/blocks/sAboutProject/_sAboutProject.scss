@@ -1,0 +1,120 @@
+// start .sAboutProject
+.sAboutProject {
+	--sPT: #{rem(40)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+		// margin-bottom: rem(30);
+	}
+	.section-title {
+		flex-grow: 1;
+	}
+	h1,
+	h3 {
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: calc(24 / 20);
+		text-transform: uppercase;
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(23);
+		}
+	}
+	&__features {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		p {
+			margin-bottom: rem(23);
+			font-weight: 400;
+			font-size: rem(15);
+			line-height: calc(24 / 15);
+			font-variant: small-caps;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__col {
+	}
+	&__item {
+		display: block;
+		position: relative;
+		aspect-ratio: 427 / 635;
+		&:hover {
+			.zoom-center {
+				opacity: 1;
+			}
+			img {
+				transform: scale(1.06);
+			}
+		}
+		.zoom-center {
+			opacity: 0;
+		}
+		img {
+			@include mt;
+		}
+	}
+	&__slide {
+		height: auto;
+	}
+	.slider-wrapper {
+		position: relative;
+	}
+	// &__slider {
+	// }
+	.swiper-button-hand {
+		--swiperArrowSize: #{rem(35)};
+		border: none;
+		color: #a7a7a7;
+		background-color: transparent;
+		box-shadow: none;
+		--swiperArrowPosition: calc(var(--swiperArrowSize) * -1);
+		@include media-breakpoint-up(xl) {
+			--swiperArrowPosition: calc(var(--swiperArrowSize) * -2);
+		}
+		&:hover {
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(20);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+			stroke-linecap: round;
+			flex-shrink: 0;
+		}
+	}
+	.swiper-pagination {
+		// display: flex;
+		// flex-wrap: wrap;
+		// justify-content: center;
+		// bottom: rem(-30);
+		margin-top: rem(-10);
+		--swiper-pagination-bullet-horizontal-gap: #{rem(6)};
+		.swiper-pagination-bullet {
+			margin-top: rem(10);
+			width: rem(9);
+			height: rem(9);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAboutProject

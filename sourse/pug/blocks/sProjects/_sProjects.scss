@@ -3,99 +3,85 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
+	.section-title {
 	}
-	.custom-input{
+	.custom-input {
 		display: inline-block;
 	}
-	&__head{
+	&__head {
 		margin-bottom: rem(20);
-		.row{
-			--bs-gutter-y: 15px
+		.row {
+			--bs-gutter-y: 15px;
 		}
 	}
 	$g: 12;
-	&__item{
+	&__item {
 		position: relative;
-		aspect-ratio: 3 / 2 ;
+		aspect-ratio: 3 / 2;
 		height: 100%;
 		width: 100%;
 		display: block;
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			margin-bottom: 10px;
 		}
 		&:nth-child(#{$g}n + 1),
-		&:nth-child(#{$g}n + 6),
-		{
+		&:nth-child(#{$g}n + 6) {
 			grid-column: 1 / 6;
-			aspect-ratio: 423 / 635 ;
+			aspect-ratio: 423 / 635;
 		}
-		
-		
+
 		&:nth-child(#{$g}n + 7),
-		&:nth-child(#{$g}n + 2){
+		&:nth-child(#{$g}n + 2) {
 			grid-column: -1 / 6;
 		}
-		
-		&:nth-child(#{$g}n + 3){
+
+		&:nth-child(#{$g}n + 3) {
 			grid-column: -1 / 8;
 		}
-		&:nth-child(3){
-			
+		&:nth-child(3) {
 			grid-row: 2 / span 2;
 		}
 
-		
-		&:nth-child(#{$g + 3}){
-			
+		&:nth-child(#{$g + 3}) {
 			grid-row: #{$g - 3} / span 2;
 		}
 
-		&:nth-child(#{$g * 2}){
-			
+		&:nth-child(#{$g * 2}) {
 			grid-row: #{$g + 1} / span 2;
 		}
 
-
 		&:nth-child(#{$g}n + 4),
 		&:nth-child(#{$g}n + 5),
-		&:nth-child(#{$g}n + 8)
-		{
+		&:nth-child(#{$g}n + 8) {
 			grid-column: 1 / 8;
 		}
-		
-		&:nth-child(#{$g}n + 9){
+
+		&:nth-child(#{$g}n + 9) {
 			grid-column: -1 / 8;
-			aspect-ratio: 423 / 635 ;
+			aspect-ratio: 423 / 635;
 		}
 
-		
 		&:nth-child(#{$g}n + 10),
-		&:nth-child(#{$g}n + 11){
+		&:nth-child(#{$g}n + 11) {
 			grid-column: -1 / 6;
 		}
-		
 
-		&:nth-child(#{$g}){
-			
+		&:nth-child(#{$g}) {
 			grid-row: #{6} / span 2;
 		}
 		&:nth-child(#{$g}),
-		&:nth-child(#{$g * 2}){
-			
+		&:nth-child(#{$g * 2}) {
 			grid-column: 1 / 6;
 		}
 	}
-	img{
+	img {
 		object-fit: cover;
 		width: 100%;
 		position: absolute;
@@ -104,20 +90,18 @@
 		height: 100%;
 		@include mt;
 	}
-	&__grid{
+	&__grid {
 		@include media-breakpoint-up(sm) {
-			
 			gap: 17px;
 		}
 		gap: 10px;
 		@include media-breakpoint-up(md) {
-			
 			display: grid;
 			grid-template-columns: repeat($g, 1fr);
 		}
 	}
 
-	&__caption{
+	&__caption {
 		margin-top: auto;
 		padding: 15px;
 		position: relative;
@@ -126,53 +110,61 @@
 		@include mt;
 		opacity: 0;
 	}
-	.zoom-center{
+	.zoom-center {
 		opacity: 0;
 	}
 
-	&__item:hover img{
+	&__item:hover img {
 		transform: scale(1.06);
 	}
 	&__item:hover * {
 		opacity: 1;
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sProjects
 
-.zoom-center{
-		@include a-cent;
-		@include media-breakpoint-up(sm) {
-			--w:66px; 
-		}	
-			--w: 40px;
-				width: var(--w);
-				height: var(--w);
+.zoom-center {
+	@include a-cent;
+	@include media-breakpoint-up(sm) {
+		--w: 66px;
+	}
+	--w: 40px;
+	width: var(--w);
+	height: var(--w);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(#aba3a3, 0.5);
+	z-index: 5;
+	color: rgba($color: #fff, $alpha: 0.7);
+	@include mt;
+	&::before {
+		content: "";
+		width: calc(var(--w) + 38px);
+		height: calc(var(--w) + 38px);
 		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: rgba(#ABA3A3, .5);
-		z-index: 5;
-		color: #fff;
-		@include  mt;
-		&::before{
-			content: '';
-			width: calc(var(--w) + 38px);
-			height: calc(var(--w) + 38px);
-			border-radius: 50%;
-			@include a-cent1;
-			background: rgba(95, 93, 93, 0.5);
-		}
-		.icon{
-			fill: none;
-			stroke: currentColor;
-			font-size: 22px;
-		}
+		@include a-cent1;
+		background: rgba(95, 93, 93, 0.5);
+		z-index: -1;
+	}
+	.icon {
+		fill: none;
+		stroke: currentColor;
+		font-size: 22px;
+	}
 }

@@ -1,0 +1,15 @@
+mixin sNextProject(data)
+	// start sNextProject
+	+b.SECTION.sNextProject.section#sNextProject&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg
+					+e.features
+						+b.section-title
+							h2 следующий проект
+				+e.col.col-lg-8
+					+e.item(href=`#`) 
+						+img(`img/project-1.jpg`, 'bg')
+						+b.zoom-center
+							+icon("zoom")
+	// end sNextProject

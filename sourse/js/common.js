@@ -375,6 +375,18 @@ function eventHandler() {
 			// 		spaceBetween: 24
 			// 	}
 			// },
+			navigation: {
+				nextEl: sliderParent.querySelector('.swiper-button-next'),
+				prevEl: sliderParent.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: sliderParent.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+				// }
+			},
 		});
 	};
 
@@ -400,6 +412,7 @@ function eventHandler() {
 			swiper: sProdCardThumbSwiper,
 		},
 	});
+
 
 	// modal window
 
@@ -463,7 +476,7 @@ function eventHandler() {
 		// }
 	});
 
-	
+
 
 	const sBlogSlider2 = new Swiper('.sBlog__slider--2js', {
 		loop: true,
@@ -502,10 +515,10 @@ function eventHandler() {
 		},
 	});
 
-	document.addEventListener('click', function(event) {
+	document.addEventListener('click', function (event) {
 		let menuItemWithSubMenuTarget = event.target.closest('.menu-item-has-children span');
 		let menuItemWithSubMenu = document.querySelector('.menu-item-has-children');
-		if(menuItemWithSubMenuTarget && window.matchMedia('(max-width: 992px)').matches) {
+		if (menuItemWithSubMenuTarget && window.matchMedia('(max-width: 992px)').matches) {
 			menuItemWithSubMenu.classList.toggle('active');
 			$('.menu-item-has-children .sub-menu').slideToggle();
 		}
@@ -516,7 +529,7 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		// spaceBetween: 0,
 		watchSlidesProgress: true,
-		 
+
 		observeParents: true,
 		observer: true,
 	});

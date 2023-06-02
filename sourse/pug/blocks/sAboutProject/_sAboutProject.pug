@@ -1,0 +1,37 @@
+mixin sAboutProject(data)
+	// start sAboutProject
+	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md-6.col-lg
+					+e.features
+						+b.section-title
+							h1 О проекте
+						h3 год
+						p 2021 г.
+						h3 местоположение
+						p КП Новая Рига
+						h3 изделие
+						p Скошенный планкен, Термоясень, 20х160 мм
+						h3 площадь
+						p 1200 м²
+
+				+e.col.col-md-6.col-xl-4
+					.slider-wrapper
+						+e.slider.swiper.slider-auto-js
+							.swiper-wrapper
+								- for (var x = 1; x < 13; x++)
+									+e.slide.swiper-slide
+										+e.item(href=`img/project-${x}.jpg` data-fancybox=`project`) 
+											+img(`img/project-${x}.jpg`, 'bg')
+											+b.zoom-center
+												+icon("zoom")
+											.swiper-lazy-preloader
+						.swiper-pagination
+						.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+							+icon('chevron-left')
+						.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+							+icon('chevron-right')
+				.col.d-none.d-xl-block
+
+	// end sAboutProject
