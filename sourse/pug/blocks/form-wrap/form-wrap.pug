@@ -64,12 +64,12 @@ mixin in-c(typ="checkbox", text, name= typ )
 		else
 			+e.SPAN.text.form-check-label= text
  
-mixin add-file(n)
+mixin add-file(n='Прикрепить резюме')
 	+b.add-file
 		label
 			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
+			+e.SPAN.btn
+			+e.SPAN.text!= n
 		+e.SPAN.filename 
 
 
@@ -77,3 +77,13 @@ mixin policy()
 	+e.policy
 		+in-c()(checked)
 			+e.SMALL.text.text-secondary Нажимая кнопку Вы соглашаетесь с Политикой конфиденциальности
+
+mixin upload-field(title)
+	+b.upload-field
+		//- +e.title.form-wrap__input-title!=title
+		+e.wrap
+			+e.input-wrap
+				+e.LABEL
+					input.input-upload(type='file' name='file')
+					span Прикрепить вложение
+			+e.file-name 

@@ -37,4 +37,74 @@ mixin modal()
 											+img("img/blog-img.jpg",'bg')
 	// #modal-call
 	
+	div(id="modal-questions"  style="display: none" )
+		+b.modal-win--questions
+			+e.head-row.row
+				.col
+					.form-data.h5 Оставьте заявку и выберете удобное время звонка
+				.col-auto
+					+e.next(href="#"): +icon('chevron-right') 
+			+e.question-title 1. Выберите область применения Термодерева
+			+e.body-row.row
+				.col-sm
+					+in-c('radio')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/modal-img-1.jpg', 'bg')
+						+e.text Фасадная доска
+				.col-sm
+					+in-c('radio')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/modal-img-2.jpg', 'bg')
+						+e.text Террасная доска
+	// #modal-questions
+
+	div(id="modal-questions2"  style="display: none" )
+		+b.modal-win--questions
+			+e.head-row.row
+				.col
+					.form-data.h5 Оставьте заявку и выберете удобное время звонка
+				.col-auto
+					+e.next(href="#"): +icon('chevron-right') 
+			+e.question-title 2. Выберите породу Термодерева
+			+e.body-row.row
+				.col-sm
+					+in-c('radio' ,'', 'wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/prod-1.jpg', 'bg')
+						+e.text Термоясень
+				.col-sm
+					+in-c('radio' ,'', 'wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/prod-2.jpg', 'bg')
+						+e.text Термопихта
+				.col-sm
+					+in-c('radio' ,'', 'wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/prod-3.jpg', 'bg')
+						+e.text Термохвоя
+			+e.question-title--indent 3. Выберите профиль
+			+e.body-row.row
+				.col-sm
+					+in-c('radio', '', 'rectangle')
+						+e.rectangle
+						+e.text Прямой планкен
+				.col-sm
+					+in-c('radio', '', 'rectangle')
+						+e.rectangle--skew
+						+e.text Косой планкен
+				.col-sm
+					+in-c('radio', '', 'rectangle')
+						+e.rectangle ?
+						+e.text Под заказ
+			+e.question-title--indent 4. Выберите объем (м²)
+			+e.question-title 5. Комментарии
+			+input('', 'textarea')
+			+upload-field()
+	// #modal-questions
+
 	// end modals

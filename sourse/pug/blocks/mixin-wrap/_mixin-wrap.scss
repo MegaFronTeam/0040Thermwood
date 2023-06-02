@@ -165,3 +165,29 @@
 		--bs-gutter-x: #{rem(31)};
 	}
 }
+
+.upload-field {
+	margin-top: rem(16);
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(80);
+	}
+	&__wrap {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__input-wrap {
+		span {
+			cursor: pointer;
+		}
+	}
+	&__file-name  {
+		margin-left: rem(16);
+	}
+}
+.input-upload {
+	display: none;
+}
