@@ -74,10 +74,21 @@ mixin card(i,t,p)
 				p= p
 	// /.card-item
 
-mixin head-banner(i, t)
+mixin head-banner(i, t, title)
 	.section
 		+b.head-banner.bg-wrap&attributes(attributes)
 			+pic(i,'bg').picture-bg
 			if t
 				.container
 					+e.btn.btn.btn-primary(href="#")!= t
+			if title
+				.container
+					.h2!= title
+
+mixin imagesInRow()
+	+b.images-in-row
+		.row
+			.col
+				+e.img-wrap: .img-wrap-center: +img('img/covering-img-5.jpg', 'bg')
+			.col
+				+e.img-wrap: .img-wrap-center: +img('img/covering-img-6.jpg', 'bg')
