@@ -8,8 +8,7 @@
 5. <https://megafronteam.github.io/0040Thermwood/public/06-product-card.html>
 6. <https://megafronteam.github.io/0040Thermwood/public/07-terrace-board.html>
 7. <https://megafronteam.github.io/0040Thermwood/public/09-projects.html>
-8. <https://megafronteam.github.io/0040Thermwood/public/12-catalog.html>
-9. <https://megafronteam.github.io/0040Thermwood/public/14-thermoash.html>
-10. <https://megafronteam.github.io/0040Thermwood/public/16-blog.html>
-
-
+8. <https://megafronteam.github.io/0040Thermwood/public/11-covering.html>
+9. <https://megafronteam.github.io/0040Thermwood/public/12-catalog.html>
+10. <https://megafronteam.github.io/0040Thermwood/public/14-thermoash.html>
+11. <https://megafronteam.github.io/0040Thermwood/public/16-blog.html>

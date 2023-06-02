@@ -666,6 +666,17 @@ p {
 		margin-top: auto;
 		width: 203px;
 	}
+	.h2 {
+		font-size: rem(20);
+		color: rgba(255, 255, 255, 0.8);
+		margin-bottom: 0;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-top: auto;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(40);
+		}
+	}
 }
 
 .btn-light {

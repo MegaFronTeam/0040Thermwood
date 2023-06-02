@@ -38,6 +38,27 @@
 
 		}
 	}
+	&__text-wrap {
+		margin-bottom: rem(30);
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		h2 {
+			margin-bottom: rem(19);
+		}
+		p {
+			margin-bottom: rem(40);
+			text-align: justify;
+			font-variant: small-caps;
+			line-height: 1.31;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
