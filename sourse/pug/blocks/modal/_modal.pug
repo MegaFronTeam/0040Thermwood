@@ -9,6 +9,27 @@ mixin modal()
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  ) перезвоните мне
 				+policy()
 	// #modal-call
+
+	div(id="modal-socials"  style="display: none" )
+		+b.modal-win--socials
+			.h5 напишите нам:
+			.row
+				.col-6
+					+e.soc-item(href="#")
+						+img('img/whatsapp-modal.png')
+						span WhatsApp
+				.col-6
+					+e.soc-item(href="#")
+						+img('img/telegram-modal.png')
+						span Telegram
+
+	// modal-socials
+
+	div(id="modal-accepted"  style="display: none" )
+		+b.modal-win--accepted
+			.h5 ваше обращение принято.&nbsp;в&nbsp;течении 30&nbsp;минут пришлём расчёт.
+
+	// #modal-accepted
 	
 	div(id="modal-blog"  style="display: none" )
 		+b.modal-win--blog
@@ -35,6 +56,6 @@ mixin modal()
 									+e.slide.swiper-slide
 										+e.img-wrap
 											+img("img/blog-img.jpg",'bg')
-	// #modal-call
+	// #modal-blog
 	
 	// end modals
