@@ -10,6 +10,8 @@
 7. <https://megafronteam.github.io/0040Thermwood/public/09-projects.html>
 8. <https://megafronteam.github.io/0040Thermwood/public/10-about-project.html>
 9. <https://megafronteam.github.io/0040Thermwood/public/11-covering.html>
-10. <https://megafronteam.github.io/0040Thermwood/public/12-catalog.html>
-11. <https://megafronteam.github.io/0040Thermwood/public/14-thermoash.html>
-12. <https://megafronteam.github.io/0040Thermwood/public/16-blog.html>
+10. <https://megafronteam.github.io/0040Thermwood/public/13-mounting.html>
+11. <https://megafronteam.github.io/0040Thermwood/public/12-catalog.html>
+12. <https://megafronteam.github.io/0040Thermwood/public/14-thermoash.html>
+13. <https://megafronteam.github.io/0040Thermwood/public/15-contacts.html>
+14. <https://megafronteam.github.io/0040Thermwood/public/16-blog.html>

@@ -472,11 +472,11 @@
 					<form>
 						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__input-title">Введите номер телефона:</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="" required="required"/> 
+							<label><span class="form-wrap__input-title">Введите номер телефона:</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (_ _ _) - _ _ _ - _ _ - _ _" required="required"/> 
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit">перезвоните мне
+						<button class="form-wrap__btn btn btn-primary" type="submit">перезвоните мне
 						</button>
 						<div class="form-wrap__policy">
 							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Нажимая кнопку Вы соглашаетесь с Политикой конфиденциальности</small>
@@ -487,6 +487,28 @@
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div id="modal-socials" style="display: none">
+			<div class="modal-win modal-win--socials">
+				<div class="h5">напишите нам:</div>
+				<div class="row">
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/whatsapp-modal.png" alt="" loading="lazy"/><span>WhatsApp</span>
+						</a>
+					</div>
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/telegram-modal.png" alt="" loading="lazy"/><span>Telegram</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal-socials-->
+		<div id="modal-accepted" style="display: none">
+			<div class="modal-win modal-win--accepted">
+				<div class="h5">ваше обращение принято.&nbsp;в&nbsp;течении 30&nbsp;минут пришлём расчёт.</div>
+			</div>
+		</div>
+		<!-- #modal-accepted-->
 		<div id="modal-blog" style="display: none">
 			<div class="modal-win modal-win--blog">
 				<div class="row">
@@ -569,7 +591,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<!-- #modal-blog-->
 		<div id="modal-questions" style="display: none">
 			<div class="modal-win modal-win--questions">
 				<div class="modal-win__head-row row">
