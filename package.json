@@ -46,6 +46,7 @@
     "@fancyapps/ui": "^5.0.16",
     "imagesloaded": "^5.0.0",
     "inputmask": "^5.0.8",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
     "masonry-layout": "^4.2.2",
     "swiper": "^9.2.2"

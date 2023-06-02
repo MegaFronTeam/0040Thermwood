@@ -123,9 +123,29 @@ mixin modal()
 						+e.rectangle ?
 						+e.text Под заказ
 			+e.question-title--indent 4. Выберите объем (м²)
+			input(type="text").js-range-slider
+			+e.range-input-wrap
+				input(type="text").js-range-input
+				span м²
 			+e.question-title 5. Комментарии
 			+input('', 'textarea')
 			+upload-field()
+			+e.footer-row.row
+				.col-lg Куда отправить расчёт?
+				.col-lg-auto
+					.row
+						.col-sm-4
+							+e.soc-item(href="#")
+								+img('img/whatsapp-modal.png')
+								span WhatsApp
+						.col-sm-4
+							+e.soc-item(href="#")
+								+img('img/telegram-modal.png')
+								span Telegram
+						.col-sm-4
+							+e.soc-item(href="#")
+								+img('img/mail-modal.png')
+								span E-mail
 	// #modal-questions
 
 	// end modals

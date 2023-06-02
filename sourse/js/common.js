@@ -554,6 +554,26 @@ function eventHandler() {
 	}
 	inputFile();
 
+	var $range = $(".js-range-slider");
+	var $input = $(".js-range-input");
+	var valueArr = [0, 500, 900, 1500, 2000, 2800, 3500, 5000];
+
+	$range.ionRangeSlider({
+		type: "single",
+		min: 0,
+		max: 5000,
+		from: 0,
+		grid: true,
+		values: valueArr,
+		skin: "round",
+		onStart: function(data) {
+			$input.prop("value", valueArr[data.from]);
+		},
+		onChange: function(data) {
+			$input.prop("value", valueArr[data.from]);
+		}
+	});
+
 };
 
 if (document.readyState !== 'loading') {
