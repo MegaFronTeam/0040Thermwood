@@ -72,14 +72,14 @@
 		transform: translateY(-50%);
 		border: none;
 		background-color: transparent;
-		--swiperColorDef: #{$light};
-		// opacity: 0.6;
+		--swiperColorDef: #{$white};
+		// opacity: 0.5;
 		box-shadow: none;
 		&.swiper-button-disabled {
 			opacity: 0;
 		}
 		.icon {
-			font-size: rem(30);
+			font-size: rem(30); 
 		}
 	}
 
