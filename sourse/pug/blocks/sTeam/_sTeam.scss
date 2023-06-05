@@ -64,6 +64,25 @@
 		}
 	}
 
+	.swiper-button-hand {
+		--swiperArrowSize: #{rem(48)};
+		--swiperArrowPosition: 0;
+		top: calc(var(--slideH) / 2);
+		margin: 0;
+		transform: translateY(-50%);
+		border: none;
+		background-color: transparent;
+		--swiperColorDef: #{$light};
+		// opacity: 0.6;
+		box-shadow: none;
+		&.swiper-button-disabled {
+			opacity: 0;
+		}
+		.icon {
+			font-size: rem(30);
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

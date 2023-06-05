@@ -166,6 +166,28 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
+	heightSlide() {
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		function getSlideH() {
+			let slideI = document.querySelectorAll('.sTeam__img-wrap');
+			if (slideI.length == 0) return;
+			let slideH, index = 0;
+			for (const iterator of slideI) {
+				if (index < 1) {
+					slideH = iterator.offsetHeight;
+					index++;
+				} else break;
+			};
+			// console.log(slideH);
+			document.documentElement.style.setProperty('--slideH', `${slideH}px`);
+		};
+		getSlideH();
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+			// We execute the same script as before
+			getSlideH();
+		}, { passive: true });
+	},
 	animateScroll() {
 		$(document).on('click', " .menu li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
@@ -389,6 +411,7 @@ function eventHandler() {
 			},
 		});
 	};
+	JSCCommon.heightSlide();
 
 	var sProdCardThumbSwiper = new Swiper(".sProdCard__thumb-slider--js", {
 		// spaceBetween: 10,
@@ -543,12 +566,12 @@ function eventHandler() {
 		},
 	});
 
-	function inputFile(){
-		if (document.querySelector('.upload-field')){
+	function inputFile() {
+		if (document.querySelector('.upload-field')) {
 			let uploadField = document.querySelectorAll('.upload-field');
-			for (let i=0;i<uploadField.length;i++){
+			for (let i = 0; i < uploadField.length; i++) {
 				let inputFile = uploadField[i].querySelector('.input-upload');
-				inputFile.addEventListener('change',() => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
+				inputFile.addEventListener('change', () => uploadField[i].querySelector('.upload-field__file-name').innerHTML = inputFile.files[0].name);
 			}
 		}
 	}
@@ -566,10 +589,10 @@ function eventHandler() {
 		grid: true,
 		values: valueArr,
 		skin: "round",
-		onStart: function(data) {
+		onStart: function (data) {
 			$input.prop("value", valueArr[data.from]);
 		},
-		onChange: function(data) {
+		onChange: function (data) {
 			$input.prop("value", valueArr[data.from]);
 		}
 	});
