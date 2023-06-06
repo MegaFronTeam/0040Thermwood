@@ -48,8 +48,8 @@
 		}
 		p {
 			margin-bottom: rem(40);
-			text-align: justify;
-			font-variant: small-caps;
+			// text-align: justify;
+			// font-variant: small-caps;
 			line-height: 1.31;
 			@include media-breakpoint-up(lg) {
 				font-size: rem(18);

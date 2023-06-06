@@ -75,7 +75,7 @@ mixin card(i,t,p)
 	// /.card-item
 
 mixin head-banner(i, t, title)
-	.section
+	.section.container-max
 		+b.head-banner.bg-wrap&attributes(attributes)
 			+pic(i,'bg').picture-bg
 			if t
@@ -86,7 +86,7 @@ mixin head-banner(i, t, title)
 					.h2!= title
 
 mixin imagesInRow()
-	+b.images-in-row
+	+b.images-in-row.container-max
 		.row
 			.col
 				+e.img-wrap: .img-wrap-center: +img('img/covering-img-5.jpg', 'bg')

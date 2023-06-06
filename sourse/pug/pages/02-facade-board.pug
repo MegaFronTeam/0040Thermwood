@@ -23,25 +23,27 @@ block pagecontent
 		+page-head(title)
 
 		+section('Выберите породу')
-			+e.slider--js.swiper
-				.swiper-wrapper
-					+e.slide.swiper-slide
-						+card(`img/prod-1.jpg`,`термоясень <br> от 5800 руб/м²`)
-					+e.slide.swiper-slide
-						+card(`img/prod-2.jpg`,`термопихта <br> от 3350 руб/м²`)
-					+e.slide.swiper-slide
-						+card(`img/prod-3.jpg`,`термохвоя <br> от 2250 руб/м²`)
+			.container-max
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+card(`img/prod-1.jpg`,`термоясень <br> от 5800 руб/м²`)
+						+e.slide.swiper-slide
+							+card(`img/prod-2.jpg`,`термопихта <br> от 3350 руб/м²`)
+						+e.slide.swiper-slide
+							+card(`img/prod-3.jpg`,`термохвоя <br> от 2250 руб/м²`)
 		+section('выберите тип фасада')
-			+e.slider--js.swiper
-				.swiper-wrapper
-					+e.slide.swiper-slide
-						+card(`img/prod-4.jpg`,`фасадная доска`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
+			.container-max
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+card(`img/prod-4.jpg`,`фасадная доска`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
 
-					+e.slide.swiper-slide
-						+card(`img/prod-5.jpg`,`реечный фасад`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
+						+e.slide.swiper-slide
+							+card(`img/prod-5.jpg`,`реечный фасад`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
 
-					+e.slide.swiper-slide
-						+card(`img/prod-6.jpg`,`разноширинный фасад`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
+						+e.slide.swiper-slide
+							+card(`img/prod-6.jpg`,`разноширинный фасад`,'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione aperiam necessitatibus. Eligendi quas, ipsum animi consequatur, similique molestias consectetur saepe non, possimus eius placeat! Non hic error quibusdam officia.')
 
 		//- +headerBlock 
 		//- +sResult()

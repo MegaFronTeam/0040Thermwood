@@ -117,7 +117,7 @@ $g: 3;
 		&:nth-child(7n + 7){
 			@include media-breakpoint-up(lg) {
 				
-				grid-column: 1 / span $g;
+				grid-column: 1 / span $g !important;
 				aspect-ratio: 1330 / 347 ;
 			}
 			aspect-ratio: 1330 / 647 ;
