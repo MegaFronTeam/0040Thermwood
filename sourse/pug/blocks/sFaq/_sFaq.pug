@@ -4,26 +4,26 @@ mixin sFaq(data)
 		.container
 			+b.section-title
 				h2 <strong>отвечаем</strong> на&nbsp;самые частые <strong>вопросы</strong>
-				
-		+e.row.row
-			.col-lg-6
-				+pic("faq-bg.jpg",'bg')
-			.col-lg-6
-				+e.slider-wrap
-					+e.slider--js.swiper
-						.swiper-wrapper
-							mixin item(t)
-								+e.slide.swiper-slide
-									+e.head.dd-head-js= t
-										+icon("chevron-down")
-									+e.body
-										p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda consequatur ducimus veritatis, dolor laborum accusantium corrupti vitae rem excepturi nam? Voluptate necessitatibus aspernatur quis quos quod voluptas at, id laboriosam.
-										p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda consequatur ducimus veritatis, dolor laborum accusantium corrupti vitae rem excepturi nam? Voluptate necessitatibus aspernatur quis quos quod voluptas at, id laboriosam.
-							- for (var x = 0; x < 3; x++)
-								+item(`Зачем и от чего защищать Термодерево маслом?`)
-								+item(`Как ухаживать за термодеревом?`)
-								+item(`За что я переплачиваю, приобретая термодоску? Чем термодревесина лучше лиственницы и экзотики?`)
-						.swiper-scrollbar
-					+arrow
+		.wrapper-lg
+			+e.row.row
+				.col-lg-6
+					+pic("faq-bg.jpg",'bg')
+				.col-lg-6
+					+e.slider-wrap
+						+e.slider--js.swiper
+							.swiper-wrapper
+								mixin item(t)
+									+e.slide.swiper-slide
+										+e.head.dd-head-js= t
+											+icon("chevron-down")
+										+e.body
+											p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda consequatur ducimus veritatis, dolor laborum accusantium corrupti vitae rem excepturi nam? Voluptate necessitatibus aspernatur quis quos quod voluptas at, id laboriosam.
+											p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda consequatur ducimus veritatis, dolor laborum accusantium corrupti vitae rem excepturi nam? Voluptate necessitatibus aspernatur quis quos quod voluptas at, id laboriosam.
+								- for (var x = 0; x < 3; x++)
+									+item(`Зачем и от чего защищать Термодерево маслом?`)
+									+item(`Как ухаживать за термодеревом?`)
+									+item(`За что я переплачиваю, приобретая термодоску? Чем термодревесина лучше лиственницы и экзотики?`)
+							.swiper-scrollbar
+						+arrow
 				
 	// end sFaq

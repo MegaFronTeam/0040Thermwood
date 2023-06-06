@@ -6,6 +6,9 @@
 	// @include media-breakpoint-up(md) {
 	// 	--sTPB: #{rem(60)};
 	// }
+	.wrapper-lg {
+		overflow: hidden;
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(32)};

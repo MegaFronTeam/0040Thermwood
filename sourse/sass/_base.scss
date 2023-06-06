@@ -594,7 +594,7 @@ p {
 			display: flex;
 			align-items: center;
 			&:before {
-				content: '';
+				content: "";
 				display: block;
 				width: rem(6);
 				height: rem(6);
@@ -757,4 +757,11 @@ p {
 
 h2 {
 	font-weight: 500;
+}
+
+.wrapper-lg {
+	max-width: rem(1512);
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
 }
