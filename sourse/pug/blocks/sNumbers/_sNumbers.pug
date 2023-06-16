@@ -1,0 +1,16 @@
+mixin sNumbers(data)
+	// start sNumbers
+	+b.sNumbers.section#sNumbers&attributes(attributes)
+		.container
+			+e.inner
+					+e.row.row
+						mixin item(p,t,p1)
+							+e.col.col-lg
+								+e.item
+									p= p
+									+e.title= t
+									p= p1
+						+item(`Термообрабатываем`,`420 м3`,`ежемесячно`)
+						+item(`Наличие на складе`,`30 000 м²`,`готовых изделий из термодерева`)
+						+item(`Производство`,`82 000 м²`,`произведено и реализованно за 2022 г.`)
+	// end sNumbers

@@ -1,0 +1,66 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sNumbers/_sNumbers.pug
+include ../blocks/sSecretes/_sSecretes.pug
+include ../blocks/sAdvanteges/_sAdvanteges.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'о компании'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		+sContent().pb-0
+			.container 
+				p Термо Вуд успешно работает на рынке погонажных изделий из термодерева более 14-ти лет (с 2009 года). За это время мы приобрели самое главное – огромный опыт и безупречную репутацию.
+				p Мы специализируемся на термодревесине высших сортов – Термоясень и Термопихта. Основная сфера применения термодерева – это внешняя отделка: фасадная и террасная доска. За годы работы мы убедились в том, что наши изделия действительно стабильнее и долговечнее аналогов (лиственницы и экзотики), поэтому выбор в пользу термодоски – это, в первую очередь, дальновидность и экономия.
+
+				+head-banner('about-page.jpg').head-banner--about
+					+e.content
+						p Мы гордимся нашим парком оборудования, который включает в себя лучшие деревообрабатывающие станки: 
+						p 
+							strong KATRES (Чехия) 
+							br
+							| конвекционный сушильный комплекс (1700 м³) 
+						p 
+							strong SCHROEDER (Германия), WEINIG (Германия), GABBIANI (Италия) 
+							br
+							| строгание, калибрование заготовок и готовых изделий 
+						p Благодаря первоклассному оборудованию и жёсткому контролю качества, на выходе мы получаем идеальный продукт.
+		+sNumbers
+		+sSecretes
+		+sContent().sSclad.pb-0
+			.container 
+				h2 склад
+				p Одним из главных преимуществ ООО «Термо Вуд» является наличие готовых изделий на складе. Мы постоянно поддерживаем запас более 30 000 м² классических профилей фасадной (косой/прямой планкен) и террасной (гладкая/вельвет) доски. Также наши сырьевые запасы позволяют выполнить любой заказ в срок не более 2-х недель. Это значит, что Вам не нужно будет ждать 2-3 месяца и переживать за поставку.
+
+				p Убедиться в качестве и наличии изделий из термодерева можно у нас на складе всего в 15 км от МКАД (г.Сходня).
+				.row
+					.col-12
+						+img("img/about-img-1.jpg")
+					.col-7
+						+img("img/about-img-2.jpg")
+					.col
+						+img("img/about-img-3.jpg")
+		+sAdvanteges
+		+sBlog("следите за нами в блоге ")
+	+parts('footer')
+      

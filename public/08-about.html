@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>о компании</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<h1>о компании</h1>
+					</div>
+				</div>
+				<!-- start sContent-->
+				<section class="sContent section pb-0" id="sContent">
+					<div class="container"> 
+						<p>Термо Вуд успешно работает на рынке погонажных изделий из термодерева более 14-ти лет (с 2009 года). За это время мы приобрели самое главное – огромный опыт и безупречную репутацию.</p>
+						<p>Мы специализируемся на термодревесине высших сортов – Термоясень и Термопихта. Основная сфера применения термодерева – это внешняя отделка: фасадная и террасная доска. За годы работы мы убедились в том, что наши изделия действительно стабильнее и долговечнее аналогов (лиственницы и экзотики), поэтому выбор в пользу термодоски – это, в первую очередь, дальновидность и экономия.</p>
+						<div class="section container-max">
+							<div class="head-banner bg-wrap head-banner head-banner--about">
+								<!-- picture-->
+								<picture class="picture-bg"> 
+									<source type="image/webp" srcset="img/@2x/webp/about-page.webp"/><img class="object-fit-js" src="img/@2x/about-page.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<div class="head-banner__content">
+									<p>Мы гордимся нашим парком оборудования, который включает в себя лучшие деревообрабатывающие станки: </p>
+									<p> <strong>KATRES (Чехия) </strong><br>конвекционный сушильный комплекс (1700 м³) </p>
+									<p> <strong>SCHROEDER (Германия), WEINIG (Германия), GABBIANI (Италия) </strong><br>строгание, калибрование заготовок и готовых изделий </p>
+									<p>Благодаря первоклассному оборудованию и жёсткому контролю качества, на выходе мы получаем идеальный продукт.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sContent-->
+				<!-- start sNumbers-->
+				<div class="sNumbers section" id="sNumbers">
+					<div class="container">
+						<div class="sNumbers__inner">
+							<div class="sNumbers__row row">
+								<div class="sNumbers__col col-lg">
+									<div class="sNumbers__item">
+										<p>Термообрабатываем</p>
+										<div class="sNumbers__title">420 м3
+										</div>
+										<p>ежемесячно</p>
+									</div>
+								</div>
+								<div class="sNumbers__col col-lg">
+									<div class="sNumbers__item">
+										<p>Наличие на складе</p>
+										<div class="sNumbers__title">30 000 м²
+										</div>
+										<p>готовых изделий из термодерева</p>
+									</div>
+								</div>
+								<div class="sNumbers__col col-lg">
+									<div class="sNumbers__item">
+										<p>Производство</p>
+										<div class="sNumbers__title">82 000 м²
+										</div>
+										<p>произведено и реализованно за 2022 г.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sNumbers-->
+				<!-- start sSecretes-->
+				<section class="sSecretes section" id="sSecretes">
+					<div class="container">
+						<div class="section-title">
+							<h2> <strong>секрет нашей успешной работы - </strong>любовь к&nbsp;своему делу и&nbsp;ответственность за&nbsp;каждый заказ</h2>
+						</div>
+						<div class="sSecretes__row row">
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-1.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-2.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-3.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item">
+									<h2>приглашаем в&nbsp;гости на&nbsp;чашечку кофе</h2>
+									<p>Приглашаем Вас посетить шоу рум Термо Вуд  в&nbsp;г. Химки. Вы&nbsp;можете с&nbsp;уверенностью расчитывать на&nbsp;наших специалистов, которые честно расскажут плюсы и&nbsp;минусы нашей продукции и&nbsp;подберут наиболее подходящий материал под Ваш проект и&nbsp;бюджет. В&nbsp;нашем шоу руме представлены стенды в&nbsp;натуральную величину, что дает возможность визуально представить Термодревесину на&nbsp;Вашем фасаде или террасе.</p><a class="btn btn-light" href="#">посмотреть на карте</a>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-4.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-5.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-6.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-7.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item">
+									<h2>образцы продукции  и&nbsp;каталоги</h2>
+									<p>Всем нашим гостям мы&nbsp;бесплатно предоставляем каталоги и&nbsp;живые образцы, которые можно взять с&nbsp;собой и&nbsp;примерить к&nbsp;другим материалам в&nbsp;проекте. Большой выбор профилей и&nbsp;цветовых решений Вас приятно удивит. Также мы&nbsp;бесплатно осуществляем подбор цвета по&nbsp;индивидуально заданным параметрам.</p><a class="btn btn-light" href="#">получить образцы</a>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item">
+									<h2>всё дело в подходе</h2>
+									<p>Мы предлагаем комплексное решение для проекта, а также сопровождаем на всех этапах. </p>
+									<p>С нами вы получите:</p>
+									<ul>
+										<li>фасадную / террасную доску высшего качества;</li>
+										<li>лучшее на рынке защитное покрытие для внешней отделки маслами Kreidezeit li (Германия)</li>
+										<li>помощь в комплектации заказа подсистемой (крепежи, направляющие, саморезы);</li>
+										<li>в случае необходимости - услуги по монтажу;</li>
+										<li>бесплатный технадзор Ваших подрядчиков с целью сминимизировать ошибки при монтаже нашей доски;</li>
+										<li>помощь в обновлении;</li>
+										<li>сопровождение на весь период эксплуатации.</li>
+									</ul><a class="btn btn-light" href="#">получить образцы</a>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-6.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+							<div class="sSecretes__col col-lg-4 col-sm-6">
+								<div class="sSecretes__item"><img src="img/secret-7.jpg" alt="" loading="lazy"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sSecretes-->
+				<!-- start sContent-->
+				<section class="sContent section sSclad pb-0" id="sContent">
+					<div class="container"> 
+						<h2>склад</h2>
+						<p>Одним из главных преимуществ ООО «Термо Вуд» является наличие готовых изделий на складе. Мы постоянно поддерживаем запас более 30 000 м² классических профилей фасадной (косой/прямой планкен) и террасной (гладкая/вельвет) доски. Также наши сырьевые запасы позволяют выполнить любой заказ в срок не более 2-х недель. Это значит, что Вам не нужно будет ждать 2-3 месяца и переживать за поставку.</p>
+						<p>Убедиться в качестве и наличии изделий из термодерева можно у нас на складе всего в 15 км от МКАД (г.Сходня).</p>
+						<div class="row">
+							<div class="col-12"><img src="img/about-img-1.jpg" alt="" loading="lazy"/>
+							</div>
+							<div class="col-7"><img src="img/about-img-2.jpg" alt="" loading="lazy"/>
+							</div>
+							<div class="col"><img src="img/about-img-3.jpg" alt="" loading="lazy"/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sContent-->
+				<!-- start sAdvanteges-->
+				<section class="sAdvanteges section" id="sAdvanteges">
+					<div class="container">
+						<h2>наши преимущества</h2><img src="img/edv.jpg" alt="" loading="lazy"/>
+						<div class="sAdvanteges__row row">
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>собственное производство</h6>
+									<p>Собственное производство полного цикла&nbsp;&mdash; от&nbsp;распиловки до&nbsp;готовых погонажных изделий. Постоянный контроль качества на&nbsp;всех этапах изготовления</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>наличие на складе</h6>
+									<p>Экономия времени и гарантия поставки товара. Не нужно ждать изделия под заказ 2-3 месяца, как в большинстве случаев, и переживать о сроках, качестве и нестабильных обстоятельствах. Приобретайте Товар из наличия у нас с возможностью проверить качество на складе.</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>гибкая ценовая политика</h6>
+									<p>Предоставляем скидки от объема, программа лояльности для архитекторов и строителей</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>безценный опыт</h6>
+									<p>За 14 лет мы приняли участие в более чем 17 000 проектах с использованием Термодоски и точно знаем, как сделать идеально и как делать нельзя</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>комплексный подход</h6>
+									<p>У нас Вы можете заказать не только доску, но и лучшее на рынке защитное покрытие Kreidezeit (Германия), подсистему (лаги, крепеж, саморезы) и монтаж.</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>контроль и ответственность</h6>
+									<p>Мы будем сопровождать Вас и помогать на всех этапах во время монтажа. Бесплатный технадзор, сопровождение на весь период эксплуатации, помощь в обновлении.</p>
+								</div>
+							</div>
+							<div class="sAdvanteges__col col-xl-4 col-lg-6">
+								<div class="sAdvanteges__item">
+									<h6>гарантированное соблюдение договоренностей</h6>
+									<p>“Боже мой, вы единственные, кто поставил нам в срок!!!” - это вторая фраза, которую мы слышим от наших клиентов. (Первая- “Доска прекрасна и превзошла все наши ожидания!”). Мы действительно всегда четко выполняем условия договора и не обещаем то, что не можем сделать.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAdvanteges-->
+				<!-- start sBlog-->
+				<section class="sBlog section" id="sBlog">
+					<div class="container">
+						<div class="section-title">
+							<h2><strong>следите за нами в блоге </strong></h2>
+						</div>
+					</div>
+					<div class="sBlog__slider sBlog__slider--js swiper">
+						<div class="swiper-wrapper">
+							<div class="sBlog__slide swiper-slide">
+								<div class="sBlog__item">
+									<div class="row">
+										<div class="col-sm-auto">
+											<div class="sBlog__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="col">
+											<div class="sBlog__head">
+												<div class="sBlog__title">EXTERIA DESIGN WEEKEND 2023
+												</div>
+												<div class="sBlog__date">19.05.2023 г.
+												</div>
+											</div>
+											<div class="sBlog__body">
+												<p>Вчера установили подиум для форума "EXTERIA DESIGN WEEKEND 2023", где будет выступление ведущих архитекторов и дизайнеров частного домостроения. <br> Использовали гладкую террасную доску из Термоясеня. Подиум отлично вписался в стилистику мероприятия!</p>
+											</div>
+											<div class="sBlog__footer row">
+												<div class="col-auto"><a class="btn btn-light btn-modal-js" href="#modal-blog">подробнее</a></div>
+												<div class="col-auto"><span class="d-none d-sm-inline">Нравится </span><img src="img/like.png" alt="" loading="lazy"/>200
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sBlog__slide swiper-slide">
+								<div class="sBlog__item">
+									<div class="row">
+										<div class="col-sm-auto">
+											<div class="sBlog__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="col">
+											<div class="sBlog__head">
+												<div class="sBlog__title">EXTERIA DESIGN WEEKEND 2023
+												</div>
+												<div class="sBlog__date">19.05.2023 г.
+												</div>
+											</div>
+											<div class="sBlog__body">
+												<p>Вчера установили подиум для форума "EXTERIA DESIGN WEEKEND 2023", где будет выступление ведущих архитекторов и дизайнеров частного домостроения. <br> Использовали гладкую террасную доску из Термоясеня. Подиум отлично вписался в стилистику мероприятия!</p>
+											</div>
+											<div class="sBlog__footer row">
+												<div class="col-auto"><a class="btn btn-light btn-modal-js" href="#modal-blog">подробнее</a></div>
+												<div class="col-auto"><span class="d-none d-sm-inline">Нравится </span><img src="img/like.png" alt="" loading="lazy"/>200
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sBlog__slide swiper-slide">
+								<div class="sBlog__item">
+									<div class="row">
+										<div class="col-sm-auto">
+											<div class="sBlog__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+											</div>
+										</div>
+										<div class="col">
+											<div class="sBlog__head">
+												<div class="sBlog__title">EXTERIA DESIGN WEEKEND 2023
+												</div>
+												<div class="sBlog__date">19.05.2023 г.
+												</div>
+											</div>
+											<div class="sBlog__body">
+												<p>Вчера установили подиум для форума "EXTERIA DESIGN WEEKEND 2023", где будет выступление ведущих архитекторов и дизайнеров частного домостроения. <br> Использовали гладкую террасную доску из Термоясеня. Подиум отлично вписался в стилистику мероприятия!</p>
+											</div>
+											<div class="sBlog__footer row">
+												<div class="col-auto"><a class="btn btn-light btn-modal-js" href="#modal-blog">подробнее</a></div>
+												<div class="col-auto"><span class="d-none d-sm-inline">Нравится </span><img src="img/like.png" alt="" loading="lazy"/>200
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+					</div>
+				</section>
+				<!-- end sBlog-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script src="libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="libs/masonry-layout/masonry.pkgd.min.js"></script>
+<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="js/common.js"></script>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win modal-win--form">
+				<div class="form-wrap">
+					<form>
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Введите номер телефона:</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (_ _ _) - _ _ _ - _ _ - _ _" required="required"/> 
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-primary" type="submit">перезвоните мне
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Нажимая кнопку Вы соглашаетесь с Политикой конфиденциальности</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-socials" style="display: none">
+			<div class="modal-win modal-win--socials">
+				<div class="h5">напишите нам:</div>
+				<div class="row">
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/whatsapp-modal.png" alt="" loading="lazy"/><span>WhatsApp</span>
+						</a>
+					</div>
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/telegram-modal.png" alt="" loading="lazy"/><span>Telegram</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal-socials-->
+		<div id="modal-accepted" style="display: none">
+			<div class="modal-win modal-win--accepted">
+				<div class="h5">ваше обращение принято.&nbsp;в&nbsp;течении 30&nbsp;минут пришлём расчёт.</div>
+			</div>
+		</div>
+		<!-- #modal-accepted-->
+		<div id="modal-blog" style="display: none">
+			<div class="modal-win modal-win--blog">
+				<div class="row">
+					<div class="modal-win__caption-col col-lg-6">
+						<div class="sBlog__head">
+							<div class="sBlog__title">Потрясающий дом с отделкой Термодеревом</div>
+							<div class="sBlog__date">19.05.2023 г.</div>
+						</div>
+						<div class="sBlog__body">
+							<p>Хорошая погода-отличный повод для съемки нового объекта с применением планкена из Термоясеня.  В проекте использовали широкую доску для фасада 20х160 мм, общий объем планкена скошенного 1350м². Покрытием натуральным немецким маслом.</p>
+							<p>Обязательно переходите и смотрите на youtube новый видео-ролик с объекта.</p>
+						</div>
+						<div class="modal-win__slider modal-win__slider--thumbs-js swiper">
+							<div class="swiper-wrapper">
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-win__slider-col col-lg-6 order-lg-first">
+						<div class="modal-win__slider modal-win__slider--js swiper">
+							<div class="swiper-wrapper">
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-blog-->
+		<div id="modal-questions" style="display: none">
+			<div class="modal-win modal-win--questions">
+				<div class="modal-win__head-row row">
+					<div class="col">
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+					</div>
+					<div class="col-auto">
+						<a class="modal-win__next" href="#">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="modal-win__question-title">1. Выберите область применения Термодерева
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/modal-img-1.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Фасадная доска</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/modal-img-2.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Террасная доска</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-questions-->
+		<div id="modal-questions2" style="display: none">
+			<div class="modal-win modal-win--questions">
+				<div class="modal-win__head-row row">
+					<div class="col">
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+					</div>
+					<div class="col-auto">
+						<a class="modal-win__next" href="#">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="modal-win__question-title">2. Выберите породу Термодерева
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-1.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термоясень</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-2.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термопихта</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-3.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термохвоя</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__question-title modal-win__question-title--indent">3. Выберите профиль
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><span class="custom-input__rectangle"></span><span class="custom-input__text">Прямой планкен</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><span class="custom-input__rectangle custom-input__rectangle--skew"></span><span class="custom-input__text">Косой планкен</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><span class="custom-input__rectangle">?</span><span class="custom-input__text">Под заказ</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__question-title modal-win__question-title--indent">4. Выберите объем (м²)
+				</div>
+				<input class="js-range-slider" type="text"/>
+				<div class="modal-win__range-input-wrap">
+					<input class="js-range-input" type="text"/><span>м²</span>
+				</div>
+				<div class="modal-win__question-title">5. Комментарии
+				</div>
+				<div class="modal-win__input-wrap form-group"><textarea class="modal-win__input form-control" name="textarea" placeholder=""></textarea>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="upload-field">
+					<div class="upload-field__wrap">
+						<div class="upload-field__input-wrap">
+							<label>
+								<input class="input-upload" type="file" name="file"/><span>Прикрепить вложение</span>
+							</label>
+						</div>
+						<div class="upload-field__file-name"> 
+						</div>
+					</div>
+				</div>
+				<div class="modal-win__footer-row row">
+					<div class="col-lg">Куда отправить расчёт?</div>
+					<div class="col-lg-auto">
+						<div class="row">
+							<div class="col-sm-4">
+								<a class="modal-win__soc-item" href="#"><img src="img/whatsapp-modal.png" alt="" loading="lazy"/><span>WhatsApp</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a class="modal-win__soc-item" href="#"><img src="img/telegram-modal.png" alt="" loading="lazy"/><span>Telegram</span>
+								</a>
+							</div>
+							<div class="col-sm-4">
+								<a class="modal-win__soc-item" href="#"><img src="img/mail-modal.png" alt="" loading="lazy"/><span>E-mail</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-questions-->
+		<!-- end modals-->
+	</body>
+</html>

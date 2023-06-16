@@ -84,6 +84,8 @@ mixin head-banner(i, t, title)
 			if title
 				.container
 					.h2!= title
+			if block
+				block
 
 mixin imagesInRow()
 	+b.images-in-row.container-max

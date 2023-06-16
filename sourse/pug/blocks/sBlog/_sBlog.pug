@@ -1,9 +1,9 @@
-mixin sBlog(data)
+mixin sBlog(t="блог")
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
 			+b.section-title
-				h2: strong блог
+				h2: strong= t
 				
 		+e.slider--js.swiper
 			.swiper-wrapper
