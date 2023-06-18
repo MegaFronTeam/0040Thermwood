@@ -289,6 +289,30 @@ const JSCCommon = {
 				btnDisabled.attr('disabled', 'disabled');
 			}
 		})
+	},
+	rangerSlider(){
+		console.log(1)
+		var $range = $(".js-range-slider");
+		var $input = $(".js-range-input");
+		console.log($range);rrrr
+		var valueArr = [0, 500, 900, 1500, 2000, 2800, 3500, 5000];
+
+		console.log(1)
+		$range.ionRangeSlider({
+			type: "single",
+			min: 0,
+			max: 5000,
+			from: 0,
+			grid: true,
+			values: valueArr,
+			skin: "round",
+			onStart: function (data) {
+				$input.prop("value", valueArr[data.from]);
+			},
+			onChange: function (data) {
+				$input.prop("value", valueArr[data.from]);
+			}
+		});
 	}
 };
 const $ = jQuery;
@@ -301,7 +325,9 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+
 	JSCCommon.disabledBtn();
+	// JSCCommon.rangerSlider();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 
@@ -577,25 +603,7 @@ function eventHandler() {
 	}
 	inputFile();
 
-	var $range = $(".js-range-slider");
-	var $input = $(".js-range-input");
-	var valueArr = [0, 500, 900, 1500, 2000, 2800, 3500, 5000];
 
-	$range.ionRangeSlider({
-		type: "single",
-		min: 0,
-		max: 5000,
-		from: 0,
-		grid: true,
-		values: valueArr,
-		skin: "round",
-		onStart: function (data) {
-			$input.prop("value", valueArr[data.from]);
-		},
-		onChange: function (data) {
-			$input.prop("value", valueArr[data.from]);
-		}
-	});
 
 };
 
