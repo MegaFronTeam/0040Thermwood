@@ -3,13 +3,13 @@ const JSCCommon = {
 	modalCall() {
 		const link = '.btn-modal-js';
 		Fancybox.bind(link, {
+			type: 'html',
 			arrows: false,
 			// // infobar: false,
 			touch: false,
 			trapFocus: false,
 			placeFocusBack: false,
 			infinite: false,
-			type: 'html',
 			dragToClose: false,
 			autoFocus: false,
 			groupAll: false,
@@ -294,7 +294,7 @@ const JSCCommon = {
 		console.log(1)
 		var $range = $(".js-range-slider");
 		var $input = $(".js-range-input");
-		console.log($range);rrrr
+		console.log($range);
 		var valueArr = [0, 500, 900, 1500, 2000, 2800, 3500, 5000];
 
 		console.log(1)
