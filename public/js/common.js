@@ -573,24 +573,31 @@ function eventHandler() {
 		}
 	})
 
-	var modalThumbSwiper = new Swiper(".modal-win__slider--thumbs-js", {
-		// spaceBetween: 10,
-		slidesPerView: 'auto',
-		// spaceBetween: 0,
-		watchSlidesProgress: true,
+	let modalSliders = document.querySelectorAll(".modal-win");
+	if (modalSliders){
 
-		observeParents: true,
-		observer: true,
-	});
-	var modalSwiper = new Swiper(".modal-win__slider--js", {
-		slidesPerView: 'auto',
-		// spaceBetween: 0,
-		observeParents: true,
-		observer: true,
-		thumbs: {
-			swiper: modalThumbSwiper,
-		},
-	});
+		for (const item of modalSliders) {
+			
+			var modalThumbSwiper = new Swiper(item.querySelector(".modal-win__slider--thumbs-js"), {
+				// spaceBetween: 10,
+			slidesPerView: 'auto',
+			// spaceBetween: 0,
+			watchSlidesProgress: true,
+
+			observeParents: true,
+			observer: true,
+		});
+		var modalSwiper = new Swiper(item.querySelector(".modal-win__slider--js"), {
+			slidesPerView: 'auto',
+			// spaceBetween: 0,
+			observeParents: true,
+			observer: true,
+			thumbs: {
+				swiper: modalThumbSwiper,
+			},
+		});
+		} 
+	}
 
 	function inputFile() {
 		if (document.querySelector('.upload-field')) {
