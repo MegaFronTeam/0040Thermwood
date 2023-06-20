@@ -3,7 +3,7 @@ mixin sProdCard(data)
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				+e.col.col-md-6.col-xl-auto
+				+e.col.col-md-6.col-xl-4.order-lg-last
 					+e.slider-wrap
 						+e.slider--js.swiper
 							.swiper-wrapper
@@ -27,21 +27,38 @@ mixin sProdCard(data)
 							.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 								+icon('arrow-right')
 				.col-md-6.col-xl
-					+form-wrap
-						+b.section-title
-							h2 Термоясень прямой планкен
+					+form-wrap 
 						.table-wrap
-							table
-								thead
-									th(colspan="2") Профиль:
+							table 
 								tbody
-									mixin tr(p, v)
+									mixin tr(p, v, sm)
 										tr
 											td!= p
 											if v
 												td!= v
+													if sm 
+														small= sm
+													block
 											else
 												block
+											
+
+									+tr(`Порода древесины: `)
+										td
+											.form-wrap__input-wrap.form-group
+												select.form-wrap__input.form-select(name='select')
+													option(value='') Термоясень 
+													option(value='') Термоясень 
+													option(value='') Термоясень 
+													
+									+tr(`Профиль:`)
+										td
+											.form-wrap__input-wrap.form-group
+												select.form-wrap__input.form-select(name='select')
+													option(value='') Прямой планкен 
+													option(value='') Прямой планкен 
+													option(value='') Прямой планкен 
+
 									+tr(`Толщина:`, `20 мм`)
 									+tr(`Ширина:`, ``)
 										td
@@ -50,19 +67,30 @@ mixin sProdCard(data)
 													option(value='115 мм') 115 мм
 													option(value='120 мм') 120 мм
 													option(value='130 мм') 130 мм
-									+tr(`Длина:`, ``)
-										td
-											.form-wrap__input-wrap.form-group
-												select.form-wrap__input.form-select(name='select')
-													option(value='900 - 3000 мм') 900 - 3000 мм
-													option(value='2000 - 3000 мм') 2000 - 3000 мм
-													option(value='2500 - 3000 мм') 2500 - 3000 мм
-						+e.add-title Количество (м&sup2;):
-						+addblock()
-						+e.row-btns.row
-							.col-sm-6.col-md-12.col-lg-6.col-xl-auto
+									+tr(`Длина:`, ` 900-3000 мм `,'(разнодлинка, шаг, 100, мм, доска, длиннее, 2, м, -, не, менее, 50%, от, партии)')
+									+tr(`Тон:  `, ` Тёмно-коричневый `)
+									+tr(`Покрытие: `, `Без покрытия  `)
+									+tr(`Область применения: `, `Фасады домов, подшивка крыши, заборы `)
+									+tr(`Количество: `, `Цена за м² `)
+										//- +e.BUTTON.btn.btn.btn-primary(type="submit") отправить запрос
+						+e.btn-row.row
+							.col-auto
+								+addblock()
+							.col-auto
+								+e.btn--price  5 800 руб.
 								+e.BUTTON.btn.btn.btn-primary(type="submit") отправить запрос
-							.col-sm-6.col-md-12.col-lg-6.col-xl-auto
-								+e.BUTTON.btn.btn.btn-primary(type="submit") получить образцы
-
+			+e.dropdown.section
+				.row
+					mixin item(t)
+						.col-lg-6
+							+e.dropdown-item
+								+e.head.dd-head-js
+									+icon("chevron-down")
+									= t
+								+e.body
+									p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus tempora atque, veniam maiores doloremque, suscipit ipsam dolores vero repellendus magni harum expedita, dicta accusantium. Tempore nihil quisquam dolorem, aliquid suscipit delectus aperiam animi alias debitis nobis est error, corporis laudantium.
+					+item('Срок поставки')
+					+item('Оплата')
+					+item('Доставка')
+					+item('Гарантия')
 	// end sProdCard

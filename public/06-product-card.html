@@ -33,14 +33,14 @@
 			<main>
 				<div class="page-head">
 					<div class="container">
-						<h1><span class="h2">фасадная доска</span><span>термоясень прямой планкен</span></h1>
+						<h1>фасадная доска</h1>
 					</div>
 				</div>
 				<!-- start sProdCard-->
 				<section class="sProdCard section" id="sProdCard">
 					<div class="sProdCard__container container">
 						<div class="sProdCard__row row">
-							<div class="sProdCard__col col-md-6 col-xl-auto">
+							<div class="sProdCard__col col-md-6 col-xl-4 order-lg-last">
 								<div class="sProdCard__slider-wrap">
 									<div class="sProdCard__slider sProdCard__slider--js swiper">
 										<div class="swiper-wrapper">
@@ -108,19 +108,38 @@
 							</div>
 							<div class="col-md-6 col-xl">
 								<div class="form-wrap">
-									<form>
-										<div class="section-title">
-											<h2>Термоясень прямой планкен</h2>
-										</div>
+									<form> 
 										<div class="table-wrap">
-											<table>
-												<thead>
-													<th colspan="2">Профиль:</th>
-												</thead>
+											<table> 
 												<tbody>
 																<tr>
+																	<td>Порода древесины: </td>
+																	<td>
+																		<div class="form-wrap__input-wrap form-group">
+																			<select class="form-wrap__input form-select" name="select">
+																				<option value="">Термоясень </option>
+																				<option value="">Термоясень </option>
+																				<option value="">Термоясень </option>
+																			</select>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td>Профиль:</td>
+																	<td>
+																		<div class="form-wrap__input-wrap form-group">
+																			<select class="form-wrap__input form-select" name="select">
+																				<option value="">Прямой планкен </option>
+																				<option value="">Прямой планкен </option>
+																				<option value="">Прямой планкен </option>
+																			</select>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
 																	<td>Толщина:</td>
-																	<td>20 мм</td>
+																	<td>20 мм
+																	</td>
 																</tr>
 																<tr>
 																	<td>Ширина:</td>
@@ -136,40 +155,103 @@
 																</tr>
 																<tr>
 																	<td>Длина:</td>
-																	<td>
-																		<div class="form-wrap__input-wrap form-group">
-																			<select class="form-wrap__input form-select" name="select">
-																				<option value="900 - 3000 мм">900 - 3000 мм</option>
-																				<option value="2000 - 3000 мм">2000 - 3000 мм</option>
-																				<option value="2500 - 3000 мм">2500 - 3000 мм</option>
-																			</select>
-																		</div>
+																	<td> 900-3000 мм <small>(разнодлинка, шаг, 100, мм, доска, длиннее, 2, м, -, не, менее, 50%, от, партии)</small>
+																	</td>
+																</tr>
+																<tr>
+																	<td>Тон:  </td>
+																	<td> Тёмно-коричневый 
+																	</td>
+																</tr>
+																<tr>
+																	<td>Покрытие: </td>
+																	<td>Без покрытия  
+																	</td>
+																</tr>
+																<tr>
+																	<td>Область применения: </td>
+																	<td>Фасады домов, подшивка крыши, заборы 
+																	</td>
+																</tr>
+																<tr>
+																	<td>Количество: </td>
+																	<td>Цена за м² 
 																	</td>
 																</tr>
 												</tbody>
 											</table>
 										</div>
-										<div class="form-wrap__add-title">Количество (м&sup2;):
-										</div>
-										<div class="addBlock">
-											<button class="addBlock__btn addBlock__btn--minus" type="button">
-											</button>
-											<input type="text" value="1"/>
-											<button class="addBlock__btn addBlock__btn--plus" type="button">
-											</button>
-										</div>
-										<div class="form-wrap__row-btns row">
-											<div class="col-sm-6 col-md-12 col-lg-6 col-xl-auto">
-												<button class="form-wrap__btn btn btn-primary" type="submit">отправить запрос
-												</button>
+										<div class="form-wrap__btn-row row">
+											<div class="col-auto">
+												<div class="addBlock">
+													<button class="addBlock__btn addBlock__btn--minus" type="button">
+													</button>
+													<input type="text" value="1"/>
+													<button class="addBlock__btn addBlock__btn--plus" type="button">
+													</button>
+												</div>
 											</div>
-											<div class="col-sm-6 col-md-12 col-lg-6 col-xl-auto">
-												<button class="form-wrap__btn btn btn-primary" type="submit">получить образцы
+											<div class="col-auto">
+												<div class="form-wrap__btn form-wrap__btn--price"> 5 800 руб.
+												</div>
+												<button class="form-wrap__btn btn btn-primary" type="submit">отправить запрос
 												</button>
 											</div>
 										</div>
 									</form>
 								</div>
+							</div>
+						</div>
+						<div class="sProdCard__dropdown section">
+							<div class="row">
+									<div class="col-lg-6">
+										<div class="sProdCard__dropdown-item">
+											<div class="sProdCard__head dd-head-js">
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>Срок поставки
+											</div>
+											<div class="sProdCard__body">
+												<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus tempora atque, veniam maiores doloremque, suscipit ipsam dolores vero repellendus magni harum expedita, dicta accusantium. Tempore nihil quisquam dolorem, aliquid suscipit delectus aperiam animi alias debitis nobis est error, corporis laudantium.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sProdCard__dropdown-item">
+											<div class="sProdCard__head dd-head-js">
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>Оплата
+											</div>
+											<div class="sProdCard__body">
+												<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus tempora atque, veniam maiores doloremque, suscipit ipsam dolores vero repellendus magni harum expedita, dicta accusantium. Tempore nihil quisquam dolorem, aliquid suscipit delectus aperiam animi alias debitis nobis est error, corporis laudantium.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sProdCard__dropdown-item">
+											<div class="sProdCard__head dd-head-js">
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>Доставка
+											</div>
+											<div class="sProdCard__body">
+												<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus tempora atque, veniam maiores doloremque, suscipit ipsam dolores vero repellendus magni harum expedita, dicta accusantium. Tempore nihil quisquam dolorem, aliquid suscipit delectus aperiam animi alias debitis nobis est error, corporis laudantium.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sProdCard__dropdown-item">
+											<div class="sProdCard__head dd-head-js">
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>Гарантия
+											</div>
+											<div class="sProdCard__body">
+												<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus tempora atque, veniam maiores doloremque, suscipit ipsam dolores vero repellendus magni harum expedita, dicta accusantium. Tempore nihil quisquam dolorem, aliquid suscipit delectus aperiam animi alias debitis nobis est error, corporis laudantium.</p>
+											</div>
+										</div>
+									</div>
 							</div>
 						</div>
 					</div>

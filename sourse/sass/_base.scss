@@ -577,6 +577,7 @@ p {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
+		@extend h2;
 		span {
 			display: inline-block;
 			font-weight: 400;

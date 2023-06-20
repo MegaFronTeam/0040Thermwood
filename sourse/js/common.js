@@ -501,7 +501,9 @@ function eventHandler() {
 			.next()
 			.slideToggle(function () {
 				$(this).toggleClass('active');
-				faqSlider.update()
+				if ($(this).has('.sFaq__slider--js').length){
+					faqSlider.update()
+				}
 			});
 	});
 
