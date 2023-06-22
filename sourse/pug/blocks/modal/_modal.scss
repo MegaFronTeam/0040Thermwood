@@ -426,6 +426,15 @@
 					&-line {
 						background-color: #ACACAC;
 						height: 1px;
+						overflow: visible;
+						&::before{
+							content: '';
+							left: 0;
+							top: -15px;
+							height: 30px;
+							width: 100%;
+							position: absolute;
+						}
 					}
 					&-bar {
 						height: 3px;
@@ -460,6 +469,8 @@
 			}
 		}
 	}
+
+	
 }
 
 a {
@@ -680,3 +691,29 @@ a {
 		margin-right: 10px;
 	}
 }
+
+
+
+.modal-win{
+	.text-center{
+		.btn{
+			width: 173px;
+		}
+	}
+}
+.modal-win__inputs{
+		max-width: 224px;
+		.form-wrap{
+			margin-bottom: 40px;
+		}
+		.form-group{
+			margin-bottom: 6px;
+		}
+		.form-wrap__input{
+			border-radius: 0;
+			background-color: #fff;
+		}
+		.modal-win__input{
+
+		}
+	} 

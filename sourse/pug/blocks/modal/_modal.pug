@@ -183,22 +183,30 @@ mixin modal()
 			+e.question-title 5. Комментарии
 			+input('', 'textarea')
 			+upload-field()
-			+e.footer-row.row
-				.col-lg Куда отправить расчёт?
-				.col-lg-auto
-					.row
-						.col-sm-4
-							+e.soc-item(href="#")
-								+img('img/whatsapp-modal.png')
-								span WhatsApp
-						.col-sm-4
-							+e.soc-item(href="#")
-								+img('img/telegram-modal.png')
-								span Telegram
-						.col-sm-4
-							+e.soc-item(href="#")
-								+img('img/mail-modal.png')
-								span E-mail
+			+e.question-title 5. Комментарии
+			+e.inputs
+				+b.form-wrap
+					+input("E-mail",'select')
+					+input("Ваше имя")
+					+input("+7 (_ _ _) - _ _ _ - _ _ - _ _",'tel')
+			.text-center
+				button.btn.btn-primary(type="button") готово
+			//- +e.footer-row.row
+			//- 	.col-lg Куда отправить расчёт?
+			//- 	.col-lg-auto
+			//- 		.row
+			//- 			.col-sm-4
+			//- 				+e.soc-item(href="#")
+			//- 					+img('img/whatsapp-modal.png')
+			//- 					span WhatsApp
+			//- 			.col-sm-4
+			//- 				+e.soc-item(href="#")
+			//- 					+img('img/telegram-modal.png')
+			//- 					span Telegram
+			//- 			.col-sm-4
+			//- 				+e.soc-item(href="#")
+			//- 					+img('img/mail-modal.png')
+			//- 					span E-mail
 	// #modal-questions
 
 	// end modals

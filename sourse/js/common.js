@@ -327,7 +327,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 
 	JSCCommon.disabledBtn();
-	// JSCCommon.rangerSlider();
+	JSCCommon.rangerSlider();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 
