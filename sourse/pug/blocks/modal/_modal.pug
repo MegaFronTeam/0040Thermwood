@@ -88,6 +88,26 @@ mixin modal()
 					.form-data.h5 Оставьте заявку и выберете удобное время звонка
 				.col-auto
 					+e.next(href="#"): +icon('chevron-right') 
+			+e.question-title Выберите тип фасада
+			+e.body-row.row
+				.col-sm
+					+in-c('radio' ,'', 'type-fasade-wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/type-fasade-1.jpg', 'bg')
+						+e.text Термоясень
+				.col-sm
+					+in-c('radio' ,'', 'type-fasade-wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/type-fasade-2.jpg', 'bg')
+						+e.text Термопихта
+				.col-sm
+					+in-c('radio' ,'', 'type-fasade-wood2')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/type-fasade-3.jpg', 'bg')
+						+e.text Термохвоя
 			+e.question-title 2. Выберите породу Термодерева
 			+e.body-row.row
 				.col-sm
@@ -108,21 +128,40 @@ mixin modal()
 							.img-wrap-center
 								+img('img/prod-3.jpg', 'bg')
 						+e.text Термохвоя
-			+e.question-title--indent 3. Выберите профиль
+			+e.question-title 3. Выберите профиль
 			+e.body-row.row
-				.col-sm
+				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+e.rectangle
+						+img('img/form-profile-1.png')
 						+e.text Прямой планкен
-				.col-sm
+				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+e.rectangle--skew
+						+img('img/form-profile-2.png')
 						+e.text Косой планкен
-				.col-sm
+				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+e.rectangle ?
+						+img('img/form-profile-3.png')
 						+e.text Под заказ
-			+e.question-title--indent 4. Выберите объем (м²)
+						
+			+e.body-row.row
+				.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle2')
+						+img('img/form-profile-4.png')
+						+e.text Декинг
+				.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle2')
+						+img('img/form-profile-5.png')
+						+e.text Вельвет
+				.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle2')
+						+img('img/form-profile-6.png')
+						+e.text Антислип
+				.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle2')
+						+img('img/form-profile-7.png')
+						+e.text Под заказ
+
+			+e.question-title 4. Выберите объем (м²)
 			input(type="text").js-range-slider
 			+e.range-input-wrap
 				input(type="text").js-range-input

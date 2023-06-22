@@ -275,6 +275,7 @@
 			}
 			&__body-row {
 				--bs-gutter-y: #{rem(18)};
+				margin-bottom: 34px;
 			}
 			&__footer-row {
 				--bs-gutter-y: #{rem(12)};
@@ -327,7 +328,7 @@
 				&:checked {
 					& ~ span {
 						&:before {
-							display: block;
+							filter: grayscale(0);
 						}
 					}
 				}
@@ -374,7 +375,9 @@
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: contain;
-					display: none;
+					// display: none;
+					filter: grayscale(1);
+					@include mt;
 					top: 50%;
 					transform: translateY(-50%);
 					left: 0;
