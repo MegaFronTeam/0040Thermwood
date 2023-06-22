@@ -357,13 +357,18 @@
 				}
 			}
 			&__text {
-				font-variant: small-caps;
+				// font-variant: small-caps;
 				position: relative;
 				padding-left: rem(20);
 				padding-right: rem(20);
+				min-width: rem(17);
+				min-height: rem(17);
 				@include media-breakpoint-up(xl) {
 					padding-left: rem(28);
 					padding-right: rem(28);
+				}
+				&--without-text{
+					padding: 0 !important;
 				}
 				&:before {
 					content: '';

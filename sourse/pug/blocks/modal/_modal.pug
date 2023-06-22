@@ -132,34 +132,48 @@ mixin modal()
 			+e.body-row.row
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+img('img/form-profile-1.png')
+						+img('img/form-profile-1.png').res-i
 						+e.text Прямой планкен
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+img('img/form-profile-2.png')
+						+img('img/form-profile-2.png').res-i
 						+e.text Косой планкен
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle')
-						+img('img/form-profile-3.png')
+						+img('img/form-profile-3.png').res-i
 						+e.text Под заказ
 						
 			+e.body-row.row
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle2')
-						+img('img/form-profile-4.png')
+						+img('img/form-profile-4.png').res-i
 						+e.text Декинг
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle2')
-						+img('img/form-profile-5.png')
+						+img('img/form-profile-5.png').res-i
 						+e.text Вельвет
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle2')
-						+img('img/form-profile-6.png')
+						+img('img/form-profile-6.png').res-i
 						+e.text Антислип
 				.col-sm-4.col-6
 					+in-c('radio', '', 'rectangle2')
-						+img('img/form-profile-7.png')
+						+img('img/form-profile-7.png').res-i
 						+e.text Под заказ
+			//- +e.question-title 3. Выберите профиль
+			+e.body-row.row.justify-content-center
+				.col-xl-3.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle3')
+						+img('img/form-profile-8.png').res-i 
+						+e.text--without-text
+				.col-xl-3.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle3')
+						+img('img/form-profile-9.png').res-i 
+						+e.text--without-text
+				.col-xl-3.col-sm-4.col-6
+					+in-c('radio', '', 'rectangle3')
+						+img('img/form-profile-10.png').res-i 
+						+e.text--without-text
 
 			+e.question-title 4. Выберите объем (м²)
 			input(type="text").js-range-slider
