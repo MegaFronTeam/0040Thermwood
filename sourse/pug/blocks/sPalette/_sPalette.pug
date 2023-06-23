@@ -1,12 +1,14 @@
-mixin sPalette(h)
+mixin sPalette(h,p)
 	// start sPalette
 	+b.sPalette.section&attributes(attributes)
 		.container
 			+b.section-title
 				h2!= h
+				if p 
+					p!= p
 			+e.content
 				mixin item(img)
-					+e.item(href=`img/sPalette-${img}.jpg` data-fancybox="sPalette") 
+					+e.item(href=`img/sPalette-${img}.jpg` data-f, pancybox="sPalette") 
 							+img(`img/sPalette-${img}.jpg`, 'bg')
 				block
 

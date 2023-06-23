@@ -1,0 +1,81 @@
+// start .sSamples
+.sSamples {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+
+		img {
+		object-fit: cover;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		@include mt;
+	}
+
+	$g: 12;
+	&__item {
+		position: relative;
+		aspect-ratio: 3 / 2;
+		height: 100%;
+		width: 100%;
+		display: block;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		grid-column: span calc(#{$g} / 3);
+		aspect-ratio: 316 / 251;
+		min-height: 100%;
+		// @include media-breakpoint-down(md) {
+		// 	margin-bottom: 10px;
+		// }
+		&:nth-child(4n + 3)
+		// ,
+		// &:nth-child(13n + 5),
+		// &:nth-child(13n + 7),
+		{
+			grid-row: span 2;
+			aspect-ratio: 316 / calc(251 * 2  + var(--gap) );
+			
+		}
+		&:nth-child(4n + 4)
+		// ,
+		// &:nth-child(13n + 13)
+		{
+			grid-column: span calc(#{$g} - 4);
+			aspect-ratio: 648 / 251;
+
+		}
+		}
+	&__row { 
+		--gap: 4px;
+		gap: var(--gap);
+		// @include media-breakpoint-up(md) {
+			display: grid;
+			grid-template-columns: repeat($g, 1fr);
+		// }
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sSamples

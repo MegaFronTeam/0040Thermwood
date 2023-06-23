@@ -7,6 +7,7 @@ include ../blocks/sPalette/_sPalette.pug
 include ../blocks/sApproach/_sApproach.pug
 include ../blocks/sProdCard/_sProdCard.pug
 include ../blocks/sProdCardTabs/_sProdCardTabs.pug
+include ../blocks/sSamples/_sSamples.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -27,9 +28,11 @@ block pagecontent
 		+sProdCard()
 		+sProdCardTabs()
 		+sApproach()
-		+sPalette(`цветовая палитра на&nbsp;термоясене`)
+		+sPalette(`цветовая палитра на&nbsp;термоясене`,'Защитное покрытие маслом Kreidezeit + 1500 руб./м2')
 			- for (var x = 1; x < 16; x++)
 				+item(x)
+		+sSamples
+
 		+sPortfolioSlider()
 		+sCategoriesCards()
 		+sForm()

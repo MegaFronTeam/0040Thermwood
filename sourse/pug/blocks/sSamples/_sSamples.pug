@@ -1,0 +1,23 @@
+mixin sSamples(data)
+	// start sSamples
+	+b.SECTION.sSamples.section#sSamples&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 закажите образцы бесплатно или приезжайте к&nbsp;нам в&nbsp;гости
+					.col-md-auto
+						a.btn.btn-light(href='#') получить образцы
+				
+			+e.row
+				mixin grid-item(x)
+					+e.item(href=`img/sSample-${x}.jpg` data-fancybox="smaples")
+						//- img(src=`img/gal-${x}.jpg`, alt="")
+						+img(`img/sSample-${x}.jpg`)
+				- for (var x = 0; x < 5; x++)
+					+grid-item(`1`)
+					+grid-item(`2`)
+					+grid-item(`3`)
+					+grid-item(`4`)
+				
+	// end sSamples
