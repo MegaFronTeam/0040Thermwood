@@ -334,3 +334,293 @@ mixin sTableBlock17(data)
 
 				td: strong 2 250
 				td: strong 3 750
+	+sTableBlockBase()
+		thead
+			tr.tr-gray
+				th(colspan="5").text-center реечный фасад
+			tr.text-center 
+				td(colspan="5")
+					.row
+						.col-4
+							+img('img/table-var-2-1.png').mb-1 
+						.col-4
+							+img('img/table-var-2-2.png').mb-1 
+						.col-4
+							+img('img/table-var-2-3.png').mb-1 
+			tr 
+				th порода древесины
+				th толщина (мм)
+				th ширина (мм)
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие  без&nbsp;покрытия
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие + защитное покрытие Kreidezeit
+		tbody
+			tr.tr-gray
+				th().text-center термоясень
+				th(colspan="4")
+			tr
+				td(rowspan="8")
+					+e.img-wrap
+						+img("img/table-2-poroda-1.jpg")
+					p Сорт Экстра
+					p Длина брусков 900-3000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="5"): strong  20
+				td: strong 40
+				td: strong 240
+				td: strong 360
+				
+			tr
+				td: strong 50
+				td: strong 300
+				td: strong 435
+			tr
+				td: strong 60
+				td: strong 360
+				td: strong 510
+			tr
+				td: strong 70
+				td: strong 420
+				td: strong 585
+			tr
+				td: strong 80
+				td: strong 480
+				td: strong 660
+
+			tr
+				td(rowspan="3"): strong  20
+				td: strong 40
+				td: strong 510
+				td: strong 690
+			tr
+				td: strong 60
+				td: strong 760
+				td: strong 970
+			tr
+				td: strong 80
+				td: strong 1020
+				td: strong 1260
+
+				
+			tr.tr-gray
+				th().text-center термопихта
+				th(colspan="4")
+			tr
+				td(rowspan="5")
+					+e.img-wrap
+						+img("img/table-2-poroda-2.jpg")
+					p Сорт Экстра
+					p Длина брусков 900-4000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="2"): strong  16
+				td: strong 55
+				td: strong 230
+				td: strong 360
+				
+			tr
+				td: strong 80
+				td: strong 265
+				td: strong 435
+			tr
+				td(rowspan="3"): strong  40
+				td: strong 40
+				td: strong 310
+				td: strong 490
+			tr
+				td: strong 60
+				td: strong 460
+				td: strong 670
+			tr
+				td: strong 120
+				td: strong 920
+				td: strong 1220
+
+				
+			tr.tr-gray
+				th().text-center термососна
+				th(colspan="4")
+			tr
+				td(rowspan="3")
+					+e.img-wrap
+						+img("img/table-2-poroda-3.jpg")
+					p Сорт АВ (с сучками)
+					p Длина брусков 1250-4000 мм,
+					p Шаг по длине 100 мм,
+					p Доска длиннее 1,75м - не менее 40% от партии
+				td(rowspan="3"): strong  40
+				td: strong 40
+				td: strong 190
+				td: strong 370
+				
+			tr
+				td: strong 90
+				td: strong 390
+				td: strong 645
+			tr
+				td: strong 140
+				td: strong 740
+				td: strong 1070
+
+	+sTableBlockBase()
+		thead
+			tr.tr-gray
+				th(colspan="5").text-center разноширинный фасад
+			tr.text-center 
+				td(colspan="5")
+					.row
+						.col-4
+							+img('img/table-var-3-1.png').mb-1
+							.small Прямой планкен
+						.col-4
+							+img('img/table-var-3-2.png').mb-1
+							.small Скошенный планкен
+						.col-4
+							+img('img/table-var-3-3.png').mb-1
+							.small Профиль по&nbsp;образцу  или чертежу Заказчика
+			tr 
+				th порода древесины
+				th толщина (мм)
+				th ширина (мм)
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие  без&nbsp;покрытия
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие + защитное покрытие Kreidezeit
+		tbody
+			tr.tr-gray
+				th().text-center термоясень
+				th(colspan="4")
+			tr
+				td(rowspan="1")
+					+e.img-wrap
+						+img("img/table-3-poroda-1.jpg")
+					p Сорт Экстра
+					p Длина изделий 800-3000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="1"): strong  20
+				td
+					p 50 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 115 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 160 ММ -  <strong>30%</strong> ОТ ПАРТИИ
+				td: strong 6 000
+				td: strong 7 600
+			tr.tr-gray
+				th().text-center термопихта
+				th(colspan="4")
+			tr
+				td(rowspan="1")
+					+e.img-wrap
+						+img("img/table-3-poroda-2.jpg")
+					p Сорт Экстра
+					p Длина изделий 800-3000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="1"): strong  16
+				td
+					p 55 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 80 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 120 ММ -  <strong>30%</strong> ОТ ПАРТИИ
+				td: strong 3 750
+				td: strong 5 350
+				
+			tr.tr-gray
+				th().text-center термохвоя
+				th(colspan="4")
+			tr
+				td(rowspan="1")
+					+e.img-wrap
+						+img("img/table-3-poroda-3.jpg")
+					p Сорт АВ (с сучками)
+					p Длина изделий 2000-3000 мм,
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="1"): strong  18
+				td
+					p 40 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 90 ММ -  <strong>35%</strong> ОТ ПАРТИИ
+					p 140 ММ -  <strong>30%</strong> ОТ ПАРТИИ
+				td: strong 2 500
+				td: strong 4 100
+
+	+sTableBlockBase()
+		thead
+			tr.tr-gray
+				th(colspan="5").text-center террасная доска
+			tr.text-center 
+				td(colspan="5")
+					.row
+						.col-3
+							+img('img/table-var-4-1.png').mb-1
+							.small Декинг
+						.col-3
+							+img('img/table-var-4-2.png').mb-1
+							.small Вельвет
+							
+						.col-3
+							+img('img/table-var-4-3.png').mb-1
+							.small Антислип
+
+						.col-3
+							+img('img/table-var-4-3.png').mb-1
+							.small Профиль по&nbsp;образцу  или чертежу Заказчика
+			tr 
+				th порода древесины
+				th толщина (мм)
+				th ширина (мм)
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие  без&nbsp;покрытия
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие + защитное покрытие Kreidezeit
+		tbody
+			tr.tr-gray
+				th().text-center термоясень
+				th(colspan="4")
+			tr
+				td(rowspan="7")
+					+e.img-wrap
+						+img("img/table-4-poroda-1.jpg")
+					p Сорт Экстра
+					p Длина изделий 900-3000 мм,
+					p Шаг по длине 100 мм,
+					p Доска длиннее  2 м - не менее 50%  от партии
+				td(rowspan="4"): strong  20
+				td: strong 95
+				td: strong 5 500
+				td: strong 7 000
+			tr
+				td: strong 115
+				td: strong 5 800
+				td: strong 7 300
+
+			tr
+				td: strong 135/160
+				td: strong 6 200
+				td: strong 7 700
+			tr
+				td: strong 180/200
+				td: strong 6 800
+				td: strong 8 300
+			tr
+				td(rowspan="3"): strong  40
+				td: strong 100
+				td: strong 11 500
+				td: strong 13 000
+
+			tr
+				td: strong 120
+				td: strong 12 000
+				td: strong 13 500
+			
+			tr
+				td: strong 140
+				td: strong 13 000
+				td: strong 14 500
