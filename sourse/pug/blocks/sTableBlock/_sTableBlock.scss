@@ -20,7 +20,7 @@
 	table{
 		width: 100%;
 		text-align: center;
-		min-width: 360px;
+		min-width: 760px;
 		p{
 			margin-bottom: 0.1rem;
 			font-size: 1rem;
@@ -33,10 +33,10 @@
 	
 	@include media-breakpoint-up(md) {
 
-		--first: calc(145px + 8vw);
 	}
 	
-	--first: calc(105px + 8vw);
+	// --first: calc(105px + 8vw);
+	--first: calc(145px + 8vw);
 	th{
 
 		&:not(:first-child){
