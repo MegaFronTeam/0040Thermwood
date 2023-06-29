@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>реечный фасад</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body data-bg="main.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<h1>реечный фасад</h1>
+					</div>
+				</div>
+				<!-- start sTableBlock-->
+				<section class="sTableBlock section" id="sTableBlock">
+					<div class="container">
+						<div class="table-wtrap">
+							<table>
+								<thead>
+									<tr class="tr-gray">
+										<th class="text-center" colspan="5">классическая фасадная доска</th>
+									</tr>
+									<tr class="text-center"> 
+										<td colspan="5">
+											<div class="row">
+												<div class="col-4"><img class="mb-1" src="img/table-var-1-1.png" alt="" loading="lazy"/>
+													<div class="small">Прямой планкен</div>
+												</div>
+												<div class="col-4"><img class="mb-1" src="img/table-var-1-2.png" alt="" loading="lazy"/>
+													<div class="small">Скошенный планкен</div>
+												</div>
+												<div class="col-4"><img class="mb-1" src="img/table-var-1-3.png" alt="" loading="lazy"/>
+													<div class="small">Профиль по&nbsp;образцу  или чертежу Заказчика</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr> 
+										<th>порода древесины</th>
+										<th>толщина (мм)</th>
+										<th>ширина (мм)</th>
+										<th>цена <small>(руб./м.п)</small>
+											<div class="smallest"> изделие  без&nbsp;покрытия</div>
+										</th>
+										<th>цена <small>(руб./м.п)</small>
+											<div class="smallest"> изделие + защитное покрытие Kreidezeit</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tr-gray">
+										<th class="text-center">термоясень</th>
+										<th colspan="4"></th>
+									</tr>
+									<tr>
+										<td rowspan="4">
+											<div class="sTableBlock__img-wrap"><img src="img/table-1-poroda-1.jpg" alt="" loading="lazy"/>
+											</div>
+											<p>Сорт Экстра</p>
+											<p>Длина изделий 900-3000 мм, </p>
+											<p>Шаг по длине 100 мм,</p>
+											<p>Доска длиннее 2 м - не менее 50% от партии</p>
+										</td>
+										<td rowspan="4"><strong> 20</strong></td>
+										<td><strong>95</strong></td>
+										<td><strong>5 500</strong></td>
+										<td><strong>7 000</strong></td>
+									</tr>
+									<tr>
+										<td><strong>115</strong></td>
+										<td><strong>5 800</strong></td>
+										<td><strong>7 300</strong></td>
+									</tr>
+									<tr>
+										<td><strong>135/160</strong></td>
+										<td><strong>6 200</strong></td>
+										<td><strong>7 700</strong></td>
+									</tr>
+									<tr>
+										<td><strong>180/200</strong></td>
+										<td><strong>6 800</strong></td>
+										<td><strong>8 300</strong></td>
+									</tr>
+									<tr class="tr-gray">
+										<th class="text-center">термопихта</th>
+										<th colspan="4"></th>
+									</tr>
+									<tr>
+										<td rowspan="2">
+											<div class="sTableBlock__img-wrap"><img src="img/table-1-poroda-2.jpg" alt="" loading="lazy"/>
+											</div>
+											<p>Сорт Экстра</p>
+											<p>Длина изделий 900-4000 мм, </p>
+											<p>Шаг по длине 100 мм,</p>
+											<p>Доска длиннее 2 м - не менее 50% от партии</p>
+										</td>
+										<td rowspan="2"><strong> 16</strong></td>
+										<td><strong>80/85</strong></td>
+										<td><strong>3 300</strong></td>
+										<td><strong>4 800</strong></td>
+									</tr>
+									<tr>
+										<td><strong>120</strong></td>
+										<td><strong>3 700</strong></td>
+										<td><strong>5 200</strong></td>
+									</tr>
+									<tr class="tr-gray">
+										<th class="text-center">термохвоя</th>
+										<th colspan="4"></th>
+									</tr>
+									<tr>
+										<td rowspan="1">
+											<div class="sTableBlock__img-wrap"><img src="img/table-1-poroda-3.jpg" alt="" loading="lazy"/>
+											</div>
+											<p>Сорт АВ (с сучками)</p>
+											<p>Длина изделий 1250-4000 мм,</p>
+											<p>Шаг по длине 100 мм,</p>
+											<p>Доска длиннее  1,75м - не менее 40% от партии</p>
+										</td>
+										<td rowspan="4"><strong> 19,5</strong></td>
+										<td><strong>130</strong></td>
+										<td><strong>2 250</strong></td>
+										<td><strong>3 750</strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="text-end"> *Цены указаны без покртия</p>
+						<div class="row">
+							<div class="col"></div>
+							<div class="col-auto">
+								<a class="sTableBlock__btn btn btn-light" href="#">скачать техпаспорт
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sTableBlock__btn btn btn-light" href="#">скачать прайс лист
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sTableBlock-->
+			</main>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script src="libs/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="libs/masonry-layout/masonry.pkgd.min.js"></script>
+<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="js/common.js"></script>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win modal-win--form">
+				<div class="form-wrap">
+					<form>
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__input-title">Введите номер телефона:</span><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (_ _ _) - _ _ _ - _ _ - _ _" required="required"/> 
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn btn-primary" type="submit">перезвоните мне
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Нажимая кнопку Вы соглашаетесь с Политикой конфиденциальности</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div id="modal-socials" style="display: none">
+			<div class="modal-win modal-win--socials">
+				<div class="h5">напишите нам:</div>
+				<div class="row">
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/whatsapp-modal.png" alt="" loading="lazy"/><span>WhatsApp</span>
+						</a>
+					</div>
+					<div class="col-6">
+						<a class="modal-win__soc-item" href="#"><img src="img/telegram-modal.png" alt="" loading="lazy"/><span>Telegram</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal-socials-->
+		<div id="modal-accepted" style="display: none">
+			<div class="modal-win modal-win--accepted">
+				<div class="h5">ваше обращение принято.&nbsp;в&nbsp;течении 30&nbsp;минут пришлём расчёт.</div>
+			</div>
+		</div>
+		<!-- #modal-accepted-->
+		<div id="modal-blog" style="display: none">
+			<div class="modal-win modal-win--blog">
+				<div class="row">
+					<div class="modal-win__caption-col col-lg-6">
+						<div class="sBlog__head">
+							<div class="sBlog__title">Потрясающий дом с отделкой Термодеревом</div>
+							<div class="sBlog__date">19.05.2023 г.</div>
+						</div>
+						<div class="sBlog__body">
+							<p>Хорошая погода-отличный повод для съемки нового объекта с применением планкена из Термоясеня.  В проекте использовали широкую доску для фасада 20х160 мм, общий объем планкена скошенного 1350м². Покрытием натуральным немецким маслом.</p>
+							<p>Обязательно переходите и смотрите на youtube новый видео-ролик с объекта.</p>
+						</div>
+						<div class="modal-win__slider modal-win__slider--thumbs-js swiper">
+							<div class="swiper-wrapper">
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-win__slider-col col-lg-6 order-lg-first">
+						<div class="modal-win__slider modal-win__slider--js swiper">
+							<div class="swiper-wrapper">
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+								<div class="modal-win__slide swiper-slide">
+									<div class="modal-win__img-wrap"><img class="object-fit-js" src="img/blog-img.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-blog-->
+		<div id="modal-questions" style="display: none">
+			<div class="modal-win modal-win--questions">
+				<div class="modal-win__head-row row">
+					<div class="col">
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+					</div>
+					<div class="col-auto">
+						<a class="modal-win__next" href="#">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="modal-win__question-title">1. Выберите область применения Термодерева
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/modal-img-1.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Фасадная доска</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="radio" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/modal-img-2.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Террасная доска</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-questions-->
+		<div id="modal-questions2" style="display: none">
+			<div class="modal-win modal-win--questions">
+				<div class="modal-win__head-row row">
+					<div class="col">
+						<div class="form-data h5">Оставьте заявку и выберете удобное время звонка</div>
+					</div>
+					<div class="col-auto">
+						<a class="modal-win__next" href="#">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="modal-win__question-title">Выберите тип фасада
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type-fasade-wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/type-fasade-1.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термоясень</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type-fasade-wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/type-fasade-2.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термопихта</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="type-fasade-wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/type-fasade-3.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термохвоя</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__question-title">2. Выберите породу Термодерева
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-1.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термоясень</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-2.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термопихта</span>
+						</label>
+					</div>
+					<div class="col-sm">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="wood2" type="radio"/><span class="custom-input__img-wrap">
+							<div class="img-wrap-center"><img class="object-fit-js" src="img/prod-3.jpg" alt="" loading="lazy"/>
+							</div></span><span class="custom-input__text">Термохвоя</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__question-title">3. Выберите профиль
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><img class="res-i" src="img/form-profile-1.png" alt="" loading="lazy"/><span class="custom-input__text">Прямой планкен</span>
+						</label>
+					</div>
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><img class="res-i" src="img/form-profile-2.png" alt="" loading="lazy"/><span class="custom-input__text">Косой планкен</span>
+						</label>
+					</div>
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle" type="radio"/><img class="res-i" src="img/form-profile-3.png" alt="" loading="lazy"/><span class="custom-input__text">Под заказ</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__body-row row">
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle2" type="radio"/><img class="res-i" src="img/form-profile-4.png" alt="" loading="lazy"/><span class="custom-input__text">Декинг</span>
+						</label>
+					</div>
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle2" type="radio"/><img class="res-i" src="img/form-profile-5.png" alt="" loading="lazy"/><span class="custom-input__text">Вельвет</span>
+						</label>
+					</div>
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle2" type="radio"/><img class="res-i" src="img/form-profile-6.png" alt="" loading="lazy"/><span class="custom-input__text">Антислип</span>
+						</label>
+					</div>
+					<div class="col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle2" type="radio"/><img class="res-i" src="img/form-profile-7.png" alt="" loading="lazy"/><span class="custom-input__text">Под заказ</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__body-row row justify-content-center">
+					<div class="col-xl-3 col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle3" type="radio"/><img class="res-i" src="img/form-profile-8.png" alt="" loading="lazy"/><span class="custom-input__text custom-input__text--without-text"></span>
+						</label>
+					</div>
+					<div class="col-xl-3 col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle3" type="radio"/><img class="res-i" src="img/form-profile-9.png" alt="" loading="lazy"/><span class="custom-input__text custom-input__text--without-text"></span>
+						</label>
+					</div>
+					<div class="col-xl-3 col-sm-4 col-6">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="rectangle3" type="radio"/><img class="res-i" src="img/form-profile-10.png" alt="" loading="lazy"/><span class="custom-input__text custom-input__text--without-text"></span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-win__question-title">4. Выберите объем (м²)
+				</div>
+				<input class="js-range-slider" type="text"/>
+				<div class="modal-win__range-input-wrap">
+					<input class="js-range-input" type="text"/><span>м²</span>
+				</div>
+				<div class="modal-win__question-title">5. Комментарии
+				</div>
+				<div class="modal-win__input-wrap form-group"><textarea class="modal-win__input form-control" name="textarea" placeholder=""></textarea>
+				</div>
+				<!-- +e.input-wrap-->
+				<div class="upload-field">
+					<div class="upload-field__wrap">
+						<div class="upload-field__input-wrap">
+							<label>
+								<input class="input-upload" type="file" name="file"/><span>Прикрепить вложение</span>
+							</label>
+						</div>
+						<div class="upload-field__file-name"> 
+						</div>
+					</div>
+				</div>
+				<div class="modal-win__question-title">5. Комментарии
+				</div>
+				<div class="modal-win__inputs">
+					<div class="form-wrap">
+						<div class="form-wrap__input-wrap form-group">
+							<select class="form-wrap__input form-select" name="select">
+								<option value="E-mail">E-mail</option>
+								<option value=" placeholder 1">placeholder 1</option>
+								<option value=" placeholder 2">placeholder 2</option>
+								<option value=" placeholder 3">placeholder 3</option>
+								<option value=" placeholder 4">placeholder 4</option>
+							</select>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="+7 (_ _ _) - _ _ _ - _ _ - _ _"/>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+				</div>
+				<div class="text-center">
+					<button class="btn btn-primary" type="button">готово</button>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-questions-->
+		<!-- end modals-->
+	</body>
+</html>

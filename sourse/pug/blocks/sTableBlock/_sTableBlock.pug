@@ -238,3 +238,99 @@ mixin sTableBlock07(data)
 				td: strong 7 000
 
 
+				
+mixin sTableBlock17(data)
+	+sTableBlockBase()
+		thead
+			tr.tr-gray
+				th(colspan="5").text-center классическая фасадная доска
+			tr.text-center 
+				td(colspan="5")
+					.row
+						.col-4
+							+img('img/table-var-1-1.png').mb-1
+							.small Прямой планкен
+						.col-4
+							+img('img/table-var-1-2.png').mb-1
+							.small Скошенный планкен
+						.col-4
+							+img('img/table-var-1-3.png').mb-1
+							.small Профиль по&nbsp;образцу  или чертежу Заказчика
+			tr 
+				th порода древесины
+				th толщина (мм)
+				th ширина (мм)
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие  без&nbsp;покрытия
+				th цена 
+					small (руб./м.п)
+					.smallest  изделие + защитное покрытие Kreidezeit
+		tbody
+			tr.tr-gray
+				th().text-center термоясень
+				th(colspan="4")
+			tr
+				td(rowspan="4")
+					+e.img-wrap
+						+img("img/table-1-poroda-1.jpg")
+					p Сорт Экстра
+					p Длина изделий 900-3000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="4"): strong  20
+				td: strong 95
+				td: strong 5 500
+				td: strong 7 000
+				
+			tr
+				td: strong 115
+				td: strong 5 800
+				td: strong 7 300
+			tr
+				td: strong 135/160
+				td: strong 6 200
+				td: strong 7 700
+			tr
+				td: strong 180/200
+				td: strong 6 800
+				td: strong 8 300
+
+			tr.tr-gray
+				th().text-center термопихта
+				th(colspan="4")
+			tr
+				td(rowspan="2")
+					+e.img-wrap
+						+img("img/table-1-poroda-2.jpg")
+					p Сорт Экстра
+					p Длина изделий 900-4000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="2"): strong  16
+				td: strong 80/85
+
+				td: strong 3 300
+				td: strong 4 800
+				
+			tr
+				td: strong 120
+				td: strong 3 700
+				td: strong 5 200
+
+			tr.tr-gray
+				th().text-center термохвоя
+				th(colspan="4")
+			tr
+				td(rowspan="1")
+					+e.img-wrap
+						+img("img/table-1-poroda-3.jpg")
+					p Сорт АВ (с сучками)
+					p Длина изделий 1250-4000 мм,
+					p Шаг по длине 100 мм,
+					p Доска длиннее  1,75м - не менее 40% от партии
+				td(rowspan="4"): strong  19,5
+				td: strong 130
+
+				td: strong 2 250
+				td: strong 3 750

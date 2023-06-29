@@ -28,7 +28,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 
-		--first: calc(355px + 8vw);
+		--first: calc(325px + 8vw);
 	}
 	
 	@include media-breakpoint-up(md) {
@@ -41,7 +41,12 @@
 
 		&:not(:first-child){
 	
-			width: calc( (100% - var(--first))/ 3);
+			width: calc( (100% - var(--first))/ 5);
+		}
+		&:nth-child(4),
+		&:nth-child(5){
+			width: 160px;
+
 		}
 	}
 	td{
@@ -74,6 +79,38 @@
 	th{
 		text-transform: uppercase;
 	}
+
+	td{
+		.row{
+			justify-content: center;
+		}
+		.col-4{
+			// margin-left: auto;
+			// margin-right: auto;
+			max-width: 240px;
+		}
+	}
+	small{
+		font-size: 12px;
+	}
+	.smallest{
+		font-size: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 140px;
+	}
+
+	&__img-wrap{
+		display: inline-block;
+		border-radius: 3px;
+		overflow: hidden;
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+		box-shadow: 4px 4px 9px 3px rgba(0, 0, 0, 0.25); 
+		img{
+			margin: 0 !important;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -84,7 +121,10 @@
 } // end.sTableBlock
 
 .table-wtrap{
-	overflow-x: auto;
+	@include media-breakpoint-down(xl) {
+
+		overflow-x: auto;
+	}
 	margin-bottom: 18px;
 }
 .tr-gray{
