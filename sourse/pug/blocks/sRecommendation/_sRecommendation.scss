@@ -15,8 +15,7 @@
 		h2 {
 			text-align: center;
 			font-weight: 600;
-			text-align: center;
-			font-variant: small-caps;
+			text-align: center; 
 			color: rgba(87, 87, 87, 0.8);	
 			font-size: rem(25);		
 			@include media-breakpoint-up(lg) {

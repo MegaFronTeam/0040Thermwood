@@ -174,7 +174,7 @@
 				font-size: rem(18);
 				font-weight: 500;
 				line-height: 26px;
-				font-variant: small-caps;
+				// font-variant: small-caps;
 			}
 		}
 	}
@@ -262,8 +262,7 @@
 			&__question-title {
 				font-size: rem(16);
 				line-height: 1.59;
-				font-weight: 500;
-				font-variant: small-caps;
+				font-weight: 500; 
 				margin-bottom: rem(30);
 				// display: inline-block;
 				&--indent {
@@ -399,7 +398,7 @@
 				height: rem(40);
 				margin-bottom: rem(32);
 				@include rfs('42px');
-				font-variant: small-caps;
+				// font-variant: small-caps;
 				color: rgba(0, 0, 0, 0.5);
 				text-align: center;
 				font-weight: 700;

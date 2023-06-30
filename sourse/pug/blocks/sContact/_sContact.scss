@@ -30,7 +30,7 @@
 		p {
 			font-weight: rem(15);
 			line-height: calc(18 / 15);
-			font-variant: small-caps;
+			// font-variant: small-caps;
 			max-width: 19em;
 			&:last-child {
 				margin-bottom: 0;
@@ -38,8 +38,7 @@
 		}
 		a {
 			font-weight: rem(15);
-			line-height: calc(18 / 15);
-			font-variant: small-caps;
+			line-height: calc(18 / 15); 
 			&:not(:hover) {
 				color: $body-color;
 			}
@@ -58,8 +57,7 @@
 			padding: rem(11) 0;
 			font-weight: 400;
 			font-size: rem(15);
-			line-height: calc(20 / 15);
-			font-variant: small-caps;
+			line-height: calc(20 / 15); 
 
 			--bs-border-width: 0.3px;
 			border-radius: 0;

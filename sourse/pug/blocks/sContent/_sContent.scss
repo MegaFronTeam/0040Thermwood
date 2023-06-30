@@ -33,8 +33,7 @@
 		list-style: none;
 		&::before{
 			content: '✔ ';
-			color: $body-color;
-			font-variant: small-caps;
+			color: $body-color; 
 
 		}
 	}

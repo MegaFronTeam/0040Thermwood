@@ -3,7 +3,8 @@
 
 		display: flex;
 		text-align: center;
-		justify-content: space-around;
+		justify-content: space-between;
+		max-width: rem(1240);
 		@include roww(20px);
 		flex-wrap: wrap;
 	}
