@@ -9,7 +9,7 @@ mixin headerBlock()
 				+e.btns
 					+e.btn(href="#") получить расчет
 					+e.btn(href="#") мессенджеры
-					+e.btn(href="#") заказать звонок
+					+e.btn(href="#" data-src="#modal-call").btn-modal-js заказать звонок
 			+e.footer
 				.row
 					mixin item(n,t,p)
