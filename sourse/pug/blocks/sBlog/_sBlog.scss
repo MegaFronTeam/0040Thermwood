@@ -59,6 +59,9 @@
 		letter-spacing: 0.3em;
 		text-transform: uppercase;
 		font-weight: 500;
+		@include media-breakpoint-down(sm) {
+		  @include  ell(3);
+		}
 	}
 	&__date{
 		font-size: 12px;
@@ -77,6 +80,12 @@
 	&__body{
 		margin-bottom: 20px;
 		flex-grow: 1;
+	  * {
+		//display: inline;
+			@include media-breakpoint-up(sm) {
+			  @include  ell(6);
+			  }
+	  }
 	}
 	&__footer{
 		align-items: center;
