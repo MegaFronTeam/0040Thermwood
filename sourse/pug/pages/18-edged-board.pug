@@ -1,0 +1,56 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= ' Обрезная доска'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head(title)
+		+head-banner('head-18.jpg')
+		//- +sTableBlock04
+		//- +headerBlock 
+		//- +sResult()
+		+sContent().pb-0
+			.container(style="max-width:1030px")
+				.row(style="--bs-gutter-x: 6px")
+					.col-lg-6
+						.table-wtrap
+							table.table.table-striped()
+								mixin tr(t1,t2)
+									tr
+										th.ttu(scope="row"  )= t1
+										td.text-end= t2
+								+tr(`порода`,`дуб, ясень,бук`)
+								+tr(`влажность `,`8-10%`)
+								+tr(`толщина`,`30/50 мм`)
+								+tr(`ширина`,`80-250 мм`)
+								+tr(`длина`,`0,5-0,9 / 1-1,4 / 1,5-1,9 / 2-2,4 / 2,5-3 мм`)
+								+tr(`сорт`,`0-1`)
+
+					.col-lg
+						+img("img/content-right-img.jpg").res-i
+		+sTableBlock18
+		
+	+parts('footer')
+      
+
+
+

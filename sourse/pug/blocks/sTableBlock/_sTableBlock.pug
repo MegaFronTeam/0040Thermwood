@@ -1,7 +1,9 @@
-mixin sTableBlockBase(data)
+mixin sTableBlockBase(cont)
 	// start sTableBlock
 	+b.SECTION.sTableBlock.section#sTableBlock&attributes(attributes)
 		.container
+			if cont
+				h2 цены
 			.table-wtrap
 				table
 					if block
@@ -65,7 +67,16 @@ mixin sTableBlockBase(data)
 					+e.btn.btn.btn-light(href="#") скачать техпаспорт
 				.col-auto
 					+e.btn.btn.btn-light(href="#") скачать прайс лист
-
+			if cont
+				h2 контакты
+				p 
+					a(href="tel:+79266217609").tdu.text-body +7 926 621 76 09
+					| 
+					| Татьяна
+					br
+					a(href="tel:+79256258080").tdu.text-body +7 925 625 80 80
+					| 
+					| Лариса
 	// end sTableBlock
 
 mixin sTableBlock(data)
@@ -624,3 +635,163 @@ mixin sTableBlock17(data)
 				td: strong 140
 				td: strong 13 000
 				td: strong 14 500
+
+mixin sTableBlock18(cont)
+	+sTableBlockBase('cont')
+		thead
+			tr.tr-gray.border-bottom.border-white(style='--bs-border-width:6px')
+				th(colspan="7") обрезная доска 
+		tbody
+			tr.tr-gray
+				td регион
+				td порода
+				td сорт
+				td толщина
+				td ширина
+				td длина
+				td цена за м³
+			tr
+				td(rowspan="5") кавказ
+				td(rowspan="5") дуб
+				td(rowspan="5") 0-1
+				td(rowspan="5") 50
+				td 80-200
+				td 500-900
+				td  75 000
+				
+			tr
+				td(rowspan="4") 90-250
+				td 1000-1400
+				td   108 000
+			tr
+				
+				td 1500-1900
+				td 110 000
+			tr
+				
+				td 2000-2400
+				td 131 000
+			tr
+				
+				td 2500-3100
+				td 135 000
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="4") кавказ
+				td(rowspan="4") дуб
+				td(rowspan="4") 0-1
+				td(rowspan="4") 30
+				td  70-200
+				td 500-900
+				td 65 000
+				
+			tr
+				td 80-200
+				td 1000-1900
+				td 88 000
+			tr
+				td(rowspan="2") 90-200
+				td  2000-3400
+				td  108 000
+			tr
+				
+				td  3500-4200
+				td  115 000
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="3") средняя полоса
+				td(rowspan="3") ясень
+				td(rowspan="3") 0-1
+				td(rowspan="3") 50
+				td(rowspan="3") 90-250
+				td 500-900
+				td 55 000
+				
+			tr 
+				td 1000-1900
+				td 80 000
+			tr 
+				td 2000-3000
+				td 98 000
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="3") средняя полоса
+				td(rowspan="3") ясень
+				td(rowspan="3") 0-1
+				td(rowspan="3") 30
+				td  90-200
+				td 500-900
+				td 54 000
+				
+			tr 
+				td(rowspan="2") 90-140
+				td 1000-1900
+				td 65 000
+			tr 
+				td 2000-3000
+				td 86 000
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="3") кавказ
+				td(rowspan="3") бук
+				td(rowspan="3") 0-1
+				td(rowspan="3") 30
+				td(rowspan="3") 90-200
+				td 500-900
+				td 39 000 
+				
+			tr  
+				td 1000-1900
+				td 48 000                    
+				
+			tr  
+				td 2000-3000
+				td 55 000
+
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="3") средняя полоса
+				td(rowspan="3") термоясень
+				td(rowspan="3") 0-1
+				td 50
+				td 80-220
+				td 2500-3000
+				td 125 000
+				
+			tr  
+				td 30
+				td 80-120
+				td 2000-3000
+				td 114 000
+
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------
+			tr
+				td(rowspan="3") кавказ
+				td(rowspan="3") термопихта
+				td(rowspan="3") 0-1
+				td 22
+				td 90
+				td 1000-4000
+				td 90 000
+				
+			tr  
+				td 45
+				td 145
+				td 1000-4000
+				td 90 000
+
+			tr
+				td(colspan="7").p-1.border-start-0.border-end-0
+			//- --------------------

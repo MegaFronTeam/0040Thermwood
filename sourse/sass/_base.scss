@@ -812,3 +812,18 @@ h2 {
 	margin-right: auto;
 	max-width: rem(1512);
 }
+
+.table-striped{
+	background: #F2F2F2;
+	font-size: 15px;
+	th,
+	td{
+		border-bottom: 6px solid #fff;
+		&:first-child{
+			padding-left: rem(30);
+		}
+		&:last-child{
+			padding-right: rem(30);
+		}
+	}
+}
