@@ -26,7 +26,7 @@
 		}
 	}
 	&__nav {
-		max-width: rem(365);
+		// max-width: rem(365);
 		@include media-breakpoint-up(md) {
 			margin-top: rem(10);
 		}
@@ -108,6 +108,13 @@
 	// 	height: auto;
 	// }
 	//
+	p{
+		max-width: 320px;
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+			text-align: right;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 
