@@ -28,27 +28,54 @@ block pagecontent
 		//- +sTableBlock04
 		//- +headerBlock 
 		//- +sResult()
-		+sContent().pb-0
-			.container(style="max-width:1030px")
-				.row(style="--bs-gutter-x: 6px")
-					.col-lg-6
-						.table-wtrap
-							table.table.table-striped()
-								mixin tr(t1,t2)
-									tr
-										th.ttu(scope="row"  )= t1
-										td.text-end= t2
-								+tr(`порода`,`дуб, ясень,бук`)
-								+tr(`влажность `,`8-10%`)
-								+tr(`толщина`,`30/50 мм`)
-								+tr(`ширина`,`80-250 мм`)
-								+tr(`длина`,`0,5-0,9 / 1-1,4 / 1,5-1,9 / 2-2,4 / 2,5-3 мм`)
-								+tr(`сорт`,`0-1`)
-
-					.col-lg
-						+img("img/content-right-img.jpg").res-i
-		+sTableBlock19
-		
+		.sTableBlock
+			+sContent().pb-0
+				.container(style="max-width:1030px")
+					.row(style="--bs-gutter-x: 6px")
+						.col-lg-6
+							+b.panel-item.bg-wrap
+								+img("img/panels-1.jpg",'bg').picture-bg 
+								+e.title дуб
+								+e.body
+									.strong порода
+									.text Дуб Кавказ
+									.strong влажность древесины
+									.text 8%±2%
+									.strong допуск по толщине
+									.text 0±3 мм
+									.strong допуск по ширине
+									.text 0+3 мм
+									.strong допуск по длине
+									.text 0+5 мм
+									.strong ширина ламели
+									.text 40-45 мм
+									.strong шлифование
+									.text Зернистость не менее P-120
+									.strong склеивание
+									.text На гладкую фугу, клей Kleiberit 303.2 категория нагрузки D3
+						.col-lg-6
+							+b.panel-item.bg-wrap
+								+img("img/panels-2.jpg",'bg').picture-bg 
+								+e.title ясень
+								+e.body
+									.strong порода
+									.text Ясень Кавказ
+									.strong влажность древесины
+									.text 8%±2%
+									.strong допуск по толщине
+									.text 0±3 мм
+									.strong допуск по ширине
+									.text 0+3 мм
+									.strong допуск по длине
+									.text 0+5 мм
+									.strong ширина ламели
+									.text 40-45 мм
+									.strong шлифование
+									.text Зернистость не менее Р-120
+									.strong склеивание
+									.text На гладкую фугу, клей Kleiberit 303.2 категория нагрузки D3
+			+sTableBlock19
+			
 	+parts('footer')
       
 

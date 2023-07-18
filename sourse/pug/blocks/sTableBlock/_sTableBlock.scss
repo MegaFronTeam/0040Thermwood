@@ -17,10 +17,16 @@
 	&__item{
 
 	}
+		.table-striped{
+			vertical-align: middle;
+		} 
+	table:not(.table-striped){
+
+		min-width: 760px;
+	}
 	table{
 		width: 100%;
 		text-align: center;
-		min-width: 760px;
 		p{
 			margin-bottom: 0.1rem;
 			font-size: 1rem;
@@ -37,7 +43,7 @@
 	
 	// --first: calc(105px + 8vw);
 	--first: calc(145px + 8vw);
-	th{
+	table:not(.table-striped) th{
 
 		&:not(:first-child){
 	
@@ -56,25 +62,28 @@
 			font-weight: 500;
 		}
 	}
-	th:nth-child(1){
+	table:not(.table-striped)th:nth-child(1){
 		width: var(--first);
 	}
-	td,
-	th{
-		padding: 6px;
-		font-weight: normal;
-	}
-	td{
-		padding: 18px 6px;
-		img{
-			margin-bottom: rem(25);
-			@extend .res-i;
-		}
+	table:not(.table-striped){
 
-	}
-	td,
-	th{
-		border: 1px solid #A7A7A7;
+		td,
+		th{
+			padding: 6px;
+			font-weight: normal;
+		}
+		td{
+			padding: 18px 6px;
+			img{
+				margin-bottom: rem(25);
+				@extend .res-i;
+			}
+	
+		}
+		td,
+		th{
+			border: 1px solid #A7A7A7;
+		} 
 	}
 	th{
 		text-transform: uppercase;

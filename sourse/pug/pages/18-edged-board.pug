@@ -28,26 +28,27 @@ block pagecontent
 		//- +sTableBlock04
 		//- +headerBlock 
 		//- +sResult()
-		+sContent().pb-0
-			.container(style="max-width:1030px")
-				.row(style="--bs-gutter-x: 6px")
-					.col-lg-6
-						.table-wtrap
-							table.table.table-striped()
-								mixin tr(t1,t2)
-									tr
-										th.ttu(scope="row"  )= t1
-										td.text-end= t2
-								+tr(`порода`,`дуб, ясень,бук`)
-								+tr(`влажность `,`8-10%`)
-								+tr(`толщина`,`30/50 мм`)
-								+tr(`ширина`,`80-250 мм`)
-								+tr(`длина`,`0,5-0,9 / 1-1,4 / 1,5-1,9 / 2-2,4 / 2,5-3 мм`)
-								+tr(`сорт`,`0-1`)
+		.sTableBlock
+			+sContent().pb-0
+				.container(style="max-width:1030px")
+					.row(style="--bs-gutter-x: 6px")
+						.col-lg-6
+							.table-wtrap
+								table.table.table-striped()
+									mixin tr(t1,t2)
+										tr
+											th.ttu(scope="row"  )= t1
+											td.text-end= t2
+									+tr(`порода`,`дуб, ясень,бук`)
+									+tr(`влажность `,`8-10%`)
+									+tr(`толщина`,`30/50 мм`)
+									+tr(`ширина`,`80-250 мм`)
+									+tr(`длина`,`0,5-0,9 / 1-1,4 / 1,5-1,9 / 2-2,4 / 2,5-3 мм`)
+									+tr(`сорт`,`0-1`)
 
-					.col-lg
-						+img("img/content-right-img.jpg").res-i
-		+sTableBlock18
+						.col-lg
+							+img("img/content-right-img.jpg").res-i
+			+sTableBlock18
 		
 	+parts('footer')
       
