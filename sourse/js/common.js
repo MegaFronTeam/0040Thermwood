@@ -291,20 +291,17 @@ const JSCCommon = {
 		})
 	},
 	rangerSlider(){
-		console.log(1)
 		var $range = $(".js-range-slider");
 		var $input = $(".js-range-input");
-		console.log($range);
 		var valueArr = [0, 500, 900, 1500, 2000, 2800, 3500, 5000];
 
-		console.log(1)
 		$range.ionRangeSlider({
 			type: "single",
 			min: 0,
 			max: 5000,
 			from: 0,
 			grid: true,
-			values: valueArr,
+			prettify: valueArr,
 			skin: "round",
 			onStart: function (data) {
 				$input.prop("value", valueArr[data.from]);
