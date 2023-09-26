@@ -122,14 +122,14 @@ function copyLibs() {
         .pipe(dest(publicPath + '/libs'));
 }
 
-function styles() {
+function watchStyle(file) {
     const processors = [
         autoprefixer(),
         nested(),
         cssnano(),
         gcmq(),
     ];
-    return src(sourse + '/sass/main.scss')
+    return src(sourse + `/sass/${file}.scss`)
         .pipe(sassGlob())
         .pipe(
             sass.sync()
@@ -141,7 +141,41 @@ function styles() {
         .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(dest(publicPath + '/css'))
         .pipe(browserSync.stream());
-
+}
+function styles() { 
+    const processors = [
+        autoprefixer(),
+        nested(),
+        cssnano(),
+        gcmq(),
+    ];
+    return src(sourse + `/sass/main.scss`)
+        .pipe(sassGlob())
+        .pipe(
+            sass.sync()
+                .on('error', sass.logError)
+        )
+        .pipe(postcss(processors, { syntax: pscss })) 
+        .pipe(rename({ suffix: '.min', prefix: '' }))
+        .pipe(dest(publicPath + '/css'))
+        .pipe(browserSync.stream());
+}
+function bootstrapstyles() {
+    const processors = [
+        autoprefixer(),
+        nested(),
+        cssnano(),
+        gcmq(),
+    ];
+    return src(sourse + `/sass/custom-bootstrap.scss`)
+        .pipe(
+            sass.sync()
+                .on('error', sass.logError)
+        ) 
+        .pipe(postcss(processors, { syntax: pscss })) 
+        .pipe(rename({ suffix: '.min', prefix: '' }))
+        .pipe(dest(publicPath + '/css'))
+        .pipe(browserSync.stream()); 
 }
 function common() {
     return src(
@@ -235,7 +269,8 @@ function img() {
         .pipe(dest(publicPath + '/img')) 
 }
 function startwatch() {
-    watch([sourse + '/sass/**/*.css', sourse + '/pug/blocks/**/*.scss', sourse + '/sass/**/*.scss', sourse + '/sass/**/*.sass'], { usePolling: true }, styles);
+    watch([sourse + '/sass/**/*.css', sourse + '/sass/**/*.scss', `!${sourse}/sass/custom-bootstrap.scss`, sourse + '/sass/**/*.sass', `${sourse}/pug/blocks/**/*.scss`, ], { usePolling: true }, styles);
+    watch([sourse + '/sass/**/*.css', sourse + '/sass/**/*.scss', `!${sourse}/sass/_base.scss`, `!${sourse}/sass/_root.scss`, `!${sourse}/sass/_fonts.scss`, sourse + '/sass/**/*.sass' ], { usePolling: true }, bootstrapstyles);
     watch([sourse + '/pug/**/*.pug', sourse + '/pug/content.json'], { usePolling: true }, pugFiles);
     watch(sourse + '/svg/*.svg', { usePolling: true }, svg);
     // watch([sourse + '/js/libs.js'], { usePolling: true }, scripts);
@@ -248,7 +283,8 @@ function startwatch() {
 export let imgAll = series(cleanimg, img) 
 export let libs = series(cleanlibs, copyLibs)
 export let sprite = series(svg, svgCopy)
+export let styleAll = parallel(bootstrapstyles,styles)
 
 
 
-export default series(common, libs, styles, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
+export default series(common, libs, styleAll, imgAll, sprite, pugFiles, parallel(browsersync, startwatch))
