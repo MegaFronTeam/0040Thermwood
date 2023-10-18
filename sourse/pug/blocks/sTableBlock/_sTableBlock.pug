@@ -1095,3 +1095,81 @@ mixin sTableBlock19(cont)
 						td 900
 						td 200 000
 						
+mixin sTableBlock20(cont)
+	+sTableBlockBase()
+		thead
+			tr.tr-gray.border-bottom.border-white(style='--bs-border-width:6px')
+				th(colspan="6") двухслойная инженерная доска пола дуб
+		tbody
+			tr.tr-gray.ttu.border-bottom.border-white(style='--bs-border-width:6px')
+				td сортировка
+				td толщина <br> (мм)
+				td ширина <br> (мм)
+				td ДИАПАЗОН длин  <br>(ММ)
+				td цена <br> руб./м²
+				td цена <br> руб./м² <br>  от 100 м²
+			tr
+				td(rowspan="10")
+					.text-center селект
+					+e.img-wrap
+						+img("img/table-1-poroda-1.jpg")
+					p Сорт Экстра
+					p Длина изделий 900-3000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="4"): strong  20
+				td: strong 95
+				td: strong 5 500
+				td: strong 7 000
+				
+			tr
+				td: strong 115
+				td: strong 5 800
+				td: strong 7 300
+			tr
+				td: strong 135/160
+				td: strong 6 200
+				td: strong 7 700
+			tr
+				td: strong 180/200
+				td: strong 6 800
+				td: strong 8 300
+
+			tr.tr-gray
+				th().text-center термопихта
+				th(colspan="4")
+			tr
+				td(rowspan="2")
+					+e.img-wrap
+						+img("img/table-1-poroda-2.jpg")
+					p Сорт Экстра
+					p Длина изделий 900-4000 мм, 
+					p Шаг по длине 100 мм,
+					p Доска длиннее 2 м - не менее 50% от партии
+				td(rowspan="2"): strong  16
+				td: strong 80/85
+
+				td: strong 3 300
+				td: strong 4 800
+				
+			tr
+				td: strong 120
+				td: strong 3 700
+				td: strong 5 200
+
+			tr.tr-gray
+				th().text-center термохвоя
+				th(colspan="4")
+			tr
+				td(rowspan="1")
+					+e.img-wrap
+						+img("img/table-1-poroda-3.jpg")
+					p Сорт АВ (с сучками)
+					p Длина изделий 1250-4000 мм,
+					p Шаг по длине 100 мм,
+					p Доска длиннее  1,75м - не менее 40% от партии
+				td(rowspan="4"): strong  19,5
+				td: strong 130
+
+				td: strong 2 250
+				td: strong 3 750

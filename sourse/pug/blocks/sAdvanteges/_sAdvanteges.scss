@@ -62,7 +62,8 @@
 		}
 	}
 img{
-	@extend .res-i;
+	max-width: 100%;
+	height: auto;
 	margin-bottom: rem(45);
 }
 	@include media-breakpoint-up(xl) {}

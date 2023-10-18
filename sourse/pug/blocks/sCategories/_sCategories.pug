@@ -70,3 +70,25 @@ mixin sCategories()
 					+e.item
 						+img(`img/sCategories-2.jpg`, 'bg')
 						+e.btn.btn.btn-primary(href="#") террасная доска
+
+mixin sCategories20()
+	+b.sCategories.section#sCategories&attributes(attributes)
+		.container 
+			+e.wrapper
+				+e.grid
+					.col
+						+e.item
+							+img(`img/cat-1.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") трёхслойная инженерная доска
+					.col
+						+e.item
+							+img(`img/cat-2.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") термодуб
+					.col
+						+e.item
+							+img(`img/cat-3.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") двухслойная инженерная доска
+					.col
+						+e.item
+							+img(`img/cat-4.jpg`, 'bg')
+							+e.btn.btn.btn-primary(href="#") массивная доска пола

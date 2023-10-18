@@ -76,7 +76,8 @@
 			padding: 18px 6px;
 			img{
 				margin-bottom: rem(25);
-				@extend .res-i;
+				max-width: 100%;
+		height: auto;
 			}
 	
 		}

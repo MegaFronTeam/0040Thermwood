@@ -72,10 +72,18 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 .breadcrumb {
+  a{
+    color: $body-color;
+    border-bottom: 1px solid ;
+    &:hover{
+      border-color: transparent;
+    }
+  }
 	.active {
 		a {
 			color: $breadcrumb-active-color;
 			pointer-events: none;
+      border: none;
 		}
 	}
 }
@@ -117,4 +125,73 @@ $output-bourbon-deprecation-warnings: false;
 // // @import '../pug/blocks/footer/_footer.scss';
 
 // @import "media"; // Всегда в конце
+
+.page-head {
+	@include media-breakpoint-down(lg) {
+		padding-top: 40px;
+	}
+	h1 {
+		font-weight: 500;
+		font-size: 15px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@extend h2;
+		span {
+			display: inline-block;
+			font-weight: 400;
+			&.h2 {
+				margin-right: 1.5rem;
+				font-weight: 500;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		.subpage {
+			font-size: rem(15);
+			line-height: 1.31;
+			display: flex;
+			align-items: center;
+			&:before {
+				content: "";
+				display: block;
+				width: rem(6);
+				height: rem(6);
+				border-radius: 50%;
+				background-color: #000;
+				margin-right: rem(24);
+				flex: 0 0 auto;
+			}
+		}
+	}
+}
+
+
+
+.select2-container--default .select2-selection--single {
+	@extend .form-select;
+	height: auto !important;
+	padding-left: rem(10);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	padding: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	display: none;
+}
+
+
+.sAbout {
+  &__item{
+		.strong{
+				@extend .h1;
+    }
+  }
+}
+
+
 

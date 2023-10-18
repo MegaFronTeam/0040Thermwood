@@ -1,7 +1,7 @@
 # 0040Thermwood
  
 
-1. <https://megafronteam.github.io/0040Thermwood/>
+1. <https://megafronteam.github.io/0040Thermwood/20-transition-to-the-floorboard.html>
 =================
 1. <https://megafronteam.github.io/0040Thermwood/>
 1. <https://megafronteam.github.io/0040Thermwood/02-facade-board.html>

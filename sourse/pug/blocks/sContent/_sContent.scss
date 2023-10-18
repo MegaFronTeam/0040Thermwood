@@ -7,7 +7,9 @@
 	// --sTPB: #{rem()};
 	img{
 		margin-bottom: 2rem;
-		@extend .res-i;
+		// @extend .res-i;
+		max-width: 100%;
+		height: auto;
 	}
 	h2{
 		margin-bottom: rem(13) ;

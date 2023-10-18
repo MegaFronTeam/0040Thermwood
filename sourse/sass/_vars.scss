@@ -1609,7 +1609,7 @@ $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         .5rem !default;
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
-$breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
+$breadcrumb-divider-color:         $body-color;
 $breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
 $breadcrumb-divider:                quote("•") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
