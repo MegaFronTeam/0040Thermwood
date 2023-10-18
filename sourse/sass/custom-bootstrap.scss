@@ -194,4 +194,7 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 
+.headerBlock__btn{
+  @extend  .btn, .btn-primary;
+}
 
