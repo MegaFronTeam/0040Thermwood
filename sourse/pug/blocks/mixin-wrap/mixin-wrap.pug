@@ -49,6 +49,16 @@ mixin page-head(t)
 				block
 			+breadcrumb('Главная',...items)
 
+mixin page-head2(t,...items)
+	+b.page-head--lg
+		- let l = items.length
+		.container
+			if t
+				h1= t
+			else
+				block
+			+breadcrumb('Главная',...items)
+
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)

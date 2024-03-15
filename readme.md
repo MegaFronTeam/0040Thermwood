@@ -22,3 +22,7 @@
 
 1. <https://megafronteam.github.io/0040Thermwood/18-edged-board.html>
 2. <https://megafronteam.github.io/0040Thermwood/19-furniture-panels.html>
+
+
+=================
+1. <https://megafronteam.github.io/0040Thermwood/21-transition-to-the-floorboard-1.html>

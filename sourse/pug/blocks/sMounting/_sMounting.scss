@@ -123,3 +123,35 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sMounting
+
+#sMounting2 {
+	--sPT: #{rem(10)};
+	--sPB: #{rem(10)};
+  .sMounting {
+    &__row {
+      --bs-gutter-x: #{rem(60)};
+    }
+
+    @include media-breakpoint-up(lg) {
+      &__col:first-child .sMounting__item{
+        margin-right: 0;
+      }
+      &__col:last-child .sMounting__item{
+        margin-left: 0;
+      }
+    }
+    &__item {
+      @include media-breakpoint-up(lg) {
+        max-width: rem(225);
+      }
+    }
+
+  }
+  h4 {
+    font-weight: 500;
+    font-size: rem(20);
+    text-transform: uppercase;
+    margin-bottom: rem(46);
+  }
+
+}

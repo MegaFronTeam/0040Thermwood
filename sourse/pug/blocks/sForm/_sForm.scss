@@ -172,3 +172,9 @@
 	@include media-breakpoint-down(xs) {
 	}
 } // end.sForm
+
+.form-wr {
+  .btn {
+    --bs-btn-border-color: #{$gray-500};
+  }
+}

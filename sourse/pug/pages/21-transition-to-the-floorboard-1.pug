@@ -1,0 +1,42 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sMounting/_sMounting.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Доска пола'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	+parts('header')
+	main
+		+page-head2('', 'Продукция', 'Доска пола')
+		//- +head-banner('head-19.jpg')
+		//- +sTableBlock04
+		//- +headerBlock 
+		//- +sResult()
+		+sCategories21()
+		+sTableBlock21
+		+sMounting2
+		+sTableBlock22
+		+sTableBlock23
+		+sTableBlock24
+		+sTableBlock25
+		+sForm.form-wr
+	+parts('footer')
+
+
+
+

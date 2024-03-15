@@ -775,7 +775,7 @@ mixin sTableBlock18(cont)
 				
 			tr  
 				td 1000-1900
-				td 48 000                    
+				td 48 000									  
 				
 			tr  
 				td 2000-3000
@@ -1173,3 +1173,465 @@ mixin sTableBlock20(cont)
 
 				td: strong 2 250
 				td: strong 3 750
+
+
+
+
+
+mixin sTableBlock21(cont)
+	+b.SECTION.sTableBlock.section#sTableBlock21&attributes(attributes).--floor
+		.container
+			.table-wtrap
+				table
+					thead
+						tr.tr-dark
+							th(colspan="5") двухслойная инженерная доска пола дуб
+						tr
+							td(colspan="7").p-1.border-start-0.border-end-0.sm.border-bottom-0
+					tbody
+						tr.tr-gray-light
+							td сортировка
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td цена<br>руб./м²<br>с покрытием
+						tr
+							td(colspan="7").p-1.border-start-0.border-end-0
+						tr
+							+b.wrap.TD(rowspan="10", width="35%").wrap
+								+e.title селект
+								+e.img-wrap
+									+img("img/table-floor-1.png")
+								p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							td(rowspan="2", width="11%") 12<br>(3/9 ММ)
+							td(width="13%") 100
+							td(rowspan="2", width="17%") 600-2000
+							td(width="24%") 6 400
+
+						tr
+							td 120
+							td 7 200
+						tr
+							td(rowspan="5") 15<br>(3/12 ММ)
+							td 120/130
+							td(rowspan="5") 400-2800
+							td 8 100
+						tr
+							td 140/150
+							td 8 750
+						tr
+							td 160
+							td 9 050 
+						tr
+							td 180
+							td 9 450
+						tr
+							td 200
+							td 10 100
+						tr
+							td(rowspan="3") 16<br>(4/12 ММ)
+							td 220
+							td(rowspan="3") 600-2800
+							td 10 850
+						tr
+							td 240
+							td 11 700
+						tr
+							td 280
+							td 11 950
+						tr
+							td(colspan="7").p-1.border-start-0.border-end-0.sm
+						tr
+							+b.wrap.TD(rowspan="10").wrap
+								+e.title натур
+								+e.img-wrap
+									+img("img/table-floor-2.png")
+								p Перепады по тону, смешанный распил и радиальные лучи допускаются в сортировке Натур. Благодаря этой сортировке удается сохранить естественную красоту и изъяны натурального дерева в умеренном количестве.
+							td(rowspan="2") 12<br>(3/9 ММ)
+							td 100
+							td(rowspan="2") 600-2000
+							td 4 600
+						tr
+							td 120
+							td 5 100
+						tr
+							td(rowspan="5") 15<br>(3/12 ММ)
+							td 120/130
+							td(rowspan="5") 400-2800
+							td 5 700
+						tr
+							td 140/150
+							td 6 070
+						tr
+							td 160
+							td 6 220
+						tr
+							td 180
+							td 6 530
+						tr
+							td 200
+							td 6 930
+						tr
+							td(rowspan="3") 15<br>(3/12 ММ)
+							td 220
+							td(rowspan="3") 600-2800
+							td 7 400
+						tr
+							td 240
+							td 8 000
+						tr
+							td 280
+							td 8 250
+						tr
+							td(colspan="7").p-1.border-start-0.border-end-0.sm
+						tr
+							+b.wrap.TD(rowspan="10").wrap
+								+e.title рустик
+								+e.img-wrap
+									+img("img/table-floor-3.png")
+								p Сорт Рустик имеет в себе все природное обаяние натурального массива: перепады по тону, благородные сучки и естественные трещины.
+							td(rowspan="2") 12<br>(3/9 ММ)
+							td 100
+							td(rowspan="2") 600-2000
+							td 3 540
+
+						tr
+							td 120
+							td 3 730
+						tr
+							td(rowspan="5") 15<br>(3/12 ММ)
+							td 120/130
+							td(rowspan="5") 400-2800
+							td 4 700
+						tr
+							td 140/150
+							td 4 800
+						tr
+							td 160
+							td 4 950
+						tr
+							td 180
+							td 5 020
+						tr
+							td 200
+							td 5 130
+						tr
+							td(rowspan="3") 15<br>(3/12 ММ)
+							td 220
+							td(rowspan="3") 600-2800
+							td 5 500
+						tr
+							td 240
+							td 5 800
+						tr
+							td 280
+							td 6 100
+				//- --------------------
+
+
+mixin sTableBlock22(cont)
+	+b.SECTION.sTableBlock.section#sTableBlock22&attributes(attributes).--floor
+		.container
+			.table-wtrap
+				table
+					thead
+					tbody
+						tr.tr-gray-light
+							td сортировка
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td цена<br>руб./м²<br>с покрытием
+						tr
+							td(colspan="5").p-1.border-start-0.border-end-0
+						tr
+							+b.wrap--left.TD(rowspan="4")
+								+e.img-wrap
+									+img("img/table-floor-1.png")
+								+e.descr
+									+e.title селект
+									p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							td(rowspan="2", width="11%") 12<br>(3/9 ММ)
+							td(width="13%") 100
+							td(width="17%") 500/600
+							td(width="24%") 6 110
+						tr
+							td 120
+							td 600
+							td 6 800
+						tr
+							td(rowspan="2") 15<br>(3/12 ММ)
+							td 100
+							td 500/600
+							td 6 640
+						tr
+							td 120
+							td 600
+							td 7 500
+						tr
+							td(rowspan="4").wrap
+								+e.title селект
+								+e.img-wrap
+									+img("img/table-floor-1.png")
+								p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							td(rowspan="2") 12<br>(3/9 ММ)
+							td 100
+							td 500/600
+							td 6 110
+						tr
+							td 120
+							td 600
+							td 6 800
+						tr
+							td(rowspan="2") 15<br>(3/12 ММ)
+							td 100
+							td 500/600
+							td 6 640
+						tr
+							td 120
+							td 600
+							td 7 500
+						tr
+							td(rowspan="4").wrap
+								+e.title селект
+								+e.img-wrap
+									+img("img/table-floor-1.png")
+								p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							td(rowspan="2") 12<br>(3/9 ММ)
+							td 100
+							td 500/600
+							td 6 110
+						tr
+							td 120
+							td 600
+							td 6 800
+						tr
+							td(rowspan="2") 15<br>(3/12 ММ)
+							td 100
+							td 500/600
+							td 6 640
+						tr
+							td 120
+							td 600
+							td 7 500
+			.price.text-end *Цена за изделие указана с покрытием по нашей коллекции, либо по индивидуальному подбору цвета.<br>**Минимальный заказ с покрытием по нашей коллекции от 30 м², по индивидуальному подбору от 50 м².
+				//- --------------------
+
+
+mixin sTableBlock23(cont)
+	+b.SECTION.sTableBlock--md.section#sTableBlock23&attributes(attributes).--floor
+		.container
+			.table-wtrap
+				table
+					thead
+						tr.tr-dark
+							th(colspan="6") трёхслойная инженерная доска пола дуб
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.sm.border-bottom-0
+						tr.tr-gray-light
+							td(colspan="6").pad сортировка
+					tbody
+						tr
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title прайм
+								+e.img-wrap
+									+img("img/table-floor-1-1.png")
+								p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title натур
+								+e.img-wrap
+									+img("img/table-floor-1-1.png")
+								p Перепады по тону, смешанный распил и радиальные лучи допускаются в сортировке Натур. Благодаря этой сортировке удается сохранить естественную красоту и изъяны натурального дерева в умеренном количестве.
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title рустик
+								+e.img-wrap
+									+img("img/table-floor-1-1.png")
+								p Сорт Рустик имеет в себе все природное обаяние натурального массива: перепады по тону, благородные сучки и естественные трещины.
+						tr.tr-gray-light
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td прайм<br>руб./м²
+							td натур<br>руб./м²
+							td рустик<br>руб./м²
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0
+						tr
+							td(rowspan="2") 16<br>(4/8/4 ММ)
+							td 155
+							td(rowspan="2") 400-2400
+							td 8 600
+							td 7 400
+							td 5 300
+						tr
+							td 185
+							td 8 900
+							td 7 500
+							td 5 400
+						tr
+							td 19<br>(4/11/4 ММ)
+							td 240
+							td 600-2400
+							td 10 600
+							td 8 300
+							td 6 700
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.table-title французская / английская ёлочка
+						tr
+							td(rowspan="3") 16<br>(4/8/4 ММ)
+							td 135
+							td(rowspan="3") 400-1000
+							td 10 400
+							td 8 800
+							td -
+						tr
+							td 155
+							td 10 700
+							td 9 000
+							td -
+						tr
+							td 185
+							td 10 800
+							td 9 200
+							td -
+			.price.text-end *Цена за изделие указана с покрытием по нашей коллекции, либо по индивидуальному подбору цвета.<br>**Минимальный заказ с покрытием по нашей коллекции от 30 м², по индивидуальному подбору от 50 м².
+
+mixin sTableBlock24(cont)
+	+b.SECTION.sTableBlock--md.section#sTableBlock24&attributes(attributes).--floor
+		.container
+			.table-wtrap
+				table
+					thead
+						tr.tr-dark
+							th(colspan="6") термодуб
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.sm.border-bottom-0
+						tr.tr-gray-light
+							td(colspan="6").pad сортировка
+					tbody
+						tr
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title прайм
+								+e.img-wrap
+									+img("img/table-floor-dub-1.png")
+								p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title натур
+								+e.img-wrap
+									+img("img/table-floor-dub-2.png")
+								p Перепады по тону, смешанный распил и радиальные лучи допускаются в сортировке Натур. Благодаря этой сортировке удается сохранить естественную красоту и изъяны натурального дерева в умеренном количестве.
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title рустик
+								+e.img-wrap
+									+img("img/table-floor-dub-3.png")
+								p Сорт Рустик имеет в себе все природное обаяние натурального массива: перепады по тону, благородные сучки и естественные трещины.
+						tr.tr-gray-light
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td прайм<br>руб./м²
+							td натур<br>руб./м²
+							td рустик<br>руб./м²
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0
+						tr
+							td(rowspan="2") 16<br>(4/8/4 ММ)
+							td 155
+							td(rowspan="2") 400-2400
+							td 9 500
+							td 8 100
+							td 6 000
+						tr
+							td 185
+							td 9 600
+							td 8 200
+							td 6 200
+						tr
+							td 19<br>(4/11/4 ММ)
+							td 240
+							td 600-2400
+							td 11 400
+							td 9 000
+							td 7 400
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.table-title французская / английская ёлочка
+						tr
+							td(rowspan="3") 16<br>(4/8/4 ММ)
+							td 135
+							td(rowspan="3") 400-1000
+							td 11 100
+							td 9 500
+							td -
+						tr
+							td 155
+							td 11 400
+							td 9 800
+							td -
+						tr
+							td 185
+							td 11 500
+							td 9 900
+							td -
+			.price.text-end *Цена за изделие указана с покрытием по нашей коллекции, либо по индивидуальному подбору цвета.<br>**Минимальный заказ с покрытием по нашей коллекции от 30 м², по индивидуальному подбору от 50 м².
+
+mixin sTableBlock25(cont)
+	+b.SECTION.sTableBlock--md.section#sTableBlock25&attributes(attributes).--floor
+		.container
+			.table-wtrap
+				table
+					thead
+						tr.tr-dark
+							th(colspan="5") массивная доска пола
+						tr
+							td(colspan="5").p-1.border-start-0.border-end-0.sm.border-bottom-0
+						tr.tr-gray-light
+							td(colspan="5").pad порода
+					tbody
+						tr
+							+b.TD(colspan="3").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title ясень
+								+e.img-wrap
+									+img("img/table-floor-white.png")
+								p Ясень – самая красивая порода дерева, предназначенная для отделки полов. Его часто используют в спальнях и детских комнатах. Оригинальность натурального массива подчеркивает богатый спектр оттенков ясеня, благодаря этому интерьер любого помещения будет особенным и неповторимым.
+							+b.TD(colspan="2").wrap.border-start-0.border-end-0.border-bottom-0
+								+e.title термоясень
+								+e.img-wrap
+									+img("img/table-floor-dark.png")
+								p Термоясень - 100% массив дерева проходит цикл термообработки (высокая температуру и пар) без добавления каких-либо химикатов. Выбирая термодерево для внутренней отделки, вы получаете экологически чистый натуральный материал, обладающий высокими эстетическими свойствами, благодаря своему благородному оттенку на всю толщину.
+						tr.tr-gray-light
+							td порода
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td цена<br>руб./м²
+						tr
+							td(colspan="5").p-1.border-start-0.border-end-0
+						tr
+							td(rowspan="3", width="20%") Ясень
+							td(rowspan="3", width="10%") 20
+							td 100
+							td(rowspan="3", width="17%") 400-1800
+							td 6 000
+						tr
+							td 120
+							td 6 900
+						tr
+							td 160
+							td 7 400
+						tr
+							td(colspan="5").p-1.border-start-0.border-end-0.sm
+						tr
+							td(rowspan="3") Термоясень
+							td(rowspan="3") 20
+							td 100
+							td(rowspan="3") 400-1800
+							td 7 400
+						tr
+							td 120
+							td 7 600
+						tr
+							td 160
+							td 7 800
+			.price.text-end *Цена за изделие указана с покрытием по нашей коллекции, либо по индивидуальному подбору цвета.<br>**Минимальный заказ с покрытием по нашей коллекции от 30 м², по индивидуальному подбору от 50 м².
+			+e.btn-wrap.text-end
+				+e.btn.btn.btn-light(href="#") скачать прайс лист
