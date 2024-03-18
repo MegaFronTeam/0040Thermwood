@@ -98,6 +98,7 @@
 }
 
 .sContent--descr {
+  --sPT: #{rem(50)};
   --sPB: #{rem(20)};
   p {
     font-size: 20px;

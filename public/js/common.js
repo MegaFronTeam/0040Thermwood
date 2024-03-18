@@ -459,6 +459,31 @@ function eventHandler() {
 		},
 	});
 
+	var sProjectSwiper = new Swiper(".sSlider__slider--js", {
+		slidesPerView: '2',
+		spaceBetween: 16,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span>' +
+              ' / ' +
+              '<span class="' + totalClass + '"></span>';
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: '3',
+      }
+    },
+		// thumbs: {
+		// 	swiper: sProdCardThumbSwiper,
+		// },
+	});
 
 	// modal window
 
