@@ -1427,6 +1427,8 @@ mixin sTableBlock22(cont)
 mixin sTableBlock23(cont)
 	+b.SECTION.sTableBlock--md.section#sTableBlock23&attributes(attributes).--floor
 		.container
+			if cont
+				h2!= cont
 			.table-wtrap
 				table
 					thead
@@ -1650,6 +1652,94 @@ mixin sTableBlock25(cont)
 			+e.btn-wrap.text-end
 				+e.btn.btn.btn-light(href="#") скачать прайс лист
 
+
+mixin sTableBlock26(cont)
+	+b.SECTION.sTableBlock--md.section#sTableBlock23&attributes(attributes).--floor
+		.container
+			if cont
+				h2!= cont
+			.table-wtrap
+				table
+					thead
+						tr.tr-dark
+							th(colspan="6") трёхслойная инженерная доска пола дуб
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.sm.border-bottom-0
+						tr.tr-gray-light
+							td(colspan="6").pad сортировка
+					tbody
+						tr
+							td(colspan="2").border-start-0.border-end-0.border-bottom-0
+								+b.wrap.border-start-0.border-end-0.border-bottom-0
+									+e.title прайм
+									+e.img-wrap
+										+img("img/table-floor-1-1.png")
+									p Высший сорт паркета смешанного распила. Перепады тона относительно небольшие, имеются радиальные лучи. Также при сортировке допустимы светлые сучки диаметром не более одного сантиметра.
+							td(colspan="2").border-start-0.border-end-0.border-bottom-0
+								+b.wrap
+									+e.title натур
+									+e.img-wrap
+										+img("img/table-floor-1-1.png")
+									p Перепады по тону, смешанный распил и радиальные лучи допускаются в сортировке Натур. Благодаря этой сортировке удается сохранить естественную красоту и изъяны натурального дерева в умеренном количестве.
+							td(colspan="2").border-start-0.border-end-0.border-bottom-0
+								+b.wrap.border-start-0.border-end-0.border-bottom-0
+									+e.title рустик
+									+e.img-wrap
+										+img("img/table-floor-1-1.png")
+									p Сорт Рустик имеет в себе все природное обаяние натурального массива: перепады по тону, благородные сучки и естественные трещины.
+						tr.tr-gray-light
+							td толщина<br>(мм)
+							td ширина<br>(ММ)
+							td ДИАПАЗОН длин<br>(ММ)
+							td прайм<br>руб./м²
+							td натур<br>руб./м²
+							td рустик<br>руб./м²
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0
+						tr
+							td(rowspan="2") 16<br>(4/8/4 ММ)
+							td 155
+							td(rowspan="2") 400-2400
+							td 9 660
+							td 8 200
+							td 5 820
+						tr
+							td 185
+							td 9 900
+							td 8 340
+							td 5 940
+						tr
+							td 19<br>(4/11/4 ММ)
+							td 240
+							td 600-2400
+							td 11 940
+							td 9 300
+							td 7 440
+						tr
+							td(colspan="6").p-1.border-start-0.border-end-0.table-title французская / английская ёлочка
+						tr
+							td(rowspan="3") 16<br>(4/8/4 ММ)
+							td 135
+							td(rowspan="3") 400-1000
+							td 11 700
+							td 9 900
+							td -
+						tr
+							td 155
+							td 12 100
+							td 10 200
+							td -
+						tr
+							td 185
+							td 12 200
+							td 10 300
+							td -
+			.price.text-end *Цена за изделие указана с покрытием по нашей коллекции, либо по индивидуальному подбору цвета.<br>**Минимальный заказ с покрытием по нашей коллекции от 30 м², по индивидуальному подбору от 50 м².
+			+b.btn-wrap.text-end
+				+e.btn.btn.btn-light(href="#") скачать прайс лист
+				+e.btn.btn.btn-light(href="#") скачать тех. паспорт
+
+
 mixin sTableConstruction(cont)
 	+b.SECTION.sTableConstruction.section#sTableConstruction&attributes(attributes)
 		+sContent().pb-0
@@ -1664,10 +1754,34 @@ mixin sTableConstruction(cont)
 									tr
 										th.ttu(scope="row"  )= t1
 										td= t2
-								+tr(`1 слой`,`однополосная самель из массива дуба (3-6 мм)`)
-								+tr(`2 слой `,`водостойкая берёзовая фсф фанера (9-15 мм)`)
+								+tr(`1 слой`,`однополосная ламель из массива дуба (4 мм)`)
+								+tr(`2 слой `,`водостойкая берёзовая фсф фанера (9-15 мм)`)
 					.col-lg-7
 						h4 двухслойная инженерная доска пола дуб
 						p На сегодняшний день - это напольное покрытие является самым распространённым.
 						p Верхний слой – шпон массива дуба, толщина которого составляет от 3 до 6 мм. Нижний - из высококачественной берёзовой фанеры ФСФ повышенной водостойкости. Такая конструкция позволяет укладывать паркет прямо на бетонную стяжку, не используя фанеру. Укладка только клеевым способом.
 						p Инженерная доска имеет шип-паз и фаску по периметру, она является двухслойной. В процессе эксплуатации необходимо точное соблюдение условий влажности в размере 40-60 % и температуры 19–25° помещения.
+
+
+mixin sTableConstruction2(cont)
+	+b.SECTION.sTableConstruction.section#sTableConstruction&attributes(attributes)
+		+sContent().pb-0
+			.container
+				h4 конструкция
+				.row
+					.col-lg-5
+						+img("img/three-layers-board.png").res-i
+						.table-wtrap
+							table.table.table-striped()
+								mixin tr(t1,t2)
+									tr
+										th= t1
+										td= t2
+								+tr(`1 слой`,`однополосная ламель из массива дуба (3-6 мм)`)
+								+tr(`2 слой `,`перпендикулярно расположенные ламкли из массива хвойных пород (8 или 11 мм)`)
+								+tr(`3 слой `,`однополосная ламель из массива дуба (3-6 мм)`)
+					.col-lg-7
+						h4 трёхслойная инженерная доска пола дуб
+						p На данный момент трехслойная инженерная доска считается самым стабильным напольным покрытием из дерева.
+						p Исходя из правильных пропорций конструкции, нам удалось достичь технического совершенства. Нижний слой представляет собой ламель дуба толщиной 4 мм и перпендикулярно расположенные рейки хвойных пород, достигающих толщины 8 или 11 мм (в зависимости от общей толщины доски). Хвойные породы обладают более мягкой и пластичной структурой, что компенсирует возможные напряжения других слоёв из твёрдых пород во время эксплуатации.
+						p В итоге мы получаем наиболее надежное покрытие из натурального дерева, не нуждающееся в обязательном соблюдении температурно-влажностного режима. Также трёхслойная инженерная доска - самое экологичное покрытие - нет фанеры (формальдегидов), только массив + максимально экологичный клей Kleberit (Германия) на водной основе.
