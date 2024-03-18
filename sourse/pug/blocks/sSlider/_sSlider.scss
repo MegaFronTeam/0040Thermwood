@@ -3,6 +3,12 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: 0;
+  h3 {
+    font-weight: 500;
+    font-size: rem(20);
+    text-transform: uppercase;
+    margin-bottom: rem(8);
+  }
   .swiper-horizontal {
     overflow: visible;
   }
@@ -53,7 +59,18 @@
     }
   }
 
-
+  &--palette {
+	--sPB: #{rem(10)};
+    .section-title {
+      margin-bottom: rem(26);
+    }
+    .slider-wrapper {
+      margin-bottom: rem(70);
+      &:last-child {
+        margin-bottom: rem(50);
+      }
+    }
+  }
 
   @include media-breakpoint-up(xl) {
 	}
@@ -68,3 +85,13 @@
 }
 
 // end .sSlider
+.palette-item {
+  &__title {
+    position: absolute;
+    bottom: rem(16);
+    left: 50%;
+    transform: translateX(-50%);
+		font-size: rem(20);
+    color: $white;
+  }
+}
