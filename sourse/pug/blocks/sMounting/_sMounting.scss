@@ -153,5 +153,37 @@
     text-transform: uppercase;
     margin-bottom: rem(46);
   }
+}
 
+.sMounting3 {
+	--sPT: #{rem(10)};
+	--sPB: #{rem(0)};
+  .row {
+    @include media-breakpoint-up(lg) {
+      max-width: rem(1000);
+      margin: 0 auto;
+    }
+  }
+  h4 {
+    font-weight: 500;
+    font-size: rem(25);
+    line-height: 131%;
+    text-transform: uppercase;
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(0);
+    }
+  }
+  .sMounting__item {
+    @include media-breakpoint-up(lg) {
+      max-width: rem(254);
+    }
+  }
+  .sMounting__img-wrap {
+    margin-bottom: rem(20);
+  }
+  h5 {
+    font-size: rem(15);
+    text-transform: uppercase;
+  }
 }

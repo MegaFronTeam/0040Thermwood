@@ -97,6 +97,11 @@ mixin head-banner(i, t, title)
 			if block
 				block
 
+mixin head-banner2(i)
+	.section.container-max
+		+b.head-banner.bg-wrap&attributes(attributes)
+			+img(`img/${i}`).picture-bg
+
 mixin imagesInRow()
 	+b.images-in-row.container-max
 		.row

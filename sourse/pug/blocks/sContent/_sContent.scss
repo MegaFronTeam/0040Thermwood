@@ -96,3 +96,38 @@
 		object-fit: cover;
 	}
 }
+
+.sContent--descr {
+  --sPB: #{rem(20)};
+  p {
+    font-size: 20px;
+    line-height: 160%;
+    text-align: justify;
+    margin-bottom: rem(30);
+  }
+}
+
+.sContent--advantages {
+  --sPT: #{rem(3)};
+  --sPB: #{rem(45)};
+  .section-title {
+    margin-bottom: rem(18);
+  }
+  p {
+    font-size: rem(20);
+    line-height: 131%;
+    text-align: justify;
+    margin-bottom: rem(5);
+  }
+  li:before {
+    content: none;
+  }
+  ul {
+    padding-left: rem(30);
+    margin-bottom: rem(5);
+  }
+  li {
+    list-style-type: disc;
+    font-size: rem(20);
+  }
+}

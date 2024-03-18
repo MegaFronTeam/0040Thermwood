@@ -166,6 +166,10 @@ thead{
   // td.wrap {
   //   border-radius: rem(3) 0 0 rem(3);
   // }
+  h2 {
+    margin-bottom: rem(24);
+    margin-top: rem(-20);
+  }
   .tr-dark {
     background: $gray-100;
     color: $black;
@@ -182,6 +186,9 @@ thead{
   }
   td{
     padding: 7px 6px !important;
+  }
+  .tr-gray-light {
+    border: 1px solid #bababa !important;
   }
   .tr-gray-light{
     td,
@@ -211,6 +218,7 @@ thead{
     padding: rem(10) rem(26) rem(10) !important;
     p {
       text-align: start;
+      text-align: justify;
       line-height: 1.2;
     }
     &__img-wrap {
@@ -226,7 +234,6 @@ thead{
   .p-1.border-start-0.border-end-0.sm {
     padding: rem(3) !important;
   }
-  
   .sTableBlock table:not(.table-striped) th {
     border: 0.5px solid rgba(46, 46, 46, 0.7);
   }
@@ -237,14 +244,31 @@ thead{
 
 #sTableBlock22 {
   --sPT: #{rem(30)};
+  h2 {
+    font-size: rem(20);
+    text-align: center;
+    margin-top: rem(-30);
+  }
   .table-wtrap {
     margin-bottom: rem(40);
   }
   .wrap {
-    // display: flex;
-    // gap: rem(15);
     &__img-wrap {
-      max-width: rem(126);
+      @include media-breakpoint-up(lg) {
+        max-width: rem(126);
+      }
+    }
+    &__descr {
+      margin-top: rem(-15);
+      @include media-breakpoint-up(lg) {
+        width: 70%;
+      }
+    }
+    &__title {
+      text-align: center;
+      @include media-breakpoint-up(lg) {
+        text-align: start;
+      }
     }
     p {
       font-weight: 400;
@@ -252,8 +276,45 @@ thead{
     }
   }
   .wrap--left {
+    display: flex;
     text-align: start;
-    // display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(15);
+    padding: rem(20) rem(8) rem(10) rem(3) !important;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: start;
+    }
+  }
+}
+
+.two-layers {
+  #sTableBlock22 .price {
+    text-align: start !important;
+    margin-top: rem(-20);
+    margin-bottom: rem(28);
+  }
+  .btn {
+    --bs-btn-border-color: #{$gray-500};
+    --bs-btn-font-size: rem(15);
+    --bs-btn-font-weight: 500;
+    --bs-btn-padding-x: #{rem(28)};
+    --bs-btn-padding-y: #{rem(12)};
+    &:first-child {
+      margin-bottom: rem(16);
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+        margin-right: rem(16);
+      }
+    }
+  }
+}
+
+#sTableBlock23 {
+  --sPT: #{rem(23)};
+  .wrap {
+    padding-bottom: rem(20) !important;
   }
 }
 
@@ -301,7 +362,16 @@ thead{
   }
 }
 
+#sTableBlock24 {
+  --sPT: #{rem(30)};
+}
+
 #sTableBlock25 {
+  --sPT: #{rem(50)};
+  --sPB: #{rem(0)};
+  .table-wtrap {
+    margin-bottom: rem(23);
+  }
   .wrap {
     padding: rem(30) rem(20) rem(20) !important;
     p {
@@ -318,5 +388,41 @@ thead{
     --bs-btn-font-weight: 500;
     --bs-btn-padding-x: #{rem(28)};
     --bs-btn-padding-y: #{rem(12)};
+  }
+}
+
+.sTableConstruction {
+  --sPT: #{rem(32)};
+  --sPB: #{rem(20)};
+  .row {
+    @include media-breakpoint-up(xl) {
+      --bs-gutter-x: #{rem(80)};
+    }
+  }
+  h4 {
+    font-weight: 500;
+    font-size: rem(25);
+    text-transform: uppercase;
+    margin-bottom: rem(46);
+    line-height: 131%;
+  }
+  .table-wtrap {
+    max-width: rem(494);
+  }
+  .table-striped th:first-child {
+    padding-left: rem(22);
+  }
+  .table-striped td:last-child {
+    padding-left: rem(20);
+    padding-right: rem(10);
+  }
+  .sContent img {
+    margin-bottom: rem(7);
+    background-color: rgba(0, 0, 0, .15);
+  }
+  p {
+    text-align: justify;
+    font-size: rem(20);
+    line-height: 1.3;
   }
 }
