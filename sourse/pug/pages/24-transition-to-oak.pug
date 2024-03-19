@@ -1,0 +1,50 @@
+extends ../layout/main.pug
+
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sTableBlock/_sTableBlock.pug
+include ../blocks/sPalette/_sPalette.pug
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sMounting/_sMounting.pug
+include ../blocks/sSlider/_sSlider.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+
+block variables
+	- let  mainPage= '' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Термодуб'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	+parts('header')
+	main
+		+page-head2('', 'Продукция', 'Термодуб')
+		+head-banner2('oak.png')
+		+sTableConstruction3.mb-4
+		+sMounting3
+		+sTableBlock27('Цены')
+		+sSlidersPalette2()
+		+sSlider2.pb-5.mb-5
+		+sContent('наши преимущества').sContent--advantages.pt-3
+			.container
+				p Российская компания «Термо Вуд» заслуженно является лидером по региону Москва и имеет множество преимуществ в работе:
+				ul
+					li современные производственные мощности позволяют изготавливать ежемесячно до 20 000 м2 инженерной доски;
+					li производится российская инженерная доска по лучшим технологиям из натуральной древесины (дуб);
+					li компания работает на рынке более 7 лет;
+					li большой склад расположен в г. Сходня (10 км от МКАД);
+					li перед заказом Вы можете ознакомиться с образцами и наглядно убедиться в качестве продукции;
+					li регулярно проводятся акции и предоставляются скидки;
+					li у квалифицированных сотрудников фирмы вы сможете проконсультироваться по выбору типа и размера инженерной доски.
+				p Вся наша продукция произведена в России на собственном оборудовании. Это гарантирует оптимальные цены и высокое качество изделий. Они полностью соответствуют экологическим стандартам безопасности, имеют презентабельный внешний вид, могут быть дополнительно обработаны после длительной эксплуатации (после шлифовки напольное покрытие будет выглядеть как новое). Сейчас вся Россия массово переходит на продукцию отечественного производства, и вы можете сделать свой вклад в развитие экономики страны. Обращайтесь в «Термо Вуд» и вам будут предложены качественные российские товары по выгодным ценам.
+		+sForm.form-wr
+	+parts('footer')
+
+
+
+

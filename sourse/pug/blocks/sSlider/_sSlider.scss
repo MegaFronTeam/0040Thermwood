@@ -95,3 +95,14 @@
     color: $white;
   }
 }
+
+.sSlider--palette2 {
+  .slider-wrapper:last-child {
+    margin-bottom: rem(20);
+  }
+}
+
+.sSlider-3 {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(20)};
+}

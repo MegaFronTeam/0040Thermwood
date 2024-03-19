@@ -27,3 +27,6 @@
 =================
 1. <https://megafronteam.github.io/0040Thermwood/21-transition-to-the-floorboard-1.html>
 1. <https://megafronteam.github.io/0040Thermwood/22-transition-to-two-layers.html>
+1. <https://megafronteam.github.io/0040Thermwood/23-transition-to-three-layers.html>
+1. <https://megafronteam.github.io/0040Thermwood/24-transition-to-oak.html>
+1. <https://megafronteam.github.io/0040Thermwood/25-transition-to-massive-board.html>

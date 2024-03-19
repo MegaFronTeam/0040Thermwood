@@ -60,6 +60,14 @@
 			}
 		}
 	}
+  
+  &__row-cards {
+    --bs-gutter-y: #{rem(40)};
+	@include media-breakpoint-up(lg) {
+    --bs-gutter-x: #{rem(130)};
+  }
+    
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -131,4 +139,5 @@
     list-style-type: disc;
     font-size: rem(20);
   }
+
 }

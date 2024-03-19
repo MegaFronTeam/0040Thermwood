@@ -31,8 +31,73 @@ mixin sSlider()
 				.swiper-button-next
 					+icon('sw-right')
 
+mixin sSlider2()
+	+b.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+b.section-title
+				h2 проекты
+			+e.slider--proj-js.swiper
+				.swiper-wrapper
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/oat-sl-${x}.png` data-fancybox="oat-sl")
+								+img(`img/oat-sl-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/oat-sl-${x}.png` data-fancybox="oat-sl")
+								+img(`img/oat-sl-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/oat-sl-${x}.png` data-fancybox="oat-sl")
+								+img(`img/oat-sl-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/oat-sl-${x}.png` data-fancybox="oat-sl")
+								+img(`img/oat-sl-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+				.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
+				.swiper-button-prev
+					+icon('sw-left')
+				.swiper-button-next
+					+icon('sw-right')
 
-mixin paletteItem(img, title, letter)
+mixin sSlider3()
+	+b.sSlider.section#sSlider&attributes(attributes)
+		.container.mb-4
+			+b.section-title
+				h2 проекты
+			+e.slider--proj-js.swiper
+				.swiper-wrapper
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/massive-${x}.png` data-fancybox="massive-sl")
+								+img(`img/massive-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/massive-${x}.png` data-fancybox="massive-sl")
+								+img(`img/massive-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/massivl-${x}.png` data-fancybox="massive-sl")
+								+img(`img/massive-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+					- for (var x = 1; x < 4; x++)
+						+e.slide.swiper-slide
+							+e.item(href=`img/massive-${x}.png` data-fancybox="massive-sl")
+								+img(`img/massive-${x}.png`, 'bg')
+								.swiper-lazy-preloader
+				.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
+				.swiper-button-prev
+					+icon('sw-left')
+				.swiper-button-next
+					+icon('sw-right')
+
+mixin paletteItem(img, title)
 	+e.slide.swiper-slide
 		+b.palette-item(href='#')
 			+img(`img/palette-1-0${img}.png`, 'bg')
@@ -158,6 +223,47 @@ mixin sSlidersPalette()
 						+paletteItem('4-1', 'B1')
 						+paletteItem('4-2', 'B2')
 						+paletteItem('4-3', 'B3')
+					.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
+					.swiper-button-prev
+						+icon('sw-left')
+					.swiper-button-next
+						+icon('sw-right')
+
+
+mixin sSlidersPalette2()
+	+b.sSlider--palette.sSlider--palette2.section#sSlidersPalette&attributes(attributes)
+		.container
+			+b.section-title
+				h2 цветовая палитра
+			+e.slider-wrapper.slider-wrapper
+				+e.slider--proj-js.swiper
+					.swiper-wrapper
+						+paletteItem('5-1', 'T1')
+						+paletteItem('5-2', 'T2')
+						+paletteItem('5-3', 'T3')
+						+paletteItem('5-4', 'T4')
+						+paletteItem('5-5', 'T5')
+						+paletteItem('5-6', 'T6')
+					.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
+					.swiper-button-prev
+						+icon('sw-left')
+					.swiper-button-next
+						+icon('sw-right')
+
+mixin sSlidersPalette3()
+	+b.sSlider--palette.sSlider--palette2.sSlider-3.section#sSlidersPalette&attributes(attributes)
+		.container 
+			+b.section-title
+				h2 цветовая палитра
+			+e.slider-wrapper.slider-wrapper
+				+e.slider--proj-js.swiper
+					.swiper-wrapper
+						+paletteItem('6-1', 'SP1')
+						+paletteItem('6-2', 'SP2')
+						+paletteItem('6-3', 'SP3')
+						+paletteItem('6-4', 'SP4')
+						+paletteItem('6-5', 'SP5')
+						+paletteItem('6-6', 'SP6')
 					.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
 					.swiper-button-prev
 						+icon('sw-left')
