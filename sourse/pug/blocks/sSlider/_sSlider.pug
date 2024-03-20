@@ -3,7 +3,7 @@ mixin sSlider()
 		.container
 			+b.section-title
 				h2 проекты
-			+e.slider--proj-js.swiper
+			+e.slider--proj.swiper
 				.swiper-wrapper
 					- for (var x = 1; x < 4; x++)
 						+e.slide.swiper-slide
@@ -36,7 +36,7 @@ mixin sSlider2()
 		.container
 			+b.section-title
 				h2 проекты
-			+e.slider--proj-js.swiper
+			+e.slider--proj.swiper
 				.swiper-wrapper
 					- for (var x = 1; x < 4; x++)
 						+e.slide.swiper-slide
@@ -65,11 +65,11 @@ mixin sSlider2()
 					+icon('sw-right')
 
 mixin sSlider3()
-	+b.sSlider.section#sSlider&attributes(attributes)
+	+b.sSlider.section#sSlider3&attributes(attributes)
 		.container.mb-4
 			+b.section-title
 				h2 проекты
-			+e.slider--proj-js.swiper
+			+e.slider--proj.swiper
 				.swiper-wrapper
 					- for (var x = 1; x < 4; x++)
 						+e.slide.swiper-slide
@@ -136,6 +136,7 @@ mixin sSlidersPalette()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 			+e.slider-wrapper.slider-wrapper
 				h3 White collection
 				+e.slider--proj-js.swiper
@@ -160,6 +161,7 @@ mixin sSlidersPalette()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 			+e.slider-wrapper.slider-wrapper
 				h3 laconique collection
 				+e.slider--proj-js.swiper
@@ -184,6 +186,7 @@ mixin sSlidersPalette()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 			+e.slider-wrapper.slider-wrapper
 				h3 grey collection
 				+e.slider--proj-js.swiper
@@ -208,6 +211,7 @@ mixin sSlidersPalette()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 			+e.slider-wrapper.slider-wrapper
 				h3 brown collection
 				+e.slider--proj-js.swiper
@@ -232,10 +236,11 @@ mixin sSlidersPalette()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 
 
 mixin sSlidersPalette2()
-	+b.sSlider--palette.sSlider--palette2.section#sSlidersPalette&attributes(attributes)
+	+b.sSlider--palette.sSlider--palette2.sSlider-3.section#sSlidersPalette&attributes(attributes)
 		.container
 			+b.section-title
 				h2 цветовая палитра
@@ -253,6 +258,7 @@ mixin sSlidersPalette2()
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar
 
 mixin sSlidersPalette3()
 	+b.sSlider--palette.sSlider--palette2.sSlider-3.section#sSlidersPalette&attributes(attributes)
@@ -262,14 +268,11 @@ mixin sSlidersPalette3()
 			+e.slider-wrapper.slider-wrapper
 				+e.slider--proj-js.swiper
 					.swiper-wrapper
-						+paletteItem('6-1', 'SP1')
-						+paletteItem('6-2', 'SP2')
-						+paletteItem('6-3', 'SP3')
-						+paletteItem('6-4', 'SP4')
-						+paletteItem('6-5', 'SP5')
-						+paletteItem('6-6', 'SP6')
+						- for (let i = 1; i <= 6; i++)
+							+paletteItem(`6-${i}`, `SP${i}`)
 					.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal
 					.swiper-button-prev
 						+icon('sw-left')
 					.swiper-button-next
 						+icon('sw-right')
+					.swiper-pagination-progressbar

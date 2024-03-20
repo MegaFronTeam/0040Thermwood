@@ -459,7 +459,7 @@ function eventHandler() {
 		},
 	});
 
-	var sProjectSwiper = new Swiper(".sSlider__slider--proj-js", {
+	var sProjectSwiper = new Swiper(".sSlider__slider--proj", {
 		slidesPerView: '2',
 		spaceBetween: 16,
 		navigation: {
@@ -485,7 +485,7 @@ function eventHandler() {
 		// },
 	});
 
-  var sPaletteSwiper = new Swiper("#sSlidersPalette .sSlider__slider--proj-js", {
+  var sPaletteSwiper = new Swiper("#sSlidersPalette .swiper", {
 		slidesPerView: '3',
 		spaceBetween: 10,
 		navigation: {
@@ -499,17 +499,22 @@ function eventHandler() {
         return '<span class="' + currentClass + '"></span>' +
               ' / ' +
               '<span class="' + totalClass + '"></span>';
-      }
+      },
     },
+    pagination: {
+      el: ".swiper-pagination-progressbar",
+      type: "progressbar",
+    },
+    // progressBar: {
+    //   el: '.swiper-pagination-progressbar',
+    //   fillClass: 'swiper-pagination-progressbar-fill',
+    // },
     breakpoints: {
       960: {
         spaceBetween: 20,
         slidesPerView: '6',
       }
     },
-		// thumbs: {
-		// 	swiper: sProdCardThumbSwiper,
-		// },
 	});
 
 	// modal window

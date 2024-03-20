@@ -15,9 +15,15 @@
   .swiper-pagination-fraction {
     text-align: end;
     padding-right: rem(43);
-    --swiper-pagination-bottom: #{rem(-56)};
+    --swiper-pagination-bottom: #{rem(-46)};
+    @include media-breakpoint-up(md) {
+      --swiper-pagination-bottom: #{rem(-56)};
+    }
     span {
-      font-size: rem(20);
+      font-size: rem(14);
+      @include media-breakpoint-up(md) {
+        font-size: rem(20);
+      }
       &:first-child {
         font-weight: bold;
       }
@@ -43,19 +49,32 @@
   }
   .swiper-button-prev {
     --swiper-theme-color: $black;
-    top: calc(100% + 40px);
+    top: calc(100% + 35px);
     opacity: 1;
     left: auto;
-    right: 100px;
+    right: 80px;
     &::after{
       content: none;
+    }
+    @include media-breakpoint-up(md) {
+      top: calc(100% + 40px);
+      right: 100px;
     }
   }
   .swiper-button-next {
     --swiper-theme-color: #535353;
-    top: calc(100% + 40px);
+    top: calc(100% + 35px);
+    .icon {
+      font-size: rem(16);
+      @include media-breakpoint-up(md) {
+        font-size: rem(22);
+      }
+    }
     &::after{
       content: none;
+    }
+    @include media-breakpoint-up(md) {
+      top: calc(100% + 40px);
     }
   }
 
@@ -91,8 +110,11 @@
     bottom: rem(16);
     left: 50%;
     transform: translateX(-50%);
-		font-size: rem(20);
+		font-size: rem(16);
     color: $white;
+    @include media-breakpoint-up(md) {
+      font-size: rem(20);
+    }
   }
 }
 
@@ -105,6 +127,46 @@
 .sSlider-3 {
 	--sPT: #{rem(30)};
 	--sPB: #{rem(20)};
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  width: calc(100% - 120px);
+  top: calc(100% + 34px);
+  @include media-breakpoint-up(sm) {
+    width: 74%;
+  }
+  @include media-breakpoint-up(md) {
+    top: calc(100% + 39px);
+    width: 77%;
+  }
+  // position: relative;
+}
+
+.swiper-pagination-progressbar {
+
+  --swiper-theme-color: #{#535353};
+  --swiper-pagination-color: var(--swiper-theme-color);
+  // --swiper-pagination-left: auto;
+  // --swiper-pagination-right: 8px;
+  // --swiper-pagination-bottom: 8px;
+  // --swiper-pagination-top: auto;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.75);
+  --swiper-pagination-progressbar-size: 0.5px;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  // --swiper-pagination-color: #{#ff0202};
+  top: -1px;
+  height: 600%;
+  // border-radius: 10px;
 }
 
 .fancybox__slide.has-caption {

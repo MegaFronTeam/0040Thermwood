@@ -503,14 +503,16 @@ thead{
     }
   }
   .sContent img {
-    margin-bottom: 0;
-    // background-color: rgba(0, 0, 0, .15);
+    margin-bottom: rem(0);
+    background-color: rgba(0, 0, 0, .15);
+  }
+  .table-wtrap {
+    margin-top: rem(7);
   }
   .img--dark {
     position: relative;
     display: inline-block;
     z-index: -1;
-    margin-bottom: rem(7);
     &:after {
       content: '';
       position: absolute;
