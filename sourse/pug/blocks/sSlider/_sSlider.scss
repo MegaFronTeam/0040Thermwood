@@ -106,3 +106,32 @@
 	--sPT: #{rem(30)};
 	--sPB: #{rem(20)};
 }
+
+.fancybox__slide.has-caption {
+  flex-direction: column;
+}
+.fancybox__content {
+  &::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(86);
+  }
+}
+.fancybox__caption {
+  
+  // position: absolute;
+  --fancybox-color: #{$black};
+  font-size: rem(20);
+  // background: rgba(255, 255, 255, 0.6);
+  line-height: 131%;
+  min-height: rem(86);
+  position: relative;
+  padding: rem(15) rem(19);
+  max-width: rem(602);
+  // top: rem(-86);
+  z-index: 20;
+}
