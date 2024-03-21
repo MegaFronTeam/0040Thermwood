@@ -485,41 +485,48 @@ function eventHandler() {
 		// },
 	});
 
-  var sPaletteSwiper = new Swiper("#sSlidersPalette .swiper", {
-		slidesPerView: '3',
-		spaceBetween: 10,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-      renderFraction: function (currentClass, totalClass) {
-        return '<span class="' + currentClass + '"></span>' +
-              ' / ' +
-              '<span class="' + totalClass + '"></span>';
-      },
-    },
-    pagination: {
-      el: ".swiper-pagination-progressbar",
-      type: "progressbar",
-    },
-    // progressBar: {
-    //   el: '.swiper-pagination-progressbar',
-    //   fillClass: 'swiper-pagination-progressbar-fill',
-    // },
-    breakpoints: {
-      960: {
-        spaceBetween: 20,
-        slidesPerView: '6',
-      }
-    },
-	});
+  function initializeSwiper(selector) {
+    return new Swiper(selector, {
+        slidesPerView: '3',
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination-progressbar",
+            type: "progressbar",
+        },
+        on: {
+            slideChange: function () {
+                var currentIndex = this.activeIndex + 1;
+                document.querySelector(selector + ' .current-slide').innerText = currentIndex;
+            },
+        },
+        breakpoints: {
+            960: {
+                spaceBetween: 20,
+                slidesPerView: '6',
+            }
+        },
+    });
+}
+
+  var sPaletteSwiper1 = initializeSwiper("#sSlidersPalette .swiper-1");
+  var sPaletteSwiper2 = initializeSwiper("#sSlidersPalette .swiper-2");
+  var sPaletteSwiper3 = initializeSwiper("#sSlidersPalette .swiper-3");
+  var sPaletteSwiper4 = initializeSwiper("#sSlidersPalette .swiper-4");
+  var sPaletteSwiper5 = initializeSwiper("#sSlidersPalette .swiper-5");
+  var sPaletteSwiper6 = initializeSwiper("#sSlidersPalette .swiper-6");
+  var sPaletteSwiper7 = initializeSwiper("#sSlidersPalette .swiper-7");
+
+  // if (sPaletteSwiper.length > 1) {
+  //     for (const item of sPaletteSwiper) {
+  //       item.el.childNodes[3].children[0].childNodes[0].innerText = item.activeIndex + 1;
+  //     }
+  //   }
 
 	// modal window
-
-
 	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
 		placement: 'auto',

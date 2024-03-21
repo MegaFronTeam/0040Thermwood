@@ -12,6 +12,34 @@
   .swiper-horizontal {
     overflow: visible;
   }
+  &__slider-count {
+    text-align: end;
+    padding-right: rem(43);
+    position: relative;
+    bottom: #{rem(-46)};
+    @include media-breakpoint-up(md) {
+      bottom: #{rem(-56)};
+    }
+    span {
+      font-size: rem(14);
+      @include media-breakpoint-up(md) {
+        font-size: rem(20);
+      }
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+  .all-slides-sm {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  .all-slides-lg {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
   .swiper-pagination-fraction {
     text-align: end;
     padding-right: rem(43);
@@ -52,13 +80,13 @@
     top: calc(100% + 35px);
     opacity: 1;
     left: auto;
-    right: 80px;
+    right: 85px;
     &::after{
       content: none;
     }
     @include media-breakpoint-up(md) {
       top: calc(100% + 40px);
-      right: 100px;
+      right: 107px;
     }
   }
   .swiper-button-next {
@@ -170,7 +198,7 @@
 }
 
 .fancybox__slide.has-caption {
-  flex-direction: column;
+  // flex-direction: column;
   .fancybox__content {
     &::after {
       content: 'Трёхслойная инженерная доска Дуб, сорт Натур, 16х155 мм';
