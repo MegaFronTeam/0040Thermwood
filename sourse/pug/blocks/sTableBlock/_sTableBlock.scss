@@ -188,7 +188,17 @@ thead{
     padding: 7px 6px !important;
   }
   .tr-gray-light {
-    border: 1px solid #bababa !important;
+    // border: 1px solid #bababa !important;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(100% + 1px);
+      top: -.5px;
+      left: 0;
+      border: .5px solid #bababa;
+    }
   }
   .tr-gray-light{
     td,
@@ -201,7 +211,7 @@ thead{
       // border-color: rgba(233, 232, 232, 0.5);
     }
     td {
-      border-color: rgba(233, 232, 232, 0.5) !important;
+      border-color: rgba(217, 217, 217, 0.5) !important;
     }
   }
   // .container .table-wtrap tbody .tr-gray-light {
