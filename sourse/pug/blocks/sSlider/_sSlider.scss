@@ -16,10 +16,7 @@
     text-align: end;
     padding-right: rem(43);
     position: relative;
-    bottom: #{rem(-26)};
-    @include media-breakpoint-up(md) {
-      bottom: #{rem(-30)};
-    }
+    bottom: #{rem(-15)};
     span {
       font-size: rem(14);
       @include media-breakpoint-up(md) {
@@ -108,25 +105,35 @@
 
   &--palette {
 	--sPB: #{rem(10)};
+    .swiper-horizontal {
+      overflow: visible;
+      @include media-breakpoint-up(md) {
+        padding-bottom: rem(50);
+        overflow: hidden;
+      }
+    }
     .section-title {
       margin-bottom: rem(26);
     }
     .slider-wrapper {
-      margin-bottom: rem(70);
+      margin-bottom: rem(50);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(20);
+      }
       &:last-child {
-        margin-bottom: rem(50);
+        margin-bottom: rem(0);
       }
     }
     .swiper-button-prev {
-      top: calc(100% + 15px);
+      top: calc(100% + 4px);
       @include media-breakpoint-up(md) {
-        top: calc(100% + 15px);
+        top: calc(100% - 50px);
       }
     }
     .swiper-button-next {
-      top: calc(100% + 15px);
+      top: calc(100% + 4px);
       @include media-breakpoint-up(md) {
-        top: calc(100% + 15px);
+        top: calc(100% - 50px);
       }
     }
   }
@@ -171,12 +178,12 @@
 
 .swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
   width: calc(100% - 120px);
-  top: calc(100% + 15px);
+  top: calc(100% + 4px);
   @include media-breakpoint-up(sm) {
     width: 74%;
   }
   @include media-breakpoint-up(md) {
-    // top: calc(100% + 39px);
+    top: calc(100% - 50px);
     width: 77%;
   }
   // position: relative;
@@ -186,10 +193,6 @@
 
   --swiper-theme-color: #{#535353};
   --swiper-pagination-color: var(--swiper-theme-color);
-  // --swiper-pagination-left: auto;
-  // --swiper-pagination-right: 8px;
-  // --swiper-pagination-bottom: 8px;
-  // --swiper-pagination-top: auto;
   --swiper-pagination-fraction-color: inherit;
   --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.75);
   --swiper-pagination-progressbar-size: 0.5px;
@@ -203,10 +206,8 @@
   --swiper-pagination-bullet-vertical-gap: 6px;
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  // --swiper-pagination-color: #{#ff0202};
   top: -1px;
   height: 600%;
-  // border-radius: 10px;
 }
 
 .fancybox__slide.has-caption {
@@ -231,19 +232,13 @@
   }
   .fancybox__caption {
     color: $black;
-    // position: absolute;
     --fancybox-color: #{$black};
     font-size: rem(20);
-    // background: rgba(255, 255, 255, 0.6);
     line-height: 131%;
     min-height: rem(86);
     position: relative;
     padding: rem(15) rem(19);
     max-width: rem(602);
-    // top: rem(-86);
     z-index: 20;
-    // @include media-breakpoint-up(sm) {
-    //   display: none;
-    // }
   }
 }
