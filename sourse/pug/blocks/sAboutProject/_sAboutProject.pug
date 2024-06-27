@@ -3,7 +3,7 @@ mixin sAboutProject(data)
 	+b.SECTION.sAboutProject.section#sAboutProject&attributes(attributes)
 		.container
 			+e.row.row
-				.col-md-6.col-lg
+				.col-lg-4
 					+e.features
 						+b.section-title
 							h1 О проекте
@@ -16,22 +16,24 @@ mixin sAboutProject(data)
 						h3 площадь
 						p 1200 м²
 
-				+e.col.col-md-6.col-xl-4
+				+e.col.col-lg
 					.slider-wrapper
-						+e.slider.swiper.slider-auto-js
-							.swiper-wrapper
+						+e.slider
+							.row
 								- for (var x = 1; x < 13; x++)
-									+e.slide.swiper-slide
+									+e.slide.col-4
 										+e.item(href=`img/project-${x}.jpg` data-fancybox=`project`) 
 											+img(`img/project-${x}.jpg`, 'bg')
 											+b.zoom-center
 												+icon("zoom")
-											.swiper-lazy-preloader
-						.swiper-pagination
-						.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-							+icon('chevron-left')
-						.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-							+icon('chevron-right')
-				.col.d-none.d-xl-block
+											//- +b.zoom-center
+											//- 	+icon("zoom")
+											//- .swiper-lazy-preloader
+						//- .swiper-pagination
+						//- .swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+						//- 	+icon('chevron-left')
+						//- .swiper-button-hand.swiper-button-hand-next.swiper-button-next
+						//- 	+icon('chevron-right')
+				//- .col.d-none.d-xl-block /
 
 	// end sAboutProject
