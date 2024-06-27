@@ -49,6 +49,6 @@
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
     "masonry-layout": "^4.2.2",
-    "swiper": "^9.2.2"
+    "swiper": "11.1.4"
   }
 }

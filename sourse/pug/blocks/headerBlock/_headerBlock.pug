@@ -11,16 +11,51 @@ mixin headerBlock()
 					+e.btn(href="#") мессенджеры
 					+e.btn(href="#" data-src="#modal-call").btn-modal-js заказать звонок
 			+e.footer
-				.row
-					mixin item(n,t,p)
-						.col-auto
+				.row.gy-4
+					.col-xl
+						.row
+							mixin item(n,t,p)
+								.col-auto
+									+e.title
+										strong= n 
+										= t
+									p!= p
+							+item(`14`,`лет`,`успешно работаем на&nbsp;рынке`)
+							+item(`17 000`,`проектов`,`реализовано  с&nbsp;2009 года`)
+							+item(`100%`,`заказов`,`выполненных в&nbsp;срок`)
+					.col-xl-5.col-12
+						+b.youtube-block
 							+e.title
-								strong= n 
-								= t
-							p!= p
-					+item(`14`,`лет`,`успешно работаем на&nbsp;рынке`)
-					+item(`17 000`,`проектов`,`реализовано  с&nbsp;2009 года`)
-					+item(`100%`,`заказов`,`выполненных в&nbsp;срок`)
+								a(href="#") 
+									img(src="img/youtube-icon.png", alt="")
+									| следите за&nbsp;нами на youtube
+							+e.slider--js.swiper
+								.swiper-wrapper
+									.swiper-slide
+										+e.item(data-fancybox="yt" href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ")
+											+img("img/project-1.jpg", 'bg')
+											+b.zoom-center
+												+icon("zoom")
+									.swiper-slide
+										+e.item(data-fancybox="yt" href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ")
+											+img("img/project-1.jpg", 'bg')
+											+b.zoom-center
+												+icon("zoom")
+									.swiper-slide
+										+e.item(data-fancybox="yt" href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ")
+											+img("img/project-3.jpg", 'bg')
+											+b.zoom-center
+												+icon("zoom")
+									.swiper-slide
+										+e.item(data-fancybox="yt" href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ")
+											+img("img/project-4.jpg", 'bg')
+											+b.zoom-center
+												+icon("zoom")
+									.swiper-slide
+										+e.item(data-fancybox="yt" href="https://www.youtube.com/watch?v=3JZ_D3ELwOQ")
+											+img("img/project-4.jpg", 'bg')
+											+b.zoom-center
+												+icon("zoom")
 		.foot-text Дом от архитектурного бюро KASUGAI DEVELOPMENT (Новая Рига)
 						
 	// end headerBlock

@@ -834,3 +834,39 @@ picture {
     @extend .section;
   }
 }
+
+.youtube-block {
+  .swiper {
+    width: 100%;
+  }
+  &__title {
+    align-content: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    a {
+      color: #fff;
+      max-width: 100%;
+      display: inline-flex;
+      align-items: center;
+      img {
+        width: 100px;
+        margin-left: -10px;
+      }
+    }
+    // font-family: Monte;
+  }
+  &__item {
+    aspect-ratio: 16 / 9;
+    display: block;
+    .zoom-center {
+      scale: 0.6;
+    }
+    &:not(:hover) {
+      .zoom-center {
+        opacity: 0;
+      }
+    }
+  }
+}
